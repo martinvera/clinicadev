@@ -135,11 +135,11 @@ export class CrearRolComponent implements OnInit {
     let createRoles = this.createform.value;
     const role_data = {
       codigo: this.contentRole.codigo,
-      nombre: createRoles.nombre,
+      nombre: createRoles.nombre.toUpperCase(),
       proveedor: createRoles.proveedor,
       estado: parseInt(createRoles.estado),
       privilegios: (createRoles.privilegios).toString(),
-      descripcion: createRoles.descripcion,
+      descripcion: createRoles.descripcion.toUpperCase(),
     };
     const parametro: Parameter = new Parameter();
     parametro.url = ENDPOINT_USERS.UPDATE_ROLE;

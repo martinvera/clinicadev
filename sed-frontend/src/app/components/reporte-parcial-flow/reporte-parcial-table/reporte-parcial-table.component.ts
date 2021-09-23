@@ -78,7 +78,7 @@ export class ReporteParcialTableComponent implements OnInit {
   form: FormGroup;
   constructor(
     private reporteParcialService: ReporteParcialService,
-    private catalogoService:CatalogoService,
+    private catalogoService: CatalogoService,
     private toastrService: ToastrService,
     private pipe: DatePipe,
     public dialog: MatDialog,
@@ -158,12 +158,10 @@ export class ReporteParcialTableComponent implements OnInit {
     this.dellSuscribe.add(this.reporteParcialService.getReporteParcial(parametro).pipe(
     ).subscribe(
       (data: any) => {
-        if (data.response.code == 200 && data.response.data == 'Enviado a cola correctamente') {
+        if (data.response.code == 200) {
           this.getReporteParcial();
           this.toastrService.success(data.response.data);
           this.form.reset();
-        } else if (data.response.code == 200 && data.response.data.indexOf('No se encontró el Nro Lote:') == 0) {
-          this.toastrService.warning(data.response.data);
         }
       }
     ));

@@ -25,9 +25,9 @@ export class ModalReportesinloteComponent implements OnInit {
     private pipe: DatePipe,
     private reporteService: ReporteService,
     private alertService: ToastrService,
-    ) {
-    
-   }
+  ) {
+
+  }
 
   ngOnInit(): void {
     this.onCreateFilter();
@@ -35,8 +35,8 @@ export class ModalReportesinloteComponent implements OnInit {
 
   onCreateFilter() {
     this.form = new FormGroup({
-      fechaDesde: new FormControl('',Validators.required),
-      fechaHasta: new FormControl('',Validators.required),
+      fechaDesde: new FormControl('', Validators.required),
+      fechaHasta: new FormControl('', Validators.required),
     });
   }
 
@@ -80,18 +80,18 @@ export class ModalReportesinloteComponent implements OnInit {
     this.dellSuscribe.add(this.reporteService.setReportes(parametro).pipe(
     ).subscribe(
       (value: any) => {
-        if (value.response.code == 200 && value.response.data == 'Enviado a cola correctamente') {
+        if (value.response.code == 200) {
           this.dialogRef.close(false);
           this.alertService.success(value.response.data);
         }
       }
     ));
   }
-  clickGenerar(){
+  clickGenerar() {
     this.dialogRef.close(false);
   }
 
-  clickClose(){
+  clickClose() {
     this.dialogRef.close();
   }
 }

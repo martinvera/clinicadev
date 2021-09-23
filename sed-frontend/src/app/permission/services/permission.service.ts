@@ -83,8 +83,9 @@ export class PermissionService {
         return this.userService?.getRolUserStorage()?.find(val => val?.codigo == Permission?.GENERAR_REPORTE_LOTES_GARANTE);
       case Permission.BOTON_REPROCESAR_GESTION_LOTE:
         return this.userService?.getRolUserStorage()?.find(val => val?.codigo == Permission?.BOTON_REPROCESAR_GESTION_LOTE);
+      case Permission.REPROCESAR_COLA:
+        return this.userService?.getRolUserStorage()?.find(val => val?.codigo == Permission?.REPROCESAR_COLA);
     }
-    
   }
 
   checkPermissionHeader(permission: Permission[]): boolean {
@@ -94,7 +95,5 @@ export class PermissionService {
       tem ? retur = true : retur = false;
     })
     return retur;
-
-
   }
 }

@@ -23,12 +23,12 @@ export class ErrorInterceptor implements HttpInterceptor {
           },
           error => {
             if (error.status == 0) {
-              this.toastrService.error('Error desconocido', 'ERROR!');
+              this.toastrService.error('Error desconocido ', 'ERROR!');
             } else if (error.status == 304) {
               this.toastrService.error('Error 304', 'ERROR!');
 
             } else if (error.status == 400) {
-              this.toastrService.error('Petición Incorrecta' + error.status, 'ERROR 400');
+              this.toastrService.error('Petición Incorrecta ' + error.status, 'ERROR 400');
 
             } else if (error.status == 401) {
 
@@ -40,16 +40,18 @@ export class ErrorInterceptor implements HttpInterceptor {
             } else if (error.status == 404) {
               this.toastrService.error(error.message);
               this._router.navigateByUrl('/error/404');
+            } else if (error.status == 409) {
+              console.log(error.error.error.mensaje)
+              this.toastrService.error(error.error.error.mensaje);
             } else if (error.status == 500) {
-              this.toastrService.error(error.message);
+              this.toastrService.error(error.error.error.mensaje);
 
             } else if (error.status == 503) {
               this.toastrService.error(error.message);
-              this._router.navigateByUrl('/error/503');
             } else if (error.status >= 900 && error.status < 1000) {
-              this.toastrService.error('Error en servicio' + error.status, 'ERROR');
+              this.toastrService.error('Error en servicio ' + error.status, 'ERROR');
             } else {
-              this.toastrService.error('Error en servicio' + error.status, 'ERROR');
+              this.toastrService.error('Error en servicio ' + error.status, 'ERROR');
             }
           })
       )

@@ -60,7 +60,7 @@ export class ModalReporteComponent implements OnInit {
     this.dellSuscribe.add(this.reporteService.setReportes(parametro).pipe(
     ).subscribe(
       (value: any) => {
-        if (value.response.code == 200 && value.response.data == 'Enviado a cola correctamente') {
+        if (value.response.code == 200) {
           this.dialogRef.close(false);
           this.alertService.success(value.response.data);
         }
