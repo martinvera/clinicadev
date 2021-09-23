@@ -370,7 +370,7 @@ export class CargadocPageComponent implements OnInit {
     this.dellSuscribe.add(this.documentService.createDocument(parametro).pipe(
     ).subscribe(
       (value: any) => {
-        if (value.response.code == 200 && value.response.data == 'Documento correctamente registrado.') {
+        if (value.response.code == 200 && value.response.data) {
           this.uploadForm.reset();
           this.onClearItems();
           this.toastrService.success(value.response.data);
