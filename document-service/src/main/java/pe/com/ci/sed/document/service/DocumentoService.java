@@ -8,6 +8,7 @@ import pe.com.ci.sed.document.persistence.entity.Documento;
 
 
 import java.util.List;
+import java.util.Optional;
 
 public interface DocumentoService {
 
@@ -31,4 +32,7 @@ public interface DocumentoService {
 
     public Object detalleDocumento(GenericRequest<BusquedaRequest> request);
 
+    public Optional<Documento> findById(String nroEncuentro);
+
+    public void delete(Documento documento);
 }

@@ -71,6 +71,7 @@ public class Documento implements Serializable {
     private String beneficioDesc;
 
     private String sede;
+    private String sedeDesc;
 
     @NotEmpty
     private List<@Valid Archivo> archivos;

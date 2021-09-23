@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.apache.logging.log4j.ThreadContext;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.http.HttpStatus;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -37,8 +38,9 @@ import pe.com.ci.sed.document.persistence.entity.Archivo;
 import pe.com.ci.sed.document.persistence.entity.Documento;
 import pe.com.ci.sed.document.persistence.entity.GenericDocument;
 import pe.com.ci.sed.document.persistence.entity.QueueMessageProcess;
-import pe.com.ci.sed.document.persistence.repository.DocumentRepository;
+import pe.com.ci.sed.document.property.SedeProperty;
 import pe.com.ci.sed.document.service.DocumentoService;
+import pe.com.ci.sed.document.service.StorageService;
 import pe.com.ci.sed.document.util.Constants;
 import pe.com.ci.sed.document.util.Constants.ORIGEN_SISTEMA;
 import pe.com.ci.sed.document.util.GenericUtil;
@@ -50,21 +52,21 @@ public class QueueServiceImpl {
     private final QueueClient queueClient;
     private final QueueClient queueClientError;
     private DocumentoService documentoService;
-    private DocumentRepository documentRepository;
     private final SalesForceServiceImpl salesForceService;
     private final XhisServiceImpl xhisService;
-    private StorageServiceImpl storageService;
+    private StorageService storageService;
+    private final SedeProperty sedeProperty;
 
     public QueueServiceImpl(QueueClient queueClient, QueueClient queueClientError, DocumentoService documentoService,
-                            DocumentRepository documentRepository, SalesForceServiceImpl salesForceService,
-                            XhisServiceImpl xhisService, StorageServiceImpl storageService) {
+                            SalesForceServiceImpl salesForceService, XhisServiceImpl xhisService,
+                            StorageServiceImpl storageService, SedeProperty sedeProperty) {
         this.queueClient = queueClient;
         this.queueClientError = queueClientError;
         this.documentoService = documentoService;
-        this.documentRepository = documentRepository;
         this.salesForceService = salesForceService;
         this.xhisService = xhisService;
         this.storageService = storageService;
+        this.sedeProperty = sedeProperty;
     }
 
     @Scheduled(fixedDelay = 5000)
@@ -154,19 +156,16 @@ public class QueueServiceImpl {
 
             if (genericDocument.getSistemaOrigen().equals(ORIGEN_SISTEMA.UNILAB.name())) {
                 RegistrarDocFromUnilabRequest documentUnilab = GenericUtil.mapper.readValue(storageService.download(url), RegistrarDocFromUnilabRequest.class);
-//                log.debug("json desde unilab {}", GenericUtil.writeValueAsString(documentUnilab));
                 documento = this.procesarMensajeUnilab(documentUnilab);
             }
 
             if (genericDocument.getSistemaOrigen().equals(ORIGEN_SISTEMA.IAFAS.name())) {
                 RegistrarDocRequest documentFromIafas = GenericUtil.mapper.readValue(storageService.download(url), RegistrarDocRequest.class);
-//                log.debug("json desde iafas {}", GenericUtil.writeValueAsString(documentFromIafas));
                 documento = this.procesarMensajeIafas(documentFromIafas);
             }
 
             if (genericDocument.getSistemaOrigen().equals(ORIGEN_SISTEMA.CONTROLDOCUMENTARIO.name())) {
                 RegistrarDocRequest documentFromCd = GenericUtil.mapper.readValue(storageService.download(url), RegistrarDocRequest.class);
-//                log.debug("json desde controldocumentario {}", GenericUtil.writeValueAsString(documentFromCd));
                 documento = this.procesarMensajeCd(documentFromCd);
             }
             return QueueMessageProcess.builder().error(false).queueMessageItem(message).documento(documento).url(url).build();
@@ -183,12 +182,12 @@ public class QueueServiceImpl {
         Documento documento = queueMessageProcess.getDocumento();
 
         if (Objects.nonNull(documento))
-            documentRepository.findById(documento.getNroEncuentro())
+            documentoService.findById(documento.getNroEncuentro())
                     .ifPresentOrElse(
                             documentoExistente -> {
                                 log.debug("Encuentro {} existente", documentoExistente.getNroEncuentro());
                                 try {
-                                    documentRepository.delete(documentoExistente);
+                                    documentoService.delete(documentoExistente);
                                     log.debug("Se eliminó el encuentro sin lote, encuentro {}", documentoExistente.getNroEncuentro());
                                     documentoService.modificarDocumentoIntegracion(documentoExistente, documento);
                                     log.debug("Se creó el nuevamente el encuentro Encuentro {} actualizado", documento.getNroEncuentro());
@@ -219,7 +218,8 @@ public class QueueServiceImpl {
         return Stream.of(factura.getEncuentros()).map(encuentro -> {
 
             List<Archivo> list = documentoService.inicializarTipoDocumentoRequerido(encuentro.getCoServicio(), factura.getCoMecaPago(), factura.getCoSubMecaPago(), factura.getCoGarante());
-
+            String sede = Strings.EMPTY;
+            String sedeDesc = Strings.EMPTY;
             if (ORIGEN_SISTEMA.IAFAS.name().equalsIgnoreCase(origenSistema.name())) {
                 Archivo archivo = Archivo.builder()
                         .archivoBytes(encuentro.getPdfHojaAutorizacion())
@@ -227,6 +227,11 @@ public class QueueServiceImpl {
                         .tipoDocumentoId(encuentro.getTipoDocumentoId())
                         .build();
                 list.add(archivo);
+                sede = sedeProperty.getEquivalencias().get(factura.getCoCentro().toUpperCase());
+                sedeDesc = this.getSede(factura.getCoCentro().toUpperCase());
+            } else if (origenSistema.name().equals(Constants.ORIGEN_SISTEMA.CONTROLDOCUMENTARIO.name())) {
+                sede = factura.getCoEstru();
+                sedeDesc = factura.getCoEstru();
             }
 
             return Documento.builder()
@@ -242,7 +247,8 @@ public class QueueServiceImpl {
                     .pacienteNroDocIdent(factura.getNuDocPaciente())
                     .pacienteTipoDocIdentId(factura.getTiDocPaciente())
                     .pacienteTipoDocIdentDesc(factura.getDeTiDocPaciente())
-
+                    .sede(sede)
+                    .sedeDesc(sedeDesc)
                     .fechaAtencion(encuentro.getFePrestacion())
                     .nroEncuentro(encuentro.getCoPrestacion())
                     .origenServicio(encuentro.getDeServicio())
@@ -274,6 +280,10 @@ public class QueueServiceImpl {
             documento.setPeticionLisID(unilabCreateRequest.getRequest().getCabecera().getIdPeticionLis());
             documento.setFechaTransaccion(GenericUtil.toDate(unilabCreateRequest.getRequest().getCabecera().getFeTrx(), Constants.UNILAB_FECHA_TRX));
             documento.setNroEncuentro(unilabCreateRequest.getRequest().getCabecera().getNuEncuentro());
+            documento.setPacienteTipoDocIdentDesc(unilabCreateRequest.getRequest().getCabecera().getTiDocumentoPac());
+            documento.setPacienteNroDocIdent(unilabCreateRequest.getRequest().getCabecera().getNuDocumentoPac());
+            documento.setSede(unilabCreateRequest.getRequest().getCabecera().getCoSede());
+            documento.setSedeDesc(this.getSede(unilabCreateRequest.getRequest().getCabecera().getCoSede().replaceAll("^0+", "")));
             documento.setFacturaNro("0");
             documento.setNroLote(0);
             documento.setOrigenDescripcion(ORIGEN_SISTEMA.UNILAB.name());
@@ -288,5 +298,12 @@ public class QueueServiceImpl {
             throw new DocumentException("Error creando la entidad de documento para unilab", HttpStatus.BAD_REQUEST);
         }
         return documento;
+    }
+
+    private String getSede(String coCentro) {
+        String sedeDescripcion = sedeProperty.getSedes().get(coCentro);
+        if (Strings.isNotBlank(sedeDescripcion))
+            return sedeDescripcion;
+        else return sedeProperty.getEquivalencias().get(coCentro);
     }
 }
