@@ -1,6 +1,7 @@
 package pe.com.ci.sed.document.errors;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
 import pe.com.ci.sed.document.model.generic.RequestHeader;
 
 import org.springframework.context.ApplicationContext;
@@ -113,6 +114,8 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     private ResponseEntity<Object> buildResponseEntity(Map<String, Object> body, HttpStatus status) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
         return new ResponseEntity<>(body, status);
     }
 

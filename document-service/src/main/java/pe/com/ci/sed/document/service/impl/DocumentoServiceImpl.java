@@ -13,6 +13,7 @@ import com.azure.cosmos.models.CosmosQueryRequestOptions;
 import com.azure.cosmos.models.FeedResponse;
 import com.azure.spring.data.cosmos.exception.CosmosAccessException;
 import org.apache.logging.log4j.util.Strings;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.azure.cosmos.CosmosContainer;
@@ -63,7 +64,7 @@ public class DocumentoServiceImpl extends GenericUtil implements DocumentoServic
             this.persistirDocumento(request.getRequest());
             return getResult("!Documento correctamente registrado!", request.getHeader());
         } else {
-            return getResult("!No es posible registrar Documento, ya que el Número de Encuentro ya existe!", request.getHeader());
+            throw new DocumentException("!No es posible registrar Documento, ya que el Número de Encuentro ya existe!", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
