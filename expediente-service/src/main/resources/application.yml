@@ -1,0 +1,42 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: expediente-service
+  main:
+    allow-bean-definition-overriding: true
+
+azure:
+  storage:
+    container-expiryTime : 10
+    key: ${AZURE_STORAGE_KEY:hfvi4pqqO+IklIl44+VzgB88rDCHTphIFOPyio4G16ErA3YjbtTGKkZX5akSczRcuIao2GTvSZe2m6axSLQ9+w==}
+    container-account: ${AZURE_STORAGE_ACCOUNT:clinicainternacional}
+    container-name: documentstorage
+    blob-endpoint: ${AZURE_STORAGE_BLOB_ENDPOINT:https://expdigstorage.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=nyA1FQmwmM0d%2F%2B1ggYKq58pWjBreIRPdj1Uy2D0OhqU%3D}
+    table-endpoint: ${AZURE_STORAGE_TABLE_ENDPOINT:TableEndpoint=https://clinicainternacional.table.core.windows.net/;SharedAccessSignature=sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacuptfx&se=2023-08-27T04:20:01Z&st=2021-08-26T20:20:01Z&spr=https&sig=HiU4QmRSQ5R8MgwvTSKBVCFnFMiRmHnVEEp7Lqt1ZVk%3D}
+  cosmos:
+    uri: ${AZURE_COSMOS_URI:https://expedientedigital.documents.azure.com:443/}
+    key: ${AZURE_COSMOS_KEY:RYAKMvHtY3udQz86RA969lVMvv8EYkkZlMzixkX7qrjlh13YNc0wr0bQMo9G3CYIlE56YlvMPdFlvxlwj5lJgQ==}
+    database: expedientedigital
+    queryMetricsEnabled: true
+
+  queue:
+    conection: ${AZURE_STORAGE_QUEUE_ENDPOINT:https://expdigstorage.queue.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=nyA1FQmwmM0d%2F%2B1ggYKq58pWjBreIRPdj1Uy2D0OhqU%3D}
+    cola: ${QUEUE_EXPEDIENTE:expedientedigitalqueuestorage2}
+
+rest:
+  client:
+    timeoutconnection: 5000
+    timeoutread: 5000
+    clinicalrecord:
+      endpoint: ${HOST_CLINICAL_SERVICE:http://localhost:8002}/v1/clinicalrecord
+      endpointReport: ${HOST_CLINICAL_SERVICE:http://localhost:8002}/v1/reportes
+      
+    document:
+      endpoint: ${HOST_DOCUMENT_SERVICE:http://localhost:8004}/v1/documento
+      timeoutconnection: 5000
+      timeoutread: 5000
+
+logging.level.org:
+  springframework: INFO

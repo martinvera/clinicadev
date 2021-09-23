@@ -1,0 +1,68 @@
+trigger:
+  branches:
+    include:
+    - dev
+    - qa
+    - master
+
+variables:
+  vmImageName: ubuntu-20.04
+  imageRepository: 'sed/ms-expediente-service'
+
+  ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}:
+    environment: 'Dev'
+    namespace: expediente-digital-ms-dev
+    applicationName: expediente-digital-ms-dev-expediente-service
+  
+  ${{ if eq(variables['Build.SourceBranchName'], 'qa') }}:
+    environment: 'Test'
+    namespace: expediente-digital-ms-qa
+    applicationName: expediente-digital-ms-qa-expediente-service
+  
+  ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
+    environment: 'Prod'
+    namespace: expediente-digital-ms-prd
+    applicationName: expediente-digital-ms-prd-expediente-service
+
+pool:
+  vmImage: $(vmImageName)
+  
+resources:
+  repositories:
+    - repository: pipelines
+      type: git
+      name: sed-pipelines
+
+stages:
+  - ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}:
+    - template: sed-microservices/azure-pipelines.yml@pipelines
+      parameters:
+        environment: $(environment)
+        namespace: $(namespace)
+        applicationName: $(applicationName)
+        azureVariableGroup: expediente-service-dev
+        imageRepository: $(imageRepository)
+        kubernetesServiceConnection: aks-expediente-digital-dev
+        configMapName: expediente-config
+
+  - ${{ if eq(variables['Build.SourceBranchName'], 'qa') }}:
+    - template: sed-microservices/azure-pipelines.yml@pipelines
+      parameters:
+        environment: $(environment)
+        namespace: $(namespace)
+        applicationName: $(applicationName)
+        azureVariableGroup: expediente-service-qa
+        imageRepository: $(imageRepository)
+        kubernetesServiceConnection: aks-expediente-digital-qa
+        configMapName: expediente-config
+
+  - ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
+    - template: sed-microservices/azure-pipelines.yml@pipelines
+      parameters:
+        environment: $(environment)
+        namespace: $(namespace)
+        applicationName: $(applicationName)
+        azureVariableGroup: expediente-service-prd
+        imageRepository: $(imageRepository)
+        kubernetesServiceConnection: aks-expediente-digital-prd
+        configMapName: expediente-config

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="imagen_patologico" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a3f6e0e0-2690-4c1c-9d09-1e17e7006966">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="xhis"/>
+	<queryString language="JSON">
+		<![CDATA[laboratorioImagenes]]>
+	</queryString>
+	<field name="codigo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="codigo"/>
+		<fieldDescription><![CDATA[codigo]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descripcion"/>
+		<fieldDescription><![CDATA[descripcion]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tipo"/>
+		<fieldDescription><![CDATA[tipo]]></fieldDescription>
+	</field>
+	<field name="tipoExamen" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tipoExamen"/>
+		<fieldDescription><![CDATA[tipoExamen]]></fieldDescription>
+	</field>
+	<field name="descExamen" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descExamen"/>
+		<fieldDescription><![CDATA[descExamen]]></fieldDescription>
+	</field>
+	<field name="tipoExamen1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tipoExamen1"/>
+		<fieldDescription><![CDATA[tipoExamen1]]></fieldDescription>
+	</field>
+	<field name="descExamen1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descExamen1"/>
+		<fieldDescription><![CDATA[descExamen1]]></fieldDescription>
+	</field>
+	<field name="prioridad" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="prioridad"/>
+		<fieldDescription><![CDATA[prioridad]]></fieldDescription>
+	</field>
+	<field name="codSegusExamen" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="codSegusExamen"/>
+		<fieldDescription><![CDATA[codSegusExamen]]></fieldDescription>
+	</field>
+	<field name="descSegusExamen" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descSegusExamen"/>
+		<fieldDescription><![CDATA[descSegusExamen]]></fieldDescription>
+	</field>
+	<field name="hisExamen" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="hisExamen"/>
+		<fieldDescription><![CDATA[hisExamen]]></fieldDescription>
+	</field>
+	<field name="tipoExamen2" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tipoExamen2"/>
+		<fieldDescription><![CDATA[tipoExamen2]]></fieldDescription>
+	</field>
+	<field name="descExamen2" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descExamen2"/>
+		<fieldDescription><![CDATA[descExamen2]]></fieldDescription>
+	</field>
+	<field name="lateralidad" class="java.lang.String"/>
+	<field name="requiereSedacion" class="java.lang.String"/>
+	<field name="contraste" class="java.lang.String"/>
+	<field name="indicaciones" class="java.lang.String"/>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="135" height="10" forecolor="#FFFFFF" backcolor="#777B7B" uuid="488bb3a2-0f05-4cca-b05c-aa7a5553ad75">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Procedimiento]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="10" width="135" height="10" uuid="0ea74b86-950c-4cd4-b970-e9fd58bbd5e2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Tipo de "+$F{descExamen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="135" y="0" width="400" height="10" forecolor="#FFFFFF" backcolor="#787C7C" uuid="bb611ef2-23ab-4dfc-aee1-29856454a40d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{tipoExamen}+ " - "+$F{descExamen}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="135" y="10" width="400" height="10" uuid="39774f87-faaa-46d4-ba41-2c611f007aeb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{tipoExamen1}+ " - "+$F{descExamen1}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10">
+			<printWhenExpression><![CDATA[!$F{descExamen1}.equals("")]]></printWhenExpression>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="135" height="10" uuid="fb0376d3-b5bb-4ba8-84b4-e137f5a8b5e7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Subtipo de Imágenes"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="135" y="0" width="400" height="10" uuid="49c64883-38a4-4924-87c1-24d62d2e8bd3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+					<printWhenExpression><![CDATA[!$F{descExamen1}.equals("")]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{hisExamen}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="0" width="135" height="10" uuid="77f2af1a-895b-4ae0-9a49-b0b8ddc88914">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Segus del Procedimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="135" height="10" uuid="f123d058-f27c-419c-b0e8-4301981c9fbc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Procedimiento]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="135" y="0" width="400" height="10" uuid="90f5c223-e83f-4f83-9d4f-63889656b32b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{codSegusExamen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="135" y="10" width="400" height="10" uuid="669463be-1c7a-4379-8368-f837a96b17e9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{descSegusExamen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="405" y="30" width="130" height="10" uuid="e7541a23-c7d3-418d-9edc-6c9090dd24c9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="405" y="20" width="130" height="10" uuid="eefd67f1-b5ca-4077-971f-5066f024c4d8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="294" y="20" width="111" height="10" uuid="1e1fb779-f09b-4863-9fba-d75ee56e514b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Requiere sedación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="294" y="30" width="111" height="10" uuid="26d5104f-c2f2-486b-9893-7a4917452a89">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lateralidad]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="135" y="30" width="159" height="10" uuid="580f4646-80cb-43f2-9d61-4403e8b00982">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{prioridad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="135" y="20" width="159" height="10" uuid="a4bbfbf4-8643-4cdb-b7c0-b30f0bbf7824">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="135" height="10" uuid="e22eb90c-ba6e-44fd-b92a-523ca3e56e64">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contraste]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="135" height="10" uuid="2d019532-1096-433a-95bd-7b176e3219d0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prioridad del Examen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="135" height="10" uuid="5a5da638-350f-4e80-9956-a86980e7ea9e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comentarios]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="135" y="40" width="400" height="10" uuid="e17abc7c-d316-40a0-8a54-38f65fa49513">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+($F{indicaciones}.toString().equals("null") ? "": $F{indicaciones})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

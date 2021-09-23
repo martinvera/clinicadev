@@ -1,0 +1,55 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.7'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id "org.sonarqube" version "3.3"
+}
+
+group = 'pe.com.ci.sed.integrator'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
+}
+
+ext {
+    set('azureVersion', "3.5.0")
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+    implementation group: 'net.minidev', name: 'json-smart', version: '2.4.7'
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.10'
+    
+    implementation 'com.azure:azure-storage-blob'
+    implementation 'com.azure:azure-storage-queue:12.10.0-beta.1'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "com.azure.spring:azure-spring-boot-bom:${azureVersion}"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

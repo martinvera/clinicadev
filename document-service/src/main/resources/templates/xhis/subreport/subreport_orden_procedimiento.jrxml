@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreport_orden_procedimiento" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a3f6e0e0-2690-4c1c-9d09-1e17e7006966">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="XHIS"/>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="deTecnicaProced" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="deTecnicaProced"/>
+		<fieldDescription><![CDATA[deTecnicaProced]]></fieldDescription>
+	</field>
+	<field name="tipoExamen" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tipoExamen"/>
+		<fieldDescription><![CDATA[tipoExamen]]></fieldDescription>
+	</field>
+	<field name="descExamen" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descExamen"/>
+		<fieldDescription><![CDATA[descExamen]]></fieldDescription>
+	</field>
+	<field name="tipoExamen1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tipoExamen1"/>
+		<fieldDescription><![CDATA[tipoExamen1]]></fieldDescription>
+	</field>
+	<field name="descExamen1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descExamen1"/>
+		<fieldDescription><![CDATA[descExamen1]]></fieldDescription>
+	</field>
+	<field name="prioridad" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="prioridad"/>
+		<fieldDescription><![CDATA[prioridad]]></fieldDescription>
+	</field>
+	<field name="codSegusExamen" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="codSegusExamen"/>
+		<fieldDescription><![CDATA[codSegusExamen]]></fieldDescription>
+	</field>
+	<field name="descSegusExamen" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descSegusExamen"/>
+		<fieldDescription><![CDATA[descSegusExamen]]></fieldDescription>
+	</field>
+	<field name="hisExamen" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="hisExamen"/>
+		<fieldDescription><![CDATA[hisExamen]]></fieldDescription>
+	</field>
+	<field name="tipoHospitalizacion" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tipoHospitalizacion"/>
+		<fieldDescription><![CDATA[tipoHospitalizacion]]></fieldDescription>
+	</field>
+	<field name="feProbHosp" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="feProbHosp"/>
+		<fieldDescription><![CDATA[feProbHosp]]></fieldDescription>
+	</field>
+	<field name="hoProbHosp" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="hoProbHosp"/>
+		<fieldDescription><![CDATA[hoProbHosp]]></fieldDescription>
+	</field>
+	<field name="feProbProced" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="feProbProced"/>
+		<fieldDescription><![CDATA[feProbProced]]></fieldDescription>
+	</field>
+	<field name="hoProbProced" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="hoProbProced"/>
+		<fieldDescription><![CDATA[hoProbProced]]></fieldDescription>
+	</field>
+	<field name="indicaciones" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="indicaciones"/>
+		<fieldDescription><![CDATA[indicaciones]]></fieldDescription>
+	</field>
+	<field name="caTimeHosp" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="caTimeHosp"/>
+		<fieldDescription><![CDATA[caTimeHosp]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="12">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="160" height="12" forecolor="#FFFFFF" backcolor="#777B7B" uuid="488bb3a2-0f05-4cca-b05c-aa7a5553ad75">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Procedimiento]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="160" y="0" width="165" height="12" forecolor="#FFFFFF" backcolor="#787C7C" uuid="bb611ef2-23ab-4dfc-aee1-29856454a40d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Hospitalización/Procedimiento"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="325" y="0" width="66" height="12" forecolor="#FFFFFF" backcolor="#787C7C" uuid="2d019532-1096-433a-95bd-7b176e3219d0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prioridad]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" mode="Opaque" x="391" y="0" width="143" height="12" forecolor="#FFFFFF" backcolor="#787C7C" uuid="580f4646-80cb-43f2-9d61-4403e8b00982">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prioridad}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{tipoHospitalizacion}!=null && !$F{tipoHospitalizacion}.equals("")]]></printWhenExpression>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="160" height="10" uuid="e02e973f-cd24-47bd-9ba5-356521fba271">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Tipo de Hospitalización"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="0" width="374" height="10" uuid="761de693-47c1-43f5-9502-bb97a99ed6c0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoHospitalizacion}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="60">
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="160" height="10" uuid="0ea74b86-950c-4cd4-b970-e9fd58bbd5e2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Tipo de Procedimiento"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="160" height="10" uuid="77f2af1a-895b-4ae0-9a49-b0b8ddc88914">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Segus del Procedimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="160" height="10" uuid="f123d058-f27c-419c-b0e8-4301981c9fbc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Procedimiento]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="0" width="374" height="10" uuid="39774f87-faaa-46d4-ba41-2c611f007aeb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="10" width="374" height="10" uuid="90f5c223-e83f-4f83-9d4f-63889656b32b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codSegusExamen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="20" width="374" height="10" uuid="669463be-1c7a-4379-8368-f837a96b17e9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descSegusExamen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="30" width="374" height="10" uuid="a4bbfbf4-8643-4cdb-b7c0-b30f0bbf7824">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="30" width="160" height="10" uuid="e22eb90c-ba6e-44fd-b92a-523ca3e56e64">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Otro Procedimiento]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="40" width="374" height="10" uuid="9acf23d4-6851-4542-b65a-a8f35672f0f1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hisExamen} + " - "+$F{deTecnicaProced}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="160" height="10" uuid="66fcdd04-bf8d-4159-8fa0-07ca628c7cd7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Técnica del Procedimiento]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="50" width="374" height="10" uuid="df3ff043-f75b-48b7-9b2e-5a3b4f189d5b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="50" width="160" height="10" uuid="f9ff0140-dd85-4d32-bfcb-37ab8b424d71">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar]]></text>
+			</staticText>
+		</band>
+		<band height="10">
+			<printWhenExpression><![CDATA[$F{feProbHosp} != null && !$F{feProbHosp}.equals("")]]></printWhenExpression>
+			<staticText>
+				<reportElement x="0" y="0" width="160" height="10" uuid="9f45846b-c8a6-4a87-8757-c303644258fa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha y Hora PROBABLE de Hospitalización]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="0" width="374" height="10" uuid="4953d054-ddcc-4ccb-be2e-6999e534c6a3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{feProbHosp} != null? $F{feProbHosp}: "")+ " "+($F{hoProbHosp}!= null ? $F{hoProbHosp}: "")]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="30">
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="0" width="374" height="10" uuid="34fb530f-0686-4483-9f81-284e0e48b4fe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($F{feProbProced} != null ? $F{feProbProced}: "")+ " "+($F{hoProbProced}!=null?$F{hoProbProced}: "")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="160" height="10" uuid="051e9dab-a087-4d81-be04-95520ea71400">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha y Hora PROBABLE de Procedimiento]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="10" width="374" height="10" uuid="f14f50fa-2857-43c9-b780-bb371381fe59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{indicaciones}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="160" height="10" uuid="788accd3-9b8b-4963-98f6-4b362f30d303">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comentarios/Indicaciones]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="20" width="374" height="10" uuid="1a51ec5a-ce8a-43ca-aa2f-2e0696b52476">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="160" height="10" uuid="6012c730-1c36-49cb-85fc-f4edde1470e3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tratamiento]]></text>
+			</staticText>
+		</band>
+		<band height="10">
+			<printWhenExpression><![CDATA[!$F{caTimeHosp}.equals("") && $F{caTimeHosp} != null]]></printWhenExpression>
+			<staticText>
+				<reportElement x="0" y="0" width="160" height="10" uuid="2221d14f-25f3-4762-9b86-734a87e03ed3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tiempo Aproximado de Hospitalización]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="160" y="0" width="374" height="10" uuid="0c8a6867-c566-459e-b690-222e48946c0c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{caTimeHosp}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="160" height="10" uuid="f90c4eda-fc34-4cb0-b000-6b3bda4d94f1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Recursos Requeridos]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="0" width="374" height="10" uuid="7642079e-7141-40e0-960b-c622f80f3ea8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="160" height="10" uuid="d0fd99d8-e7b1-47a1-939c-1687946f2ae3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Requiere Transfusión Sanguinea]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="0" width="374" height="10" uuid="08c6d629-4b90-4d5c-93b8-ab5e494f5741">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="160" height="10" uuid="bd0ca428-e807-49f7-8f87-61837abcca8c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Equipos, Materiales u Otros]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="160" y="10" width="374" height="10" uuid="2b77c75b-3aed-4428-988b-afdf977a166b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

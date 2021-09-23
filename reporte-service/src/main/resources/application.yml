@@ -1,0 +1,32 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: reporte-service
+  main:
+    allow-bean-definition-overriding: true
+
+azure:
+  storage:
+    container-expiryTime : 10000
+    key: ${AZURE_STORAGE_KEY:hfvi4pqqO+IklIl44+VzgB88rDCHTphIFOPyio4G16ErA3YjbtTGKkZX5akSczRcuIao2GTvSZe2m6axSLQ9+w==}
+    container-account: ${AZURE_STORAGE_ACCOUNT:clinicainternacional}
+    container-name: documentstorage
+    blob-endpoint: ${AZURE_STORAGE_BLOB_ENDPOINT:https://expdigstorage.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=nyA1FQmwmM0d%2F%2B1ggYKq58pWjBreIRPdj1Uy2D0OhqU%3D}
+    table-name: storagetablereporte
+    table-endpoint: ${AZURE_STORAGE_TABLE_ENDPOINT:TableEndpoint=https://expdigstorage.table.core.windows.net/;SharedAccessSignature=sv=2020-08-04&ss=t&srt=sco&sp=rwdlacu&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=2BGO2qichG7Q1HI8%2FWAqqrScEtEvCNMtQMhI6vgVbT0%3D}
+  queue:
+    conection: ${AZURE_STORAGE_QUEUE_ENDPOINT:https://expdigstorage.queue.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=nyA1FQmwmM0d%2F%2B1ggYKq58pWjBreIRPdj1Uy2D0OhqU%3D}
+    reporte.cola: ${QUEUE_REPORTE:reportqueuestorage3}
+
+rest.client:
+  timeout:
+    connection : 10000
+    read : 10000
+  expediente.endpoint: ${HOST_EXPEDIENTE_SERVICE:http://localhost:8003}/v1/expediente
+  document.endpoint: ${HOST_DOCUMENT_SERVICE:http://localhost:8004}/v1/documento
+  clinical.endpoint: ${HOST_CLINICALRECORD_SERVICE:http://localhost:8002}/v1/
+
+logging.level.org:
+  springframework: INFO

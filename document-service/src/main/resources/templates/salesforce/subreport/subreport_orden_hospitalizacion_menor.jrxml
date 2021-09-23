@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="imagen_patologico" columnCount="2" pageWidth="595" pageHeight="842" columnWidth="297" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a3f6e0e0-2690-4c1c-9d09-1e17e7006966">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CLINICAL_RECORD "/>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="parto" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="parto"/>
+		<fieldDescription><![CDATA[parto]]></fieldDescription>
+	</field>
+	<field name="nombrePadre" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nombrePadre"/>
+		<fieldDescription><![CDATA[nombrePadre]]></fieldDescription>
+	</field>
+	<field name="nombreMadre" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nombreMadre"/>
+		<fieldDescription><![CDATA[nombreMadre]]></fieldDescription>
+	</field>
+	<field name="motivoCesarea" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="motivoCesarea"/>
+		<fieldDescription><![CDATA[motivoCesarea]]></fieldDescription>
+	</field>
+	<field name="indiceApgar" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="indiceApgar"/>
+		<fieldDescription><![CDATA[indiceApgar]]></fieldDescription>
+	</field>
+	<field name="descDesarrolloPsicomotor" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descDesarrolloPsicomotor"/>
+		<fieldDescription><![CDATA[descDesarrolloPsicomotor]]></fieldDescription>
+	</field>
+	<field name="descAlimentacion" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="descAlimentacion"/>
+		<fieldDescription><![CDATA[descAlimentacion]]></fieldDescription>
+	</field>
+	<field name="desaPsicomotor" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="desaPsicomotor"/>
+		<fieldDescription><![CDATA[desaPsicomotor]]></fieldDescription>
+	</field>
+	<field name="alimentacion" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="alimentacion"/>
+		<fieldDescription><![CDATA[alimentacion]]></fieldDescription>
+	</field>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="535" height="12" forecolor="#FFFFFF" backcolor="#CCCCCC" uuid="41a46d39-52ed-4c22-9b54-d32e3b6b097a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#CCCCCC"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[- Antecedente Personal Menor]]></text>
+			</staticText>
+		</band>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="-2" width="100" height="10" uuid="77f2af1a-895b-4ae0-9a49-b0b8ddc88914">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre de la madre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="8" width="100" height="10" uuid="f123d058-f27c-419c-b0e8-4301981c9fbc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Parto]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="100" y="-2" width="180" height="10" uuid="90f5c223-e83f-4f83-9d4f-63889656b32b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{nombreMadre}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="100" y="8" width="180" height="10" uuid="669463be-1c7a-4379-8368-f837a96b17e9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parto}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="100" y="18" width="180" height="10" uuid="a4bbfbf4-8643-4cdb-b7c0-b30f0bbf7824">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{indiceApgar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="18" width="100" height="10" uuid="e22eb90c-ba6e-44fd-b92a-523ca3e56e64">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Indice de APGAR]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="100" y="28" width="180" height="20" uuid="9acf23d4-6851-4542-b65a-a8f35672f0f1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{descAlimentacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="28" width="100" height="20" uuid="66fcdd04-bf8d-4159-8fa0-07ca628c7cd7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción de alimentación]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="100" y="48" width="180" height="20" uuid="df3ff043-f75b-48b7-9b2e-5a3b4f189d5b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{descDesarrolloPsicomotor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="48" width="100" height="20" uuid="f9ff0140-dd85-4d32-bfcb-37ab8b424d71">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción de Desarrollo Psicomotor]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="366" y="-2" width="169" height="10" uuid="4953d054-ddcc-4ccb-be2e-6999e534c6a3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{nombrePadre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="286" y="-2" width="80" height="10" uuid="9f45846b-c8a6-4a87-8757-c303644258fa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Padre]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="366" y="8" width="169" height="10" uuid="34fb530f-0686-4483-9f81-284e0e48b4fe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{motivoCesarea}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="286" y="8" width="80" height="10" uuid="051e9dab-a087-4d81-be04-95520ea71400">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Motivo de cesárea]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="366" y="18" width="169" height="10" uuid="f14f50fa-2857-43c9-b780-bb371381fe59">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{alimentacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="286" y="18" width="80" height="10" uuid="788accd3-9b8b-4963-98f6-4b362f30d303">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alimentación]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement stretchType="RelativeToTallestObject" x="366" y="28" width="169" height="20" uuid="1a51ec5a-ce8a-43ca-aa2f-2e0696b52476">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0328ba67-4c1e-4ecb-8faf-28a14000e840"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{desaPsicomotor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="286" y="28" width="80" height="20" uuid="6012c730-1c36-49cb-85fc-f4edde1470e3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desarrollo psicomotor]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

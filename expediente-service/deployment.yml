@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expediente-service
+  namespace: expedientedigital
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: expediente-service
+  template:
+    metadata:
+      labels:
+        app: expediente-service
+    spec:
+      containers:
+        - name: expedienteservice
+          image: expedientedigital/expediente-services:v1
+          ports:
+            - containerPort: 80
+          env:
+            - name: HOST_CLINICAL_SERVICE
+              value: 52.149.171.29
+            - name: HOST_DOCUMENT_SERVICE
+              value: 20.81.88.13
+            - name: AZURE_COSMOS_URI
+              value: https://expedientedigital.documents.azure.com:443/
+            - name: AZURE_COSMOS_KEY
+              value: RYAKMvHtY3udQz86RA969lVMvv8EYkkZlMzixkX7qrjlh13YNc0wr0bQMo9G3CYIlE56YlvMPdFlvxlwj5lJgQ==
+            - name: QUEUE_EXPEDIENTE
+              value: expedientedigitalqueuestorage
+            - name: AZURE_STORAGE_BLOB_ENDPOINT
+              value: https://expdigstorage.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=nyA1FQmwmM0d%2F%2B1ggYKq58pWjBreIRPdj1Uy2D0OhqU%3D
+            - name: AZURE_STORAGE_TABLE_ENDPOINT
+              value: TableEndpoint=https://expdigstorage.table.core.windows.net/;SharedAccessSignature=sv=2020-08-04&ss=t&srt=sco&sp=rwdlacu&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=2BGO2qichG7Q1HI8%2FWAqqrScEtEvCNMtQMhI6vgVbT0%3D
+            - name: AZURE_STORAGE_QUEUE_ENDPOINT
+              value: https://expdigstorage.queue.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=nyA1FQmwmM0d%2F%2B1ggYKq58pWjBreIRPdj1Uy2D0OhqU%3D
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: expediente-service
+  namespace: expedientedigital
+  labels:
+    app: expediente-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+  selector:
+    app: expediente-service
+

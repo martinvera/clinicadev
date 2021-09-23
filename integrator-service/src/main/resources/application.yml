@@ -1,0 +1,20 @@
+server:
+  port: 8005
+
+spring:
+  application:
+    name: integrator-service
+  main:
+    allow-bean-definition-overriding: true
+
+azure:
+  queue:
+    conection: ${AZURE_STORAGE_QUEUE_ENDPOINT:https://expdigstorage.queue.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=nyA1FQmwmM0d%2F%2B1ggYKq58pWjBreIRPdj1Uy2D0OhqU%3D}
+    clinicalrecord-cola: ${QUEUE_CLINICAL:clinicalrecordqueuestorage4}
+    document-cola: ${QUEUE_DOCUMENT:documentqueuestorage4}
+  storage:
+    container-name: documentstorage
+    blob-endpoint: ${AZURE_STORAGE_BLOB_ENDPOINT:https://expdigstorage.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=nyA1FQmwmM0d%2F%2B1ggYKq58pWjBreIRPdj1Uy2D0OhqU%3D}
+
+logging.level.org:
+  springframework: INFO

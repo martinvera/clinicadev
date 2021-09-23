@@ -1,0 +1,44 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: document-service
+  main:
+    allow-bean-definition-overriding: true
+
+azure:
+  storage:
+    container-expiryTime: 10000
+    key: ${AZURE_STORAGE_KEY:hfvi4pqqO+IklIl44+VzgB88rDCHTphIFOPyio4G16ErA3YjbtTGKkZX5akSczRcuIao2GTvSZe2m6axSLQ9+w==}
+    container-account: ${AZURE_STORAGE_ACCOUNT:clinicainternacional}
+    container-name: documentstorage
+    blob-endpoint: ${AZURE_STORAGE_BLOB_ENDPOINT:https://rgbrmea2expmeddev.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacuptfx&se=2029-12-31T06:16:24Z&st=2021-08-09T22:16:24Z&spr=https&sig=AsvgNoBVI0WW0Ii9HahKlokVsrd0VbAhQHp4u67BECg%3D}
+    table-name: storagetableGaranteMecanismo
+    table-endpoint: ${AZURE_STORAGE_TABLE_ENDPOINT:TableEndpoint=https://rgbrmea2expmeddev.table.core.windows.net/;SharedAccessSignature=sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacuptfx&se=2029-12-31T06:16:24Z&st=2021-08-09T22:16:24Z&spr=https&sig=AsvgNoBVI0WW0Ii9HahKlokVsrd0VbAhQHp4u67BECg%3D}
+  cosmos:
+    uri: ${AZURE_COSMOS_URI:https://cosmodb-clinicas-dev-eastus2.documents.azure.com:443/}
+    key: ${AZURE_COSMOS_KEY:C6ihsWwjTqp2DSZhIBnYQmizQiEfTGrOtrAQhHGJ7a7mjcrZaQnwmRKPCzlp1zByOxYR1FmbC0FN48aDEmIdXQ==}
+    database: expedientedigital
+    container-name: document
+
+  queue:
+    conection: ${AZURE_STORAGE_QUEUE_ENDPOINT:https://rgbrmea2expmeddev.queue.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacuptfx&se=2029-12-31T06:16:24Z&st=2021-08-09T22:16:24Z&spr=https&sig=AsvgNoBVI0WW0Ii9HahKlokVsrd0VbAhQHp4u67BECg%3D}
+    cola: ${QUEUE_DOCUMENT:documentqueuestorage3}
+    colaerror: ${QUEUE_DOCUMENT_ERROR:documentqueuestorageerror3}
+
+rest:
+  timeout:
+    connection: 10000
+    read: 10000
+  client:
+    integracionclinica: ${HOST_SALESFORCE_SERVICE:https://integradordev.clinicainternacional.com.pe:443}
+    expediente: ${HOST_EXPEDIENTE_SERVICE:http://localhost:8003}/v1/expediente
+    clinicalrecord: ${HOST_CLINICAL_SERVICE:http://localhost:8002}/v1/clinicalrecord
+  credentials:
+    integracionclinica:
+      password: ${SSL_CERT_SALESFORCE_PWD:Rh4ps0dyC1}
+      url: ${SSL_CERT_SALESFORCE_URI:https://expdigstorage.blob.core.windows.net/documentstorage/certificado/integradordev.clinicainternacional.com.pe.pfx}
+
+logging.level.org:
+  springframework: INFO

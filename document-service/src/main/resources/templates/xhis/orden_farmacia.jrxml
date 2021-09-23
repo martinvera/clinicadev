@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="formato_farmacia" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="2001d476-b960-4aae-b3bb-3fc53fdd837b">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="543"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="xhis"/>
+	<import value="javax.imageio.ImageIO"/>
+	<import value="org.apache.commons.codec.binary.Base64"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#CFDBE6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="medicamentos" uuid="422f0554-b495-401a-9933-c5fb50425b2d">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JSON CLINICAL"/>
+		<queryString language="json">
+			<![CDATA[medicamentos]]>
+		</queryString>
+		<field name="viaAdministracion" class="java.lang.String"/>
+		<field name="tiempo" class="java.lang.String"/>
+		<field name="nombre" class="java.lang.String"/>
+		<field name="indicaciones" class="java.lang.String"/>
+		<field name="frecuencia" class="java.lang.String"/>
+		<field name="dosis" class="java.lang.String"/>
+		<field name="cantidad" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="LOGO" class="java.lang.String">
+		<defaultValueExpression><![CDATA["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"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="FIRMAMEDICO" class="java.lang.String">
+		<defaultValueExpression><![CDATA["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"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="horaAperturaCita" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="rucCI" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="telefonoCI" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nroEnc" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sede" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nombrePaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="apePaternoPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="apeMaternoPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tipoDocPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tipoDocPacienteDesc" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nroDocPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="edadPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fechaNacPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sexo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="hhccPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="telefonoPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="celularPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="direccionPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="distritoPaciente" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="garante" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="producto" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="parentesco" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="estadoPoliza" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nombreTitular" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="apePaternoTitular" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="apeMaternoTitular" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="numContrato" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="planSiteds" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="compania" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="plan" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="planSitedsDesc" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nroAutorizacion" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="beneficio" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="deducible" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="coaseguro" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="finCarencia" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="observAsegurado" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nombreMedico" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="apePaternoMedico" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="apeMaternoMedico" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="cmp" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tipoCita" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="firmaMedico" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="sedeDireccion" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="especialidadCod" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="especialidadDesc" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fechaEnc" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fechaVenc" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="codigosCi10" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="nroGuias" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString language="JSON">
+		<![CDATA[guiaFarmacia.detalles]]>
+	</queryString>
+	<field name="nuGuiaFar" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="nuGuiaFar"/>
+		<fieldDescription><![CDATA[nuGuiaFar]]></fieldDescription>
+	</field>
+	<field name="coPrefijoGuia" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="coPrefijoGuia"/>
+		<fieldDescription><![CDATA[coPrefijoGuia]]></fieldDescription>
+	</field>
+	<field name="tiProdFarmacia" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tiProdFarmacia"/>
+		<fieldDescription><![CDATA[tiProdFarmacia]]></fieldDescription>
+	</field>
+	<field name="coProdFarmacia" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="coProdFarmacia"/>
+		<fieldDescription><![CDATA[coProdFarmacia]]></fieldDescription>
+	</field>
+	<field name="deProdFarmacia" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="deProdFarmacia"/>
+		<fieldDescription><![CDATA[deProdFarmacia]]></fieldDescription>
+	</field>
+	<field name="caProdFarmacia" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="caProdFarmacia"/>
+		<fieldDescription><![CDATA[caProdFarmacia]]></fieldDescription>
+	</field>
+	<field name="vaPrecioUnit" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="vaPrecioUnit"/>
+		<fieldDescription><![CDATA[vaPrecioUnit]]></fieldDescription>
+	</field>
+	<field name="vaImporte" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="vaImporte"/>
+		<fieldDescription><![CDATA[vaImporte]]></fieldDescription>
+	</field>
+	<field name="esPagoProd" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="esPagoProd"/>
+		<fieldDescription><![CDATA[esPagoProd]]></fieldDescription>
+	</field>
+	<field name="noGenerico" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="noGenerico"/>
+		<fieldDescription><![CDATA[noGenerico]]></fieldDescription>
+	</field>
+	<field name="deUnMedida" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="deUnMedida"/>
+		<fieldDescription><![CDATA[deUnMedida]]></fieldDescription>
+	</field>
+	<field name="caMultidosis" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="caMultidosis"/>
+		<fieldDescription><![CDATA[caMultidosis]]></fieldDescription>
+	</field>
+	<field name="deUnMultidosis" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="deUnMultidosis"/>
+		<fieldDescription><![CDATA[deUnMultidosis]]></fieldDescription>
+	</field>
+	<field name="via" class="java.lang.String"/>
+	<variable name="logotipo" class="java.awt.Image">
+		<variableExpression><![CDATA[ImageIO.read(new ByteArrayInputStream(Base64.decodeBase64($P{LOGO}.getBytes("UTF-8"))))]]></variableExpression>
+	</variable>
+	<variable name="firmamedico" class="java.awt.Image">
+		<variableExpression><![CDATA[ImageIO.read(new ByteArrayInputStream(Base64.decodeBase64($P{FIRMAMEDICO}.getBytes("UTF-8"))))]]></variableExpression>
+	</variable>
+	<title>
+		<band height="175" splitType="Stretch">
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle" evaluationTime="Report">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="2" width="170" height="60" uuid="8b4d6e90-e978-4240-b3ed-64be8e96792c"/>
+				<imageExpression><![CDATA[$V{logotipo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Transparent" x="170" y="22" width="200" height="24" forecolor="#030303" backcolor="#FFFFFF" uuid="530bd03d-b647-4675-a816-bf1d87031c5b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ORDEN DE FARMACIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="97" width="84" height="10" uuid="cf643d54-af8e-42d0-9e38-7f1fef79fb1c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EPISODIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="97" width="54" height="10" uuid="0ece4690-fb55-493c-b4f6-05498857ed95">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NHC]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="84" y="107" width="180" height="10" uuid="b64d183e-a1f0-4381-9b21-793ee99cb906">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{nombrePaciente} + " "+ $P{apePaternoPaciente}+ " "+ $P{apeMaternoPaciente}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="84" y="127" width="317" height="10" uuid="f41a4f5c-96c3-46bc-8316-3f1abdde9ab2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{garante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="97" width="86" height="10" uuid="6dc6fd9b-ff8e-48b7-b8fe-3ec58f4c2856"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{nroEnc}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="320" y="107" width="81" height="10" uuid="b468c24a-8cb1-4058-88f3-0f973f8409c9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{nroDocPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="97" width="81" height="10" uuid="6193d01c-f9e8-402a-a8f7-cb6f2ed86e67"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{hhccPaciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="107" width="84" height="10" uuid="838c3114-74ae-4f61-a88f-2c911dfac133">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PACIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="147" width="84" height="10" uuid="25d0e1a1-140f-4466-baca-d2c270bd3f74">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESPECIALIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="157" width="84" height="10" uuid="ddaea1ad-1a2b-41cb-9bdc-13fc7955aa64">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CI 10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="127" width="84" height="10" uuid="3ab8b7c6-9c86-48f4-aa63-c46bc92f751c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASEGURADORA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="137" width="84" height="10" uuid="f1a62404-21b4-44f8-96dc-48554c95fa3a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPLEADORA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="107" width="54" height="10" uuid="7b5f7384-7026-42c2-a099-6d728d9e1dd0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="84" y="147" width="134" height="10" uuid="534861a1-c562-4904-b24f-c2d8ec64f1eb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{especialidadDesc}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="84" y="137" width="317" height="10" uuid="1868deee-1672-403b-8050-dbb9dc3f4952">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": " +$P{compania}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="455" y="127" width="80" height="10" uuid="75259dbd-34ef-4ecc-811e-b709ed6489a4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{deducible}+" SOLES"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="117" width="84" height="10" uuid="75aa53b7-d4d2-4414-ac9c-1b3d73240d57">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TITULAR]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="70" width="260" height="10" uuid="dfe764ec-f07e-4957-b7f2-a03cfbeaf6ad"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sedeDireccion}+". Telef: "+$P{telefonoCI}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="402" y="97" width="53" height="10" uuid="6f78182b-eee9-428e-a4b1-f9dbb5ad5633">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PÓLIZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="127" width="53" height="10" uuid="059913ec-9bc3-4504-976f-06154aa35677">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEDUCIBLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="402" y="137" width="53" height="10" uuid="3f8ae5ff-a5fb-44cd-8246-12b2d6f6efc8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COASEGURO]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="84" y="117" width="180" height="10" uuid="4e9e10fc-76ac-446d-8fca-329fbdd36561">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{nombreTitular} + " "+ $P{apePaternoTitular}+ " "+ $P{apeMaternoTitular}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="455" y="137" width="80" height="10" uuid="52659180-76a6-48da-b11d-faafa89700db">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": CUBIERTO AL "+(100 - Integer.valueOf($P{coaseguro})) + " %"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="84" y="157" width="451" height="10" uuid="64eb1050-da99-47a4-903f-77f1383fd20e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{codigosCi10}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="455" y="97" width="80" height="10" uuid="03103cd3-824f-4cb4-99e4-7530175caef2">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{estadoPoliza}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="455" y="117" width="80" height="10" uuid="ce550c02-361c-45d9-a534-ac7fc9143f7e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": " +$P{fechaVenc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="402" y="117" width="53" height="10" uuid="6cf3523c-3e3e-40b5-adf0-9c83526b500c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VIGENCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="147" width="54" height="10" uuid="d6ff869f-5f87-40f4-9916-7af3dd145156">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MÉDICO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="320" y="147" width="215" height="10" uuid="e8e97217-b506-47f9-bd64-4683927f8891"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{nombreMedico} + " "+$P{apePaternoMedico}+" "+$P{apeMaternoMedico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="402" y="10" width="44" height="12" uuid="ae079797-800a-4869-850c-3df596087117">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="446" y="10" width="89" height="12" uuid="f20fca2e-3a33-4e2a-b509-f71711a21e77"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{fechaEnc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="402" y="22" width="44" height="12" uuid="eca7f4a5-e5a9-4349-81d2-a52316af182c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="446" y="22" width="89" height="12" uuid="c870bc6f-eabb-4406-9716-a08b343513c2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{horaAperturaCita}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="266" y="87" width="54" height="10" uuid="8dc467c3-a142-46ef-9d94-6fe36c42aaf4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[USUARIO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="320" y="87" width="81" height="10" uuid="efbdec32-0855-478f-85ea-0bdc84ecd64d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="402" y="87" width="53" height="10" uuid="84ecce3e-abcc-4e38-8ab4-7c762877f40e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° GUIA]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="455" y="87" width="80" height="10" uuid="7b020c4c-78e8-4b18-bb61-635a6cf1bdc9">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$P{nroGuias}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="147" width="20" height="10" uuid="20f2e727-c9d2-4d4b-acf6-3f0c6cfe48fd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RNE:]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="240" y="147" width="24" height="10" uuid="318d05b2-c8f4-4f89-aaa5-66128a84dcdd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{especialidadCod}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="167" width="535" height="5" uuid="b01dc4ba-a6e9-43be-8642-99d2fea4b973">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Double"/>
+					<topPen lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="49">
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="10" uuid="b1e9eaf6-d6e9-464b-932d-7f9f20c22697">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DCI/GENERICO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="70" height="10" uuid="e889332b-0e64-4923-aada-5e2a79ca8477">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[U/M]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="70" height="10" uuid="4bfdd0c1-4187-45e3-ba29-88d57a0b9d14">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="205" y="20" width="40" height="10" uuid="1451fb30-2694-4240-8bae-7dd8dd674dd6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOSIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="20" width="40" height="10" uuid="7105ce4b-48b9-4504-88c4-da29034148e2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CANTIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="20" width="20" height="10" uuid="52dc03ae-7427-462d-810d-a206fa0ec62d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VIA]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="70" y="0" width="465" height="10" uuid="a80184d4-4147-4e2f-a43d-f1f70b372f0e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{noGenerico}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="70" y="20" width="130" height="10" uuid="74d12c18-28ba-49ca-8f1e-06340b02637e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="245" y="20" width="54" height="10" uuid="b998c6f3-99ba-44d5-835a-6971a080f205">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+($F{caMultidosis}!=null?$F{caMultidosis}: "")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="70" y="30" width="465" height="10" uuid="52d12546-78e7-4580-892d-102b20bb639a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{esPagoProd}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="350" y="20" width="90" height="10" uuid="c395f826-0348-4029-9862-c3b69cf4ddc1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{caProdFarmacia}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="475" y="20" width="60" height="10" uuid="8ad20dd6-58cb-4778-97b9-045c8d754fdd">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{via}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="70" height="10" uuid="b4764800-c9f8-46d6-9a84-bc845febf723">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MEDICAMENTO]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="70" y="10" width="465" height="10" uuid="bb1e7932-46ba-4a97-a9bf-d919daed3e21">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{coProdFarmacia}+" "+$F{deProdFarmacia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="535" height="5" uuid="bfbe7988-534e-4a82-8d82-41a03d89d5a5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Double"/>
+					<topPen lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="1.25"/>
+					<rightPen lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="91">
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Middle" evaluationTime="Report">
+				<reportElement stretchType="RelativeToTallestObject" x="365" y="11" width="170" height="60" uuid="936f67c8-6c04-421a-a253-24ad83da2a18"/>
+				<imageExpression><![CDATA[$V{firmamedico}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="6" width="270" height="40" uuid="33172152-6d69-418c-ba21-9e56ef7f7039">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="SansSerif" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Toda enmendadura invalida esta receta. 
+Si el medicamento requiere segunda autorización coordinar con farmacia su autorización.
+Vigencia Reseta Alta Hospitalaria/Emergencia: 24 Hrs
+Vigencia Reseta Ambulatoria: 7 Días a partir del día de la consulta]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="365" y="81" width="170" height="10" uuid="96f944f9-deab-4444-aa92-4db4f80749fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA["DNI: "+$P{nroDocPaciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="365" y="71" width="170" height="10" uuid="5251bef6-d4b7-4a9b-af37-60fdda9ce8fe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineColor="#FFFFFF"/>
+					<leftPen lineColor="#FFFFFF"/>
+					<bottomPen lineStyle="Dashed" lineColor="#030303"/>
+					<rightPen lineStyle="Dashed" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="535" height="5" uuid="5e59d3ee-863c-4b8c-93c3-93922fa33e50">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Double"/>
+					<topPen lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="2.0" lineStyle="Solid"/>
+					<rightPen lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

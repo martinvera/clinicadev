@@ -1,0 +1,68 @@
+trigger:
+  branches:
+    include:
+    - dev
+    - qa
+    - master
+
+variables:
+  vmImageName: ubuntu-20.04
+  imageRepository: 'sed/ms-clinicalrecord-service'
+
+  ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}:
+    environment: 'Dev'
+    namespace: expediente-digital-ms-dev
+    applicationName: expediente-digital-ms-dev-clinicalrecord-service
+  
+  ${{ if eq(variables['Build.SourceBranchName'], 'qa') }}:
+    environment: 'Test'
+    namespace: expediente-digital-ms-qa
+    applicationName: expediente-digital-ms-qa-clinicalrecord-service
+  
+  ${{ if eq(variables['Build.SourceBranchName'], 'main') }}:
+    environment: 'Prod'
+    namespace: expediente-digital-ms-prd
+    applicationName: expediente-digital-ms-prd-clinicalrecord-service
+
+pool:
+  vmImage: $(vmImageName)
+  
+resources:
+  repositories:
+    - repository: pipelines
+      type: git
+      name: sed-pipelines
+
+stages:
+  - ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}:
+    - template: sed-microservices/azure-pipelines.yml@pipelines
+      parameters:
+        environment: $(environment)
+        namespace: $(namespace)
+        applicationName: $(applicationName)
+        azureVariableGroup: clinicalrecord-service-dev
+        imageRepository: $(imageRepository)
+        kubernetesServiceConnection: aks-expediente-digital-dev
+        configMapName: clinicalrecord-config
+
+  - ${{ if eq(variables['Build.SourceBranchName'], 'qa') }}:
+    - template: sed-microservices/azure-pipelines.yml@pipelines
+      parameters:
+        environment: $(environment)
+        namespace: $(namespace)
+        applicationName: $(applicationName)
+        azureVariableGroup: clinicalrecord-service-qa
+        imageRepository: $(imageRepository)
+        kubernetesServiceConnection: aks-expediente-digital-qa
+        configMapName: clinicalrecord-config
+
+  - ${{ if eq(variables['Build.SourceBranchName'], 'main') }}:
+    - template: sed-microservices/azure-pipelines.yml@pipelines
+      parameters:
+        environment: $(environment)
+        namespace: $(namespace)
+        applicationName: $(applicationName)
+        azureVariableGroup: clinicalrecord-service-prd
+        imageRepository: $(imageRepository)
+        kubernetesServiceConnection: aks-expediente-digital-prd
+        configMapName: clinicalrecord-config

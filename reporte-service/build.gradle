@@ -1,0 +1,69 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.7'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id "org.sonarqube" version "3.3"
+}
+
+group = 'pe.com.ci.sed.reporte'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
+}
+
+ext {
+    set('azureVersion', "3.5.0")
+}
+
+dependencies {
+    implementation 'com.azure.spring:azure-spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.5.10'
+    implementation group: 'net.minidev', name: 'json-smart', version: '2.4.7'
+    implementation 'com.azure:azure-storage-blob'
+    implementation 'com.azure:azure-storage-queue:12.10.0-beta.1'
+    implementation 'com.microsoft.azure:azure-storage:8.6.6'
+    implementation 'javax.persistence:persistence-api:1.0'
+    implementation 'org.jetbrains:annotations:20.1.0'
+
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.0'
+    implementation group: 'org.apache.poi', name: 'poi', version: '4.1.0'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "com.azure.spring:azure-spring-boot-bom:${azureVersion}"
+    }
+}
+
+sonarqube {
+    properties {
+        property "sonar.projectKey", "martinvera_sed-microservices"
+        property "sonar.organization", "martinvera"
+        property "sonar.host.url", "https://sonarcloud.io"
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

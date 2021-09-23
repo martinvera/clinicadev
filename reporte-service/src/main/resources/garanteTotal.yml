@@ -1,0 +1,8 @@
+application:
+  garantes:
+    - garanteId: 1
+      garanteDesc: OTROS GARANTES
+    - garanteId: 2
+      garanteDesc: RIMAC EPS
+    - garanteId: 3
+      garanteDesc: RIMAC SEGUROS

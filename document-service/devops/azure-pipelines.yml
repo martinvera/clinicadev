@@ -1,0 +1,68 @@
+trigger:
+  branches:
+    include:
+    - dev
+    - qa
+    - master
+
+variables:
+  vmImageName: ubuntu-20.04
+  imageRepository: 'sed/ms-document-service'
+  
+  ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}:
+    environment: 'Dev'
+    namespace: expediente-digital-ms-dev
+    applicationName: expediente-digital-ms-dev-document-service
+  
+  ${{ if eq(variables['Build.SourceBranchName'], 'qa') }}:
+    environment: 'Test'
+    namespace: expediente-digital-ms-qa
+    applicationName: expediente-digital-ms-qa-document-service
+  
+  ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
+    environment: 'Prod'
+    namespace: expediente-digital-ms-prd
+    applicationName: expediente-digital-ms-prd-document-service
+
+pool:
+  vmImage: $(vmImageName)
+  
+resources:
+  repositories:
+    - repository: pipelines
+      type: git
+      name: sed-pipelines
+
+stages:
+  - ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}:
+    - template: sed-microservices/azure-pipelines.yml@pipelines
+      parameters:
+        environment: $(environment)
+        namespace: $(namespace)
+        applicationName: $(applicationName)
+        azureVariableGroup: document-service-dev
+        imageRepository: $(imageRepository)
+        kubernetesServiceConnection: aks-expediente-digital-dev
+        configMapName: document-config
+
+  - ${{ if eq(variables['Build.SourceBranchName'], 'qa') }}:
+    - template: sed-microservices/azure-pipelines.yml@pipelines
+      parameters:
+        environment: $(environment)
+        namespace: $(namespace)
+        applicationName: $(applicationName)
+        azureVariableGroup: document-service-qa
+        imageRepository: $(imageRepository)
+        kubernetesServiceConnection: aks-expediente-digital-qa
+        configMapName: document-config
+
+  - ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
+    - template: sed-microservices/azure-pipelines.yml@pipelines
+      parameters:
+        environment: $(environment)
+        namespace: $(namespace)
+        applicationName: $(applicationName)
+        azureVariableGroup: document-service-prd
+        imageRepository: $(imageRepository)
+        kubernetesServiceConnection: aks-expediente-digital-prd
+        configMapName: document-config

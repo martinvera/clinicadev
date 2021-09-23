@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subreport_pase_ambulatorio" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a3f6e0e0-2690-4c1c-9d09-1e17e7006966">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CLINICAL_RECORD "/>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#DBDBDB">
+		<box topPadding="0" leftPadding="1" bottomPadding="0" rightPadding="1">
+			<pen lineWidth="0.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="datosSited" uuid="3dff5634-c7c1-4837-a0d4-9eea86022b1a">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CLINICAL_RECORD "/>
+		<queryString language="json">
+			<![CDATA[]]>
+		</queryString>
+		<field name="tipoDetalle" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="tipoDetalle"/>
+			<fieldDescription><![CDATA[tipoDetalle]]></fieldDescription>
+		</field>
+		<field name="procTiemDifServ" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="procTiemDifServ"/>
+			<fieldDescription><![CDATA[procTiemDifServ]]></fieldDescription>
+		</field>
+		<field name="procNombreDifServ" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="procNombreDifServ"/>
+			<fieldDescription><![CDATA[procNombreDifServ]]></fieldDescription>
+		</field>
+		<field name="procGeneroDifServ" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="procGeneroDifServ"/>
+			<fieldDescription><![CDATA[procGeneroDifServ]]></fieldDescription>
+		</field>
+		<field name="procFrecDifServ" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="procFrecDifServ"/>
+			<fieldDescription><![CDATA[procFrecDifServ]]></fieldDescription>
+		</field>
+		<field name="procCopVarDifServ" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="procCopVarDifServ"/>
+			<fieldDescription><![CDATA[procCopVarDifServ]]></fieldDescription>
+		</field>
+		<field name="procCopFijDifServ" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="procCopFijDifServ"/>
+			<fieldDescription><![CDATA[procCopFijDifServ]]></fieldDescription>
+		</field>
+		<field name="procCodigoDifServ" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="procCodigoDifServ"/>
+			<fieldDescription><![CDATA[procCodigoDifServ]]></fieldDescription>
+		</field>
+		<field name="observacionDifServ" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="observacionDifServ"/>
+			<fieldDescription><![CDATA[observacionDifServ]]></fieldDescription>
+		</field>
+		<field name="fechaFinalDifServ" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="fechaFinalDifServ"/>
+			<fieldDescription><![CDATA[fechaFinalDifServ]]></fieldDescription>
+		</field>
+		<field name="descripcionDifServ" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="descripcionDifServ"/>
+			<fieldDescription><![CDATA[descripcionDifServ]]></fieldDescription>
+		</field>
+		<field name="codigoDifServ" class="java.lang.String">
+			<property name="net.sf.jasperreports.json.field.expression" value="codigoDifServ"/>
+			<fieldDescription><![CDATA[codigoDifServ]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString language="JSON">
+		<![CDATA[]]>
+	</queryString>
+	<field name="titulo" class="java.lang.String"/>
+	<detail>
+		<band height="10" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="10" forecolor="#7B121B" uuid="0920eca2-6377-4f7e-a570-16c4b6558620">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="24">
+			<componentElement>
+				<reportElement x="0" y="0" width="535" height="20" uuid="8aeee90c-9539-4117-b697-eac033e88d40">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 2_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 2_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 2_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="datosSited" uuid="c859fa47-0436-461c-aee5-de608eea16a9">
+						<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("lista")]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="80" uuid="702c6cf4-bc55-4b9d-b75e-3e67ec6a6a7b">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_TH" height="10" rowSpan="1">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<staticText>
+								<reportElement x="0" y="0" width="78" height="10" uuid="fe7a2fe0-4169-4ca7-a0c7-bc444702af98"/>
+								<textElement textAlignment="Center">
+									<font fontName="SansSerif" size="6" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Código]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 2_TD" height="10">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="80" height="10" uuid="4c2d2bff-b964-44cf-8e9d-7efcaec76b81"/>
+								<textElement textAlignment="Center">
+									<font fontName="SansSerif" size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{codigoDifServ}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="230" uuid="1e55731d-540d-4b6e-9e61-2b12f7a45ca0">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_TH" height="10" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="228" height="10" uuid="9b10d882-01b2-444b-8fed-56a870706b10"/>
+								<textElement textAlignment="Center">
+									<font fontName="SansSerif" size="6" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Descripción]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 2_TD" height="10">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="230" height="10" uuid="aa701e0e-782b-4554-b5d3-9b02e8dbbbcf"/>
+								<box padding="1"/>
+								<textElement>
+									<font fontName="SansSerif" size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{descripcionDifServ}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="225" uuid="581b6076-4b04-4626-9d83-2d6c502de62a">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_TH" height="10" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="223" height="10" uuid="ed8b80b2-6211-4a72-b981-2270b8d8a7d8"/>
+								<textElement textAlignment="Center">
+									<font fontName="SansSerif" size="6" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Observación]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 2_TD" height="10">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="225" height="10" uuid="592b2c94-1331-429f-a633-b325ee90feb3"/>
+								<box padding="1"/>
+								<textElement>
+									<font fontName="SansSerif" size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{observacionDifServ}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

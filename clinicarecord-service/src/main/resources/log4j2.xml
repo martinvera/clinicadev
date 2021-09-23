@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}{GMT-5:00}][CLINICALRECORD] [%-5p] (%F:%L) | %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="pe.com.ci.sed.clinicalrecord" level="INFO" additivity="false">
+            <appender-ref ref="console" />
+        </Logger>
+        <Logger name="com.azure.cosmos.implementation.SqlQuerySpecLogger" level="DEBUG" additivity="false">
+            <appender-ref ref="console" />
+        </Logger>
+        <Root level="OFF" additivity="false">
+            <appender-ref ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>

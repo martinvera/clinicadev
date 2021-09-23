@@ -1,0 +1,54 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: expedientedigital
+  labels:
+    name: expedientedigital
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: integrator-service
+  namespace: expedientedigital
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: integrator-service
+  template:
+    metadata:
+      labels:
+        app: integrator-service
+    spec:
+      containers:
+        - name: expedienteservice
+          image: acrexpedientedigital.azurecr.io/expedientedigital/integrator-service:v1
+          ports:
+            - containerPort: 80
+          env:
+            - name: QUEUE_CLINICAL
+              value: clinicalrecordqueuestorage
+            - name: QUEUE_DOCUMENT
+              value: documentqueuestorage
+            - name: AZURE_STORAGE_BLOB_ENDPOINT
+              value: https://expdigstorage.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=nyA1FQmwmM0d%2F%2B1ggYKq58pWjBreIRPdj1Uy2D0OhqU%3D
+            - name: AZURE_STORAGE_QUEUE_ENDPOINT
+              value: https://expdigstorage.queue.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=nyA1FQmwmM0d%2F%2B1ggYKq58pWjBreIRPdj1Uy2D0OhqU%3D
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: integrator-service
+  namespace: default
+  labels:
+    app: integrator-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+  selector:
+    app: integrator-service
