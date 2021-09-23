@@ -5,6 +5,7 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.converter.HttpMessageNotWritableException;
@@ -95,7 +96,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     protected ResponseEntity<Object> handleMethodArgumentTypeMismatch(MethodArgumentTypeMismatchException ex, WebRequest request) {
         Error error = new Error(BAD_REQUEST);
-        if(Objects.nonNull(ex.getRequiredType()))
+        if (Objects.nonNull(ex.getRequiredType()))
             error.setMensaje(String.format("The parameter '%s' of value '%s' could not be converted to type '%s'", ex.getName(), ex.getValue(), ex.getRequiredType().getSimpleName()));
         return buildResponseEntity(getBody(error, getHeaders(request)), error.getStatus());
     }
@@ -106,8 +107,10 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         error.setMensaje(ex.getMessage());
         return buildResponseEntity(getBody(error, getHeaders(request)), error.getStatus());
     }
-    
+
     private ResponseEntity<Object> buildResponseEntity(Map<String, Object> body, HttpStatus status) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
         return new ResponseEntity<>(body, status);
     }
 

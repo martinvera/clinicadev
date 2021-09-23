@@ -49,10 +49,7 @@ public class ReporteHandler {
 
     public Object enviarColaReporte(GenericRequest<RequestReporte> request) {
         try {
-            String validacion = validaciondeNroLote(request);
-            if (Strings.isNotBlank(validacion))
-                return getResult(request.getHeader(), validacion);
-
+            this.validaciondeNroLote(request);
             Historial historial = historialService.registrarHistorial(GenericRequest.<Historial>builder()
                     .request(Historial.builder()
                             .estado(PENDIENTE.name())
@@ -76,13 +73,12 @@ public class ReporteHandler {
         }
     }
 
-    private String validaciondeNroLote(GenericRequest<RequestReporte> request) {
+    private void validaciondeNroLote(GenericRequest<RequestReporte> request) {
         if (request.getRequest().getTipoReporte().equals(TipoReporte.PARCIAL.name())) {
             String validacion = expedienteServie.validarNroLote(request);
             if (Strings.isNotBlank(validacion))
-                return validacion;
+                throw new ReporteException(validacion, INTERNAL_SERVER_ERROR);
         }
-        return EMPTY;
     }
 
     @Async
