@@ -1,0 +1,289 @@
+/* You can add global styles to this file, and also import other style files */
+
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "~ngx-toastr/toastr";
+
+/* You can add global styles to this file, and also import other style files */
+// @import "../node_modules/bootstrap/scss/bootstrap";
+html,
+body {
+    height: 100%;
+}
+body {
+    font-size: 14px;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-elevation-z8 {
+    overflow-x: auto;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    border-bottom: 1px solid white;
+    width: 50%;
+}
+
+.tit {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.contenido {
+    background: rgba(0, 50, 160, 0.4);
+    border-radius: 10px;
+}
+
+.body--general-dad {
+    padding-top: 1rem;
+}
+
+.login {
+    form {
+        width: 80%;
+        margin: auto;
+        .mat-form-field {
+            width: 100%;
+            &-flex {
+                align-items: flex-end !important;
+                color: rgba(0, 0, 0, 0.54);
+            }
+        }
+    }
+}
+
+.btn {
+    font-size: 14px;
+    &:hover {
+        text-decoration: none;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+    .mat-icon {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+    }
+
+    &-cli-primary {
+        background-color: #2eafe2 !important;
+        color: #ffffff !important;
+        margin-left: 15px;
+        border: 1px solid #2eafe2 !important;
+    }
+
+    &-cli-success {
+        background-color: #249e55 !important;
+        color: #ffffff !important;
+        margin-left: 15px;
+        border: 1px solid #249e55 !important;
+    }
+
+    &-cli-danger {
+        background-color: #c52c2c !important;
+        color: #ffffff !important;
+        margin-left: 15px;
+        border: 1px solid #c52c2c !important;
+    }
+
+    &-cli-secondary {
+        background-color: #00aaaa !important;
+        color: #ffffff !important;
+        margin-left: 15px;
+        border: 1px solid #00aaaa !important;
+    }
+}
+
+.txt {
+    &-cli-dange {
+        color: #c52c2c;
+    }
+}
+
+.with-80 {
+    width: 90%;
+}
+
+snack-bar-container.success {
+    background-color: #249e55;
+    color: #ffffff;
+}
+
+snack-bar-container.error {
+    background-color: #c52c2c;
+    color: #ffffff;
+}
+snack-bar-container.pending {
+    background-color: #d4c42d;
+    color: #ffffff;
+}
+
+snack-bar-container.notification simple-snack-bar {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.breadcrumb {
+    padding-top: 20px;
+
+    .breadcrumb-item.active {
+        color: #ffffff;
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+        color: #ffffff;
+    }
+}
+
+.estado {
+    button {
+        margin-left: -20px;
+        cursor: initial;
+        padding-right: 18px;
+        padding-left: 15px;
+        border-radius: 10px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        border: 0px;
+        display: flex;
+        &.success {
+            background: #249e55;
+            width: 85px;
+            display: flex;
+            justify-content: center;
+        }
+        &.error {
+            background: #c52c2c;
+            width: 85px;
+            display: flex;
+            justify-content: center;
+        }
+        &.progressing {
+            background: #e26f2e;
+            font-weight: 400;
+            width: 85px;
+            display: flex;
+            justify-content: center;
+        }
+
+        &.pending {
+            width: 85px;
+            display: flex;
+            justify-content: center;
+            background: #d4c42d;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        &.sin_registro {
+            background: #2576de;
+        }
+        .mat-icon {
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+td.estado {
+    button {
+        padding: 4px 6px;
+        .mat-icon {
+            margin-left: 1rem;
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+.chartConfigCSS {
+    display: block;
+    max-width: 350px;
+    width: 100%;
+    margin: 0px auto;
+    height: auto;
+}
+
+.table-simple-data {
+    width: 100%;
+    td,
+    th {
+        padding: 0.5em;
+    }
+}
+
+.table-data-charts {
+    span.square {
+        display: inline-block;
+        width: 20px;
+        height: 10px;
+        margin-right: 1rem;
+
+        &.square-success {
+            background-color: #2576de;
+        }
+
+        &.square-pendant {
+            background-color: #52b279;
+        }
+
+        &.square-error {
+            background-color: #47c2e9;
+        }
+    }
+}
+
+.mat-cell,
+.mat-footer-cell {
+    font-size: 12px;
+}
+
+.mt-p-10 {
+    padding: 0 10px 0 0 !important;
+}
+
+// estilos d epaginacion
+.btn-page {
+    border-radius: 60%;
+    width: 40px;
+    height: 40px;
+}
+
+.pagina {
+    background-color: #fff;
+
+    display: flex;
+    justify-content: flex-end;
+}
+.arrow {
+    font-size: 25px;
+    color: gray;
+}
+.pag {
+    font-size: 11px;
+    color: grey;
+}
+.items {
+    background-color: #fff;
+    border-radius: 3px;
+    font-size: 11px;
+}
+
+.btn-sin-registro {
+    background-color: #2eafe2;
+    color: #fff;
+    font-size: 11px;
+    max-width: 100px;
+    height: 35px;
+}
+.caption-none{
+    display:none;
+}

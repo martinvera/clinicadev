@@ -1,0 +1,55 @@
+.login {
+    background: url(../../../assets/back.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    &__card {
+        background-color: rgba($color: #fff, $alpha: 0.85);
+        border-radius: 0 0 10px 10px;
+        text-align: center;
+        & > div {
+            width: 80%;
+            margin: 0 auto;
+        }
+        img {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+    a {
+        color: rgba(0, 0, 0, 0.54);
+        font-size: 14px;
+    }
+    .mat-success {
+        background-color: #2eafe2;
+        width: 100%;
+        text-transform: uppercase;
+        color: #fff;
+        &[disabled] {
+            background-color: #aaa;
+        }
+    }
+    .isvalidate {
+        background: rgba($color: #f00, $alpha: 0.1);
+        color: #bd5454;
+        border: 1px solid red;
+        border-radius: 6px;
+    }
+}
+@media screen and (max-height: 575px) {
+    .g-recaptcha {
+        transform: scale(0.77);
+        -webkit-transform: scale(0.77);
+    }
+}
+@media screen and (max-width: 240px) {
+    .g-recaptcha {
+        transform: scale(0.58);
+        -webkit-transform: scale(0.58);
+    }
+}
+@media screen and (min-width: 319px) and (max-width: 320px) {
+    .g-recaptcha {
+        transform: scale(0.79);
+        -webkit-transform: scale(0.79);
+    }
+}

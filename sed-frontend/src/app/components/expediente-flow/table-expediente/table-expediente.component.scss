@@ -1,0 +1,131 @@
+table {
+    width: 100%;
+}
+
+th {
+    align-items: center;
+    font-size: 13px;
+    padding: 4px 1rem !important;
+}
+
+td {
+    font-size: 12px;
+    padding: 4px 1rem !important;
+}
+
+
+.mat {
+    &-form-field {
+        font-size: 14px;
+        width: 100%;
+    }
+    &-paginator {
+        margin-bottom: 25px;
+    }
+    &-input {
+        color: white;
+    }
+}
+
+
+
+.text-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.htext {
+    font-size: 14px;
+}
+
+.ctext {
+    font-size: 12px;
+}
+.mcont {
+    margin: 50px;
+}
+
+
+.filtro {
+    background-color: white;
+    padding: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(120px,1fr)) ;
+    grid-template-rows: repeat(1, 40px);
+    
+}
+.limpiarFiltro{
+    margin-left: 20px;
+}
+
+
+.icons {
+    color: #47c2e9;
+}
+.mat-column-select {
+    overflow: initial;
+}
+
+.content__rango {
+    display: flex;
+    width: 200px;
+    align-items: baseline;
+    .mat-form-field {
+        .mat-input {
+            width: 50px !important;
+        }
+    }
+}
+
+.input-full-width {
+    width: 100% !important;
+}
+a.icon-add-file {
+    display: inline-block;
+    color: #0032a0;
+    width: 50px;
+}
+
+.boton{
+    margin-top: 25px;
+    margin-left:10px;
+    color:#fff;
+     background: linear-gradient(180deg, #65bce8 0%, #306485 100%);
+    transition: all .3s;
+    font-size: 13px;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    white-space: normal;
+ 
+}
+
+.estado {
+    button {
+        cursor: initial;
+        padding-right: 18px;
+        padding-left: 15px;
+        border-radius: 10px;
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        border: 0px;
+        display: flex;
+        &.complete {
+            background: linear-gradient(180deg, #9db6a7 0%, #2a964e 100%);
+        }
+        &.incomplete {
+            background: #c52c2c;
+        }
+
+        .mat-icon {
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+
+

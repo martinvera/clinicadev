@@ -1,0 +1,29 @@
+.content__dialog {
+    position: relative !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    #close-icon {
+        display: inline-block;
+        position: absolute;
+        right: -5px;
+        top: -10px;
+    }
+
+    .title--float {
+        position: absolute;
+        left: 0px;
+        font-size: 20px;
+        top: -10px;
+        display: flex;
+        align-items: center;
+        color: #042d64;
+        mat-icon {
+            margin-right: 8px;
+            color: #f4d18b;
+        }
+    }
+
+    div[mat-dialog-content] {
+        font-size: 18px;
+    }
+}

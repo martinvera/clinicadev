@@ -1,0 +1,83 @@
+.content {
+    width: 500px;
+    background-color: white;
+}
+.content__dialog {
+    position: relative !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    #close-icon {
+        display: inline-block;
+        position: absolute;
+        right: -5px;
+        top: -10px;
+    }
+}
+
+.mat-dialog-container {
+    padding-top: 2rem;
+}
+
+.mat-dialog-content {
+    //text-align: center;
+    font-size: 16px;
+    h3.dialog--title {
+        font-size: 25px;
+    }
+
+    .big-letter {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+}
+
+.mat-dialog-actions {
+    justify-content: center;
+    a.btn--succes {
+        background-color: #039fd7;
+        color: #ffffff;
+    }
+}
+
+.user--img {
+    width: 100px;
+    height: 100px;
+}
+
+.cdk-overlay-pane {
+    max-width: 60% !important;
+}
+
+.ptext {
+    font-size: 15px;
+}
+.tit {
+    font-size: 18px;
+}
+.dtext {
+    font-size: 14px;
+}
+.grid{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2,1fr );
+    
+}
+.label{
+    display: flex;
+    align-content:flex-start;
+    justify-content:flex-start;
+    margin-top: 25px
+}
+
+.help{
+    font-size: 16px;
+    color:#A4A4A4;
+    margin-top: 2px;
+}
+
+.btn-aceptar{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

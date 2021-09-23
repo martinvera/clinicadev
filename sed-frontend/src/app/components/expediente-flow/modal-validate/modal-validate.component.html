@@ -1,0 +1,21 @@
+<div class="content__dialog">
+    <span id="close-icon" mat-dialog-close (click)="onClickNO()">
+        <mat-icon>close</mat-icon>
+    </span>
+    <span class="title--float">
+        <mat-icon>warning</mat-icon> No se puede generar el Exp. Digital
+    </span>
+    <div class="pt-5 pb-0 pr-3 pl-3 pr-sm-3 pl-sm-3">
+        <div mat-dialog-content class="mb-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><strong>Los documentos asociados a esta factura se encuentran en estado INCOMPLETO.</strong></p>
+                    <p class="mb-0" style="color:#817C7C;">Para realizar esta acción de todos modos, dar click en el check “Ejecutar” que se encuentra dentro de la tabla y volver a generar el expediente.</p>
+                </div>
+            </div>
+        </div>
+        <div mat-dialog-actions class="justify-content-center">
+            <button class="btn btn-cli-primary m-2" mat-dialog-close (click)="onClickNO()">ACEPTAR</button>
+        </div>
+    </div>
+</div>

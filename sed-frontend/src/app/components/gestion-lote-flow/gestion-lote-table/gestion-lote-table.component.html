@@ -1,0 +1,176 @@
+<form [formGroup]="form">
+    <div class=" container-fluid filtro-content">
+
+        <div class="nroLote">
+            <mat-form-field>
+                <input formControlName="nroLote" matInput placeholder="Lote" autocomplete="off"
+                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+            </mat-form-field>
+
+        </div>
+        <div class="garante">
+            <mat-form-field>
+                <mat-label>Garante</mat-label>
+                <mat-select formControlName="garanteId" (selectionChange)="setGarante($event)" required>
+                    <mat-option *ngFor="let garante of garantes" [value]="garante.codigo">
+                        {{garante.descripcion}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="loteDesde">
+            <mat-form-field>
+                <input matInput formControlName="fechaLoteDesde" [matDatepicker]="picker"
+                    placeholder="Fecha de lote desde" autocomplete="off">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="loteHasta">
+            <mat-form-field>
+                <input formControlName="fechaLoteHasta" matInput [matDatepicker]="picker1"
+                    placeholder="Fecha de lote hasta" autocomplete="off">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="estado">
+            <mat-form-field>
+                <mat-label>Estado</mat-label>
+                <mat-select formControlName="estado">
+                    <mat-option *ngFor="let estado of estados" [value]="estado.id">
+                        {{estado.value}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="buttons">
+            <button class="search" matTooltip="Buscar" mat-mini-fab color="primary" (click)="searchFilter()"
+                [disabled]="form.invalid">
+                <mat-icon>search</mat-icon>
+            </button>
+            <button class="limpiar" matTooltip="Limpiar filtro" mat-mini-fab color="warn" (click)="clearForm()">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 226 226" style=" fill:#000000;"> <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"> <path d="M0,226v-226h226v226z" fill="none"></path> <g fill="#ffffff"> <path d="M212.41827,0.54327c-1.96935,0.23768 -3.32752,1.05259 -4.07452,2.44471l-34.22596,64.10577l26.62019,11.95192l24.71875,-68.18029c1.08654,-2.98798 -1.66376,-6.92668 -6.2476,-8.96394c-2.27494,-1.01863 -4.82151,-1.59585 -6.79087,-1.35817zM13.03846,34.76923c-7.19832,0 -13.03846,5.84014 -13.03846,13.03846c0,7.19832 5.84014,13.03846 13.03846,13.03846c7.19832,0 13.03846,-5.84014 13.03846,-13.03846c0,-7.19832 -5.84014,-13.03846 -13.03846,-13.03846zM52.15385,43.46154c-4.78756,0 -8.69231,3.90475 -8.69231,8.69231c0,4.78756 3.90475,8.69231 8.69231,8.69231c4.78756,0 8.69231,-3.90475 8.69231,-8.69231c0,-4.78756 -3.90475,-8.69231 -8.69231,-8.69231zM155.64663,74.15625c-10.59375,-0.20372 -20.94982,6.00991 -25.53365,16.29808l82.84856,36.67067c6.11178,-13.71755 -0.16977,-29.77794 -13.85337,-35.85577c-2.92007,-1.29026 -30.21935,-13.378 -33.13942,-14.66827c-3.42938,-1.52794 -6.79087,-2.3768 -10.32212,-2.44471zM47.80769,78.23077c-11.98588,0 -21.73077,9.74489 -21.73077,21.73077c0,11.98588 9.74489,21.73077 21.73077,21.73077c11.98588,0 21.73077,-9.74489 21.73077,-21.73077c0,-11.98588 -9.74489,-21.73077 -21.73077,-21.73077zM123.05048,103.22115c-9.37139,18.0637 -28.14813,28.92909 -46.72115,35.04087c-9.26953,3.05589 -18.30138,4.95734 -25.53365,5.97596c-7.23227,1.01863 -13.27614,1.15445 -14.39663,1.08654c-3.42938,-0.23768 -6.689,1.59586 -8.28486,4.6857c-1.59586,3.05589 -1.22236,6.7569 0.95072,9.4393c51.78035,63.90205 131.19952,66.55048 131.19952,66.55048c2.7503,0.10187 5.36479,-1.12049 7.0625,-3.25962c0,0 23.08894,-28.25 40.47356,-81.21875l-16.56971,-5.43269c-14.90595,45.39693 -31.54357,67.46725 -35.04087,71.98317c-3.97265,-0.30559 -13.44591,-1.35817 -25.80529,-4.61779c3.9387,-4.34615 11.54447,-13.78545 19.55769,-32.05288c-22.71544,20.94982 -36.16136,24.24339 -42.10337,24.44712c-6.82482,-2.78425 -13.64964,-6.11178 -20.91587,-10.32212c3.53125,-3.22566 8.82813,-9.13371 14.9399,-20.3726c-8.18299,8.55649 -18.94651,11.91797 -26.07692,13.3101c-7.16437,-4.95733 -14.29477,-10.66165 -21.1875,-17.38462c7.8774,-1.15444 17.2488,-2.98798 27.16346,-6.2476c21.01773,-6.92668 44.37831,-19.55769 56.77163,-43.46154z"> </path></g></g></svg>
+            </button>
+        </div>
+        <div>
+        </div>
+    </div>
+</form>
+<br>
+
+
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource"><caption class="caption-none"></caption>
+
+
+        <ng-container matColumnDef="nroLote">
+            <th scope="col" mat-header-cell *matHeaderCellDef> Lote </th>
+            <td mat-cell *matCellDef="let element"> {{element.rowKey}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="fechaLote">
+            <th scope="col" mat-header-cell *matHeaderCellDef> Fecha Lote </th>
+            <td mat-cell *matCellDef="let element"> {{element.timestamp | date:'yyyy-MM-dd' }} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="garanteDescripcion">
+            <th scope="col" mat-header-cell *matHeaderCellDef> Garante </th>
+            <td mat-cell *matCellDef="let element"> {{element.garanteDescripcion}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="origen">
+            <th scope="col" mat-header-cell *matHeaderCellDef> Origen </th>
+            <td mat-cell *matCellDef="let element"> {{element.origen}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="estadoFactura">
+            <th scope="col" mat-header-cell *matHeaderCellDef> Estado </th>
+            <td mat-cell *matCellDef="let row" class="estado">
+                <button [ngClass]="[
+                  (row.estado === 'TERMINADO') ? 'success' :
+                  (row.estado === 'PENDIENTE') ? 'pending':
+                  (row.estado === 'EN_PROCESO') ? 'progressing':'']">{{[
+                    (row.estado === 'TERMINADO') ? 'TERMINADO' :
+                    (row.estado === 'PENDIENTE') ? 'PENDIENTE':
+                    (row.estado === 'EN_PROCESO') ? 'EN PROCESO':'']}}
+                    
+                </button>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="countFacturas">
+            <th scope="col" mat-header-cell *matHeaderCellDef style="text-align: center;">Cantidad de Facturas </th>
+            <td mat-cell *matCellDef="let element" style="text-align: center;">
+                <label class="doc" for="file">{{ element.facturasGeneradas }}/{{
+                    element.totalFacturas}}</label>&nbsp;
+                <progress class="file" value="{{ element.facturasGeneradas }}" max="{{ element.totalFacturas}}"> {{
+                    element.facturasGeneradas }}% </progress>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="options">
+            <th scope="col" mat-header-cell *matHeaderCellDef style="text-align: center;"> Opciones </th>
+            <td mat-cell *matCellDef="let element" class="d-flex align-items-center justify-center">
+                <ng-container *ngIf="element.estadoGarante != 'RECHAZADO' ">
+                    <button mat-raised-button (click)="goToExpediente(element)" class="btn btn-cli-primary m-1"
+                        type="button" routerLink="/genererar/expediente"
+                        *appCheckPermissions="permission.IR_EXPEDIENTE_DIGITAL">
+                        IR A EXP. DIGITAL
+                    </button>
+                </ng-container>
+                <ng-container *ngIf="element.estadoGarante != 'RECHAZADO' ">
+                    <span matTooltip="Eliminar lote" class="txt-cli-dange d-inline" style="cursor: pointer;"
+                        (click)="openDialog(element)" *appCheckPermissions="permission.ELIMINAR_LOTE">
+                        <mat-icon>delete_outline</mat-icon>
+                    </span>
+                </ng-container>
+                <ng-container *ngIf="element.estado == 'TERMINADO' && element.estadoGarante == 'RECHAZADO' ">
+                    <span matTooltip="Reprocesar" class=" d-inline" style="cursor: pointer;"
+                        (click)="openReprocess(element)" *appCheckPermissions="permission.BOTON_REPROCESAR_GESTION_LOTE">
+                        <mat-icon>restore</mat-icon>
+                    </span>
+                </ng-container>
+                <ng-template [ngIf]="(element.urlArchivoZipSas)">
+                    <a matTooltip="Descargar ZIP compilado" [href]="element.urlArchivoZipSas"  target="_blank"
+                        *appCheckPermissions="permission.DESCARGAR_ZIP">
+                        <mat-icon style="color:#0032A0">download</mat-icon>
+                    </a>
+                </ng-template>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+        </tr>
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="12"><strong>NOTA:</strong> {{messaje}}</td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="pagina" *ngIf="pagination.length > 0">
+    <div class="mt-0">
+        <label class="pag" for="Items">Items por página:&nbsp;&nbsp;</label>
+        <select class="items" name="paginas" id="paginas" (change)="setPage($event)" [(ngModel)]="pageSize">
+
+            <option *ngFor="let item of pageSizeOptions" value="{{ item.code }}">{{ item.name }}</option>
+         
+        </select>
+      
+
+        <button mat-icon-button matTooltip="Anterior" (click)="goBack()" [disabled]="page>1? false: true">
+            <mat-icon class="arrow">chevron_left</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Siguiente" (click)="goForward()" [disabled]="siguiente">
+            <mat-icon class="arrow">chevron_right</mat-icon>
+        </button>
+    </div>
+</div>
+

@@ -1,0 +1,38 @@
+trigger:
+  branches:
+    include:
+    - main
+    - dev
+    - qa
+
+variables:
+  
+  - ${{ if eq(variables['Build.SourceBranchName'], 'dev') }}:
+    - group: sed-frontend-dev
+    - name: environment
+      value: Dev
+  
+  - ${{ if eq(variables['Build.SourceBranchName'], 'qa') }}:
+    - group: sed-frontend-qa
+    - name: environment
+      value: Test
+
+  - ${{ if eq(variables['Build.SourceBranchName'], 'main') }}:
+    - group: sed-frontend-prd
+    - name: environment
+      value: Prod
+    
+resources:
+  repositories:
+    - repository: pipelines
+      type: git
+      name: sed-pipelines
+
+stages:
+  - template: "sed-frontend/azure-pipelines.yml@pipelines"
+    parameters:
+      environment: $(environment)
+      API_BASE: $(API_BASE)
+      API_WEB_KEY: $(API_WEB_KEY)
+      API_KEY: $(API_KEY)
+      API_AUTH: $(API_AUTH)

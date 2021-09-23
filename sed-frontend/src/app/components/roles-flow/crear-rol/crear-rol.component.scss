@@ -1,0 +1,27 @@
+.content__dialog {
+    position: relative !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    #close-icon {
+        display: inline-block;
+        position: absolute;
+        right: -5px;
+        top: -10px;
+    }
+}
+
+.mat-radio-button {
+    margin: 0px 1rem;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.btn-guardar {
+    background-color: #2eafe2;
+    color: #fff;
+}
+.ptext {
+    font-size: 15px;
+}

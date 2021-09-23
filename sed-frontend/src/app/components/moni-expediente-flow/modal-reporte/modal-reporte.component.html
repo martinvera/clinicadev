@@ -1,0 +1,49 @@
+<div class="contenido">
+    <div class="content__dialog">
+        <span id="close-icon" mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </span>
+        <div class="title">
+            <p class="tit">Reporte de Expedientes Generados con Error</p>
+        </div>
+       
+
+        <form [formGroup]='$any(form)' class="mb-5">
+            <div class="filtro-content">
+                <!--FECHAS-->
+                <p class="ptext">Periodo: </p>
+                <div class="fecha">
+                    <mat-form-field>
+                        <input formControlName="fechaDesde" type="text" matInput [matDatepicker]="picker"
+                            (dateChange)="openEvent($event)" oninput="this.value = this.value.replace(/[^0-9/-]/g, '')"
+                            placeholder="Desde" autocomplete="off">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="fecha">
+                    <mat-form-field>
+                        <input matInput oninput="this.value = this.value.replace(/[^0-9/-]/g, '')"
+                            formControlName="fechaHasta" [matDatepicker]="picker1" placeholder="Hasta"
+                            autocomplete="off" id="fechaHasta">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="botones col-lg-12">
+                    <button class=" btn  align-items-center justify-content-center-flex" style="background-color: #F16565; color: #fff;"
+                    (click)="clickClose()">
+                   CANCELAR
+               </button>
+                    <button class=" btn btn-cli-primary align-items-center justify-content-center-flex"
+                        [disabled]="form.invalid" (click)="generarReporteError()">
+                        GENERAR REPORTE
+                    </button>
+                </div>
+            </div>
+        </form>
+
+       
+    </div>

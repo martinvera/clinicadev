@@ -1,0 +1,22 @@
+<div class="content__dialog">
+    <span id="close-icon" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </span>
+    <span class="title--float">
+        <mat-icon>warning</mat-icon> Eliminar Lote
+    </span>
+    <div class="p-5 pr-sm-3 pl-sm-3">
+        <div mat-dialog-content class="mb-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p><strong>¿Está seguro de eliminar el lote {{data.nroLote}}?</strong></p>
+                    <p class="mb-0">Se eliminarán todas las facturas asociadas a este lote.</p>
+                </div>
+            </div>
+        </div>
+        <div mat-dialog-actions class="justify-content-center">
+            <button class="btn btn-cli-danger m-2" mat-dialog-close>CANCELAR</button>
+            <button class="btn btn-cli-primary m-2" (click)="isDelete()" mat-button>ELIMINAR</button>
+        </div>
+    </div>
+</div>

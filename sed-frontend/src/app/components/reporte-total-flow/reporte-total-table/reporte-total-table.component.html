@@ -1,0 +1,97 @@
+<form [formGroup]='$any(form)'>
+
+
+  <div class="filtro-content">
+
+    <div class="garante">
+      <mat-form-field>
+        <mat-label>Garante</mat-label>
+        <mat-select formControlName="garante">
+          <mat-option *ngFor="let garante of garantes" [value]="garante.codigo">{{garante.descripcion}}
+          </mat-option>
+        </mat-select>
+
+      </mat-form-field>
+    </div>
+
+
+    <div class="button">
+      <button matTooltip="Buscar" mat-mini-fab color="primary" (click)="searchReporteTotal()">
+        <mat-icon>search</mat-icon>
+      </button>
+      <button mat-mini-fab color="warn" matTooltip="Limpiar filtro" (click)="clearForm()"
+        class="btn">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 226 226"
+            style=" fill:#000000;">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+              stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+              font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+              <path d="M0,226v-226h226v226z" fill="none"></path>
+              <g fill="#ffffff">
+                <path
+                  d="M212.41827,0.54327c-1.96935,0.23768 -3.32752,1.05259 -4.07452,2.44471l-34.22596,64.10577l26.62019,11.95192l24.71875,-68.18029c1.08654,-2.98798 -1.66376,-6.92668 -6.2476,-8.96394c-2.27494,-1.01863 -4.82151,-1.59585 -6.79087,-1.35817zM13.03846,34.76923c-7.19832,0 -13.03846,5.84014 -13.03846,13.03846c0,7.19832 5.84014,13.03846 13.03846,13.03846c7.19832,0 13.03846,-5.84014 13.03846,-13.03846c0,-7.19832 -5.84014,-13.03846 -13.03846,-13.03846zM52.15385,43.46154c-4.78756,0 -8.69231,3.90475 -8.69231,8.69231c0,4.78756 3.90475,8.69231 8.69231,8.69231c4.78756,0 8.69231,-3.90475 8.69231,-8.69231c0,-4.78756 -3.90475,-8.69231 -8.69231,-8.69231zM155.64663,74.15625c-10.59375,-0.20372 -20.94982,6.00991 -25.53365,16.29808l82.84856,36.67067c6.11178,-13.71755 -0.16977,-29.77794 -13.85337,-35.85577c-2.92007,-1.29026 -30.21935,-13.378 -33.13942,-14.66827c-3.42938,-1.52794 -6.79087,-2.3768 -10.32212,-2.44471zM47.80769,78.23077c-11.98588,0 -21.73077,9.74489 -21.73077,21.73077c0,11.98588 9.74489,21.73077 21.73077,21.73077c11.98588,0 21.73077,-9.74489 21.73077,-21.73077c0,-11.98588 -9.74489,-21.73077 -21.73077,-21.73077zM123.05048,103.22115c-9.37139,18.0637 -28.14813,28.92909 -46.72115,35.04087c-9.26953,3.05589 -18.30138,4.95734 -25.53365,5.97596c-7.23227,1.01863 -13.27614,1.15445 -14.39663,1.08654c-3.42938,-0.23768 -6.689,1.59586 -8.28486,4.6857c-1.59586,3.05589 -1.22236,6.7569 0.95072,9.4393c51.78035,63.90205 131.19952,66.55048 131.19952,66.55048c2.7503,0.10187 5.36479,-1.12049 7.0625,-3.25962c0,0 23.08894,-28.25 40.47356,-81.21875l-16.56971,-5.43269c-14.90595,45.39693 -31.54357,67.46725 -35.04087,71.98317c-3.97265,-0.30559 -13.44591,-1.35817 -25.80529,-4.61779c3.9387,-4.34615 11.54447,-13.78545 19.55769,-32.05288c-22.71544,20.94982 -36.16136,24.24339 -42.10337,24.44712c-6.82482,-2.78425 -13.64964,-6.11178 -20.91587,-10.32212c3.53125,-3.22566 8.82813,-9.13371 14.9399,-20.3726c-8.18299,8.55649 -18.94651,11.91797 -26.07692,13.3101c-7.16437,-4.95733 -14.29477,-10.66165 -21.1875,-17.38462c7.8774,-1.15444 17.2488,-2.98798 27.16346,-6.2476c21.01773,-6.92668 44.37831,-19.55769 56.77163,-43.46154z">
+                </path>
+              </g>
+            </g>
+          </svg>
+        </span>
+      </button>
+    </div>
+
+
+  </div>
+
+</form>
+
+<br>
+
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource"><caption class="caption-none"></caption>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="fecha">
+      <th scope="col" mat-header-cell *matHeaderCellDef> Creación Reporte </th>
+      <td mat-cell *matCellDef="let element"> {{element.timestamp | date:"d/MM/YYYY, h:mm a" }} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="garanteDescripcion">
+      <th scope="col" mat-header-cell *matHeaderCellDef> Garante </th>
+      <td mat-cell *matCellDef="let element"> {{element.garante}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th scope="col" mat-header-cell *matHeaderCellDef> Descargar</th>
+      <td mat-cell *matCellDef="let element">
+      
+        <div *ngIf="element.url">
+          <a matTooltip="Descargar reporte" [href]="element.url"
+            *appCheckPermissions="permission.DESCARGAR_REPORTE_TOTAL">
+            <button mat-mini-fab class="download" aria-label="Example icon button with a menu icon">
+              <mat-icon style="margin-top: -10px;">download</mat-icon>
+            </button>
+          </a>
+         
+        </div>
+        <div *ngIf="element.url!=''?false:true">
+        <button mat-raised-button  class="btn-sin-registro" *appCheckPermissions="permission.DESCARGAR_REPORTE" (click)="openDialog(element)">VER DETALLE
+        </button>
+        </div>
+      </td>
+    </ng-container>
+
+    
+
+    <!-- Symbol Column -->
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

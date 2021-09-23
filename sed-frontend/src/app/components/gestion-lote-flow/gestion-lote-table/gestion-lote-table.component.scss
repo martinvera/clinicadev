@@ -1,0 +1,80 @@
+table {
+    width: 100%;
+}
+th {
+    width: 5%;
+    align-items: center;
+    font-size: 13px;
+    padding: 4px 1rem !important;
+}
+
+td {
+    font-size: 12px;
+    padding: 4px 1rem !important;
+}
+
+.filtro-content {
+    width: 100%;
+    background: #fff;
+    padding: 0.7rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-left: 8px solid #00a1e1;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-template-rows: repeat(1, 40px);
+}
+
+.fechalote {
+    display: flex;
+    align-items: center;
+}
+
+.limpiar {
+    margin-left: 20px;
+}
+
+.btn {
+    font-size: 11px;
+}
+
+.doc {
+    background-image: linear-gradient(125deg, #2f729e 0, #216186 50%, #00547c 100%);
+    color: #fff;
+    border-radius: 3px;
+    width: 60px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 2.4px 2.4px 3.2px;
+}
+
+.delete {
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.pagination {
+    display: flex;
+    background: #fff;
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 1px solid #ddd;
+}
+
+.pagination a.active {
+    background-color: #4caf50;
+    color: white;
+    border: 1px solid #4caf50;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+
+

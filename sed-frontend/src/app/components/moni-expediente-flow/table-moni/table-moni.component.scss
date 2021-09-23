@@ -1,0 +1,122 @@
+/* Structure */
+table {
+    width: 100%;
+
+    td.options-row {
+        span {
+            display: inline-block;
+            a {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.filter {
+    background: white;
+    border-left: 10px solid #00a1e1;
+}
+
+
+.limpiar{
+    margin-left: 20px;
+}
+
+.fecha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.estado {
+    button {
+        cursor: initial;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-radius: 10px;
+        color: white;
+        font-size: 12px;
+        border: 0px;
+        display: flex;
+        &.success {
+            background: #249e55;
+        }
+        &.error {
+            background: #c52c2c;
+        }
+        &.progess {
+            background: #e26f2e;
+        }
+
+        &.pending {
+            background: #d4c42d;
+        }
+
+        .mat-icon {
+            margin-left: 5px;
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+.htext {
+    font-size: 14px;
+}
+
+.ctext {
+    font-size: 12px;
+}
+
+
+.filtro-content {
+    border: 0px;
+    border-left: 8px solid #00a1e1 !important;
+    border-radius: 0px;
+
+    .card-body{
+        padding: 1rem 8rem 1rem 2rem;
+        position: relative;
+
+        .btn-search{
+            position: absolute;
+            top: 25%;
+            right: 18px;
+        }
+    }
+
+    mat-form-field{
+        width: 100% !important;
+    }
+}
+
+.btn{
+  
+    margin-left:10px;
+    color:#fff;
+     background: linear-gradient(180deg, #65bce8 0%, #306485 100%);
+    transition: all .3s;
+    font-size: 13px;
+    margin-top: 54px;
+    font-weight: 500;
+    height: auto !important;
+    display: flex;
+    align-items: center;
+    white-space: normal;
+ 
+}
+.btn-exp{
+    display: flex;
+    justify-content: flex-end;
+}

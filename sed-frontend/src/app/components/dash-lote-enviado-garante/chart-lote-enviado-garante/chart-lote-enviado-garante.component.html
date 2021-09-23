@@ -1,0 +1,68 @@
+<div class="card p-3">
+    <div class="card-body">
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <table class="table table-borderless"><caption class="caption-none"></caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">&nbsp;</th>
+                            <th scope="col">&nbsp;</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                    <tr>
+                        
+                        <td>Garante: {{garante}}</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            Fecha: {{fechaDesdeHasta}}
+                        </td>
+                    </tr>
+                   </tbody>
+                   
+                </table>
+                <table class="table table-borderless"><caption class="caption-none"></caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" >&nbsp;</th>
+                            <th scope="col" >LOTES</th>
+                            <th scope="col" >%</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of enviadosGarante">
+                            <td>{{ item.estadoGarante }}</td>
+                            <td>{{ item.total }}</td>
+                            <td>{{ ((item.total/total)*100) | number:'0.0-2' }}%</td>
+    
+                           
+                        </tr>
+                      
+    
+                        <tr>
+                          
+                            <td>Total:</td>
+                            <td class="totales">{{total}}</td>
+                            <td class="totales">{{totalPor  | number:'0.0-0'}}%</td>
+                        </tr>
+                    </tbody>
+                   
+
+                
+                </table>
+            </div>
+            <div class="col-lg-6">
+                <div class="chart-cake-border">
+                    <div class="chartConfigCSS">
+                        <canvas id="chartCake"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5" *appCheckPermissions="permission.GENERAR_REPORTE_LOTES_GARANTE">
+                <a href="javascript:void(0);" (click)="reportEnviadosGarante();" >Generar reporte</a>
+            </div>
+        </div>
+    </div>
+</div>

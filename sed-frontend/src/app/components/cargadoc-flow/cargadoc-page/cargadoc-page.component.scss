@@ -1,0 +1,135 @@
+.form__content {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+
+    .example-full-width {
+        width: 100%;
+    }
+}
+
+.content_col-1 {
+    padding-right: 2rem;
+    box-sizing: border-box;
+}
+
+.content_col-2 {
+    background: #f2f1f1;
+    color: #a4a4a4;
+    padding: 1rem;
+    border-radius: 5px;
+
+    .row-border-bottom {
+        border-bottom: 1px solid #c9c9c9;
+        padding-bottom: 8px;
+    }
+
+    .button__add-file {
+        background-color: #aaaaaa;
+        color: #ffffff;
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    a.icon-add-file,
+    a.icon-remove-file {
+        display: inline-block;
+    }
+
+    .icon-add-file .icon {
+        color: #0032a0;
+        font-size: 2rem;
+    }
+
+    .icon-remove-file .icon {
+        color: #d45758;
+        font-size: 2rem;
+    }
+}
+
+.content__overflow {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.btn-rol {
+    background-color: #f16565;
+    color: #fff;
+}
+
+.btn-report {
+    background-color: #2eafe2;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .header__body {
+        overflow-x: scroll;
+        justify-content: normal;
+
+         
+            
+
+            span {
+                white-space: nowrap;
+            }
+        }
+    }
+
+
+.check-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+ .ptext{
+     font-size: 15px;
+ }
+ .tit{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.encuentro{
+    padding-bottom: 2.1em;
+}
+
+.escoba{
+    size: 5px;
+}
+
+.btn{
+    background: linear-gradient(180deg, #65bce8 0%, #306485 100%);
+    transition: all .3s;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+  
+}
+.btn1{
+    background: linear-gradient(180deg, #a7bac5 0%, #5a6469 100%);
+    transition: all .3s;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    height: 30px;
+    
+}
+.limpiarbtn{
+    background: linear-gradient(180deg, #dd9797 0%, #ce4242 100%);
+    transition: all .3s;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    
+    
+}
+
+.cabecera{
+    display: flex;
+    justify-content: center;
+}
+
