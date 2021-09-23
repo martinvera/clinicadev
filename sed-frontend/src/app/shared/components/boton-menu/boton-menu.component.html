@@ -1,0 +1,13 @@
+
+<ng-container *ngIf="permissions">
+    <a class="box {{ clase }}" (click)="toGestion(path)" *appCheckPermissions="permissionsLink">
+        <mat-icon>{{ icon }}</mat-icon>
+        <p>{{ text }}</p>
+    </a>
+</ng-container>
+<ng-container *ngIf="permissionsMenuLink.length>0">
+    <a class="box {{ clase }}" (click)="toGestion(path)" *appPermissionsHeader="[permissionsMenuLink]">
+        <mat-icon>{{ icon }}</mat-icon>
+        <p>{{ text }}</p>
+    </a>
+</ng-container>

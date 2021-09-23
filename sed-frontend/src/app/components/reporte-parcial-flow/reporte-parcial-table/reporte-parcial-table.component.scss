@@ -1,0 +1,86 @@
+table{
+    width: 100%;
+}
+th{
+    width: 15%;
+    font-size: 13px;
+}
+
+td{
+    font-size: 12px;
+}
+.filtro-content {
+     margin-left: 0px;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 65%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr)) ;
+    grid-template-rows: repeat(1, 40px);
+    
+}
+
+.boton{
+    
+    color:#fff;
+    height: 40px;
+    margin-left:10px;
+         background: linear-gradient(180deg, #65bce8 0%, #306485 100%);
+        transition: all .3s;
+        font-size: 13px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        white-space: normal;
+     
+    }
+.example-month-picker .mat-calendar-period-button {
+    pointer-events: none;
+  }
+  
+  .example-month-picker .mat-calendar-arrow {
+    display: none;
+  }
+  .download{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    background-color: #249E55;
+    
+}
+
+.estado {
+    button {
+        cursor: initial;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-radius: 10px;
+        color: white;
+        font-size: 12px;
+        border: 0px;
+        display: flex;
+        &.success {
+            background: #249e55;
+        }
+        &.error {
+            background: #c52c2c;
+        }
+        &.progess {
+            background: #e26f2e;
+        }
+
+        &.pending {
+            background: #d4c42d;
+        }
+
+        .mat-icon {
+            margin-left: 5px;
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+

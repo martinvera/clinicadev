@@ -1,0 +1,42 @@
+table {
+    width: 100%;
+}
+
+.document {
+    color: #0032a0;
+    margin-left: 15px;
+}
+th {
+    width: 22%;
+    font-size: 13px;
+}
+
+td {
+    color: #a4a4a4;
+    font-size: 12px;
+    align-items: center;
+}
+
+.acept {
+    background-color: #47c2e9;
+    color: #fff;
+    margin-left: 330px;
+}
+
+.content__dialog {
+    position: relative !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    #close-icon {
+        display: inline-block;
+        position: absolute;
+        right: -5px;
+        top: -10px;
+    }
+}
+
+.estado button.success {
+    min-width: 35% !important;
+    justify-content: center;
+}
+

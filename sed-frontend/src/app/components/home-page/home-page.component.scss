@@ -1,0 +1,57 @@
+.contenedor{
+    padding: 25px;
+}
+h1{
+    
+     font-size: 40px;
+    animation-duration: 1s;
+     animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+h2{
+    color: #0032A0;
+    font-size: 48px;
+    font-weight: normal;
+    text-shadow: 1px 0px 0px rgba(255, 255, 255, 1);
+    b{
+        font-weight: bold;
+    }
+}
+p{
+    &.operacion{
+        color:yellow;
+        font-size: 55px;
+        font-weight: bold;
+        line-height: 64px;
+        text-shadow: 1px 0px 0px rgba(11, 11, 11, 1);
+        width: 450px;
+        margin: auto;
+    }
+}
+
+.back{
+    display: block;
+    &>.mat-icon{
+        font-size: 44px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.content{
+    &__box{
+        background-color: #0032A0;
+        border-radius: 10px;
+    }
+}

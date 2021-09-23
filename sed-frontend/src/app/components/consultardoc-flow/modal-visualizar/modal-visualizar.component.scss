@@ -1,0 +1,61 @@
+.contenido{
+     width: 700px;
+     height: 550px;  
+    background-color: white;
+}
+.acept{
+    background-color:#47C2E9;
+    color: #fff;
+    margin-left: 280px;
+    
+}
+
+.mat-form-field{
+    min-height: 40px !important;
+    width: 100%;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex{
+    padding-top: 0px !important;
+}
+
+.fila1 {
+    display: flex;
+    padding-right: 10px;
+}
+.fila2 {
+    display: flex;
+    padding-right: 10px;
+}
+.fila3{
+    display: flex;
+}
+
+.content__dialog{
+    position: relative !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    #close-icon{
+        display: inline-block;
+        position: absolute;
+        right: -5px;
+        top: -10px;
+    }
+}
+
+table.table--documents{
+    thead{
+        background-color: #218ECB;
+        color: #ffffff;
+    }
+}
+.tit{
+    font-size: 20px;
+}
+.icon-add-file{
+    color: #0032A0;
+}
+.cancelar{
+    display: flex;
+    justify-content: center;
+}

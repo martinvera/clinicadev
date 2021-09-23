@@ -1,0 +1,115 @@
+<div class="content">
+    <div class="content__dialog">
+        <span id="close-icon" mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </span>
+    </div>
+    <p class="tit">Actualizar Estado y Fechas</p>
+    <form [formGroup]="form">
+
+
+        <div mat-dialog-content>
+            <div class="row grid">
+
+                <span class="label">Estado del lote:</span>
+
+                <div class="estado">
+                    <mat-form-field>
+                        <mat-label>Estado</mat-label>
+                        <mat-select formControlName="estado" (selectionChange)="onSelectOptionState($event,1)">
+                            <mat-option *ngFor="let estado of estados" [value]="estado.id">
+                                {{estado.value}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <span class="label">Fecha de Lote:&nbsp;<mat-icon class="help"
+                        matTooltip="Fecha en la que se generó el expediente de Colocación Digital">info</mat-icon>
+                    </span>
+
+                <div class="fechaLote">
+                    <mat-form-field>
+                        <mat-label>Fecha de lote </mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="fechaLote" [disabled]="true">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <span class="label" id="idFechaEnvio1" style="display: none;"
+                    *appCheckPermissions="permission.EDITAR_FECHA_ENVIO">Fecha de Envío:&nbsp;<mat-icon class="help"
+                        matTooltip="Fecha en la que se envía al garante el Expediente de colocación Digital">info
+                    </mat-icon></span>
+                <div class="fechaEnvio" id="idFechaEnvio2" style="display: none;"
+                    *appCheckPermissions="permission.EDITAR_FECHA_ENVIO">
+                    <mat-form-field>
+                        <mat-label>Fecha de Envío </mat-label>
+                        <input matInput [matDatepicker]="picker1" formControlName="fechaEnvio"
+                            (dateChange)="changeFechaEnvio()">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <span class="label" id="idRegistroSolicitud1" style="display: none;"
+                    *appCheckPermissions="permission.EDITAR_FECHA_NUMERO_SOLICITUD">Registro de Solicitud:&nbsp;
+                    <mat-icon class="help" matTooltip="Nro de registro emitido por Rimac al momento de cargar el lote">
+                        info</mat-icon></span>
+                <div class="fechaAceptacion" id="idRegistroSolicitud2" style="display: none;"
+                    *appCheckPermissions="permission.EDITAR_FECHA_NUMERO_SOLICITUD">
+                    <mat-form-field>
+                        <mat-label>Registro de Solicitud</mat-label>
+                        <input matInput formControlName="registroSolicitud">
+                    </mat-form-field>
+                </div>
+                <span class="label" id="temRegistroSolicitud1" style="display: none;"
+                    *appCheckPermissions="permission.EDITAR_FECHA_NUMERO_SOLICITUD">Registro de Solicitud:&nbsp;
+                    <mat-icon class="help" matTooltip="Nro de registro emitido por Rimac al momento de cargar el lote">
+                        info</mat-icon></span>
+                <div class="fechaAceptacion" id="temRegistroSolicitud2" style="display: none;"
+                    *appCheckPermissions="permission.EDITAR_FECHA_NUMERO_SOLICITUD">
+                    <mat-form-field>
+                        <mat-label>Registro de Solicitud</mat-label>
+                        <input matInput name="temRegistroSolicitud" id="temRegistroSolicitud" value="" disabled>
+                    </mat-form-field>
+                </div>
+                <span class="label" id="idFechaAceptacion1" style="display: none;"
+                    *appCheckPermissions="permission.EDITAR_FECHA_DE_ACEPTACION">Fecha de Aceptación:&nbsp;<mat-icon
+                        class="help" matTooltip="Fecha en la que el garante acepta Expediente de colocación Digital">
+                        info</mat-icon></span>
+                <div class="fechaAceptacion" id="idFechaAceptacion2" style="display: none;"
+                    *appCheckPermissions="permission.EDITAR_FECHA_DE_ACEPTACION">
+                    <mat-form-field>
+                        <mat-label>Fecha de Aceptación </mat-label>
+                        <input matInput [matDatepicker]="picker2" formControlName="fechaAceptacion"
+                            (dateChange)="changeFechaAceptacion()">
+                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <span class="label" id="idFechaRechazo1" style="display: none;"
+                    *appCheckPermissions="permission.EDITAR_FECHA_DE_ACEPTACION">Fecha de Rechazo:&nbsp;<mat-icon
+                        class="help"
+                        matTooltip="Fecha en la que se envía al garante rechaza Expediente de colocación Digital">info
+                    </mat-icon></span>
+
+                <div class="fechaAceptacion" id="idFechaRechazo2" style="display: none;"
+                    *appCheckPermissions="permission.EDITAR_FECHA_DE_ACEPTACION">
+                    <mat-form-field>
+                        <mat-label>Fecha de Rechazo </mat-label>
+                        <input matInput [matDatepicker]="picker3" formControlName="fechaRechazo"
+                            (dateChange)="changeFechaRechazo()">
+                        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                        <mat-datepicker #picker3></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <br>
+            <div class="btn-aceptar col-lg-12 mt5">
+                <button class="btn btn-cli-primary" (click)="setChangeState()">ACEPTAR</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>

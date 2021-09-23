@@ -1,0 +1,48 @@
+
+table {
+    width: 100%;
+  }
+    
+  td, th {
+    width: 25%;
+  }
+  
+  .mat-icon{
+   
+    font-size: 22px;
+  }
+  
+  .lib-icon{
+  font-size: 19px;
+  
+  }
+  
+  .btn-report{
+  background-color:#2EAFE2;
+  color: #fff;
+  
+  
+  }
+  
+  .mat {
+    &-form-field{
+      font-size: 14px;
+      width: 100%;
+    }
+    &-paginator{
+      margin-bottom: 25px;
+    }
+    &-input{
+      color: white;
+    }
+  }
+  
+  .filter{
+    background: white;
+    border-left: 10px solid #00A1E1;
+    width: 40%;
+  }
+  .tit{
+    font-size: 28px;
+    font-weight: bold;
+}

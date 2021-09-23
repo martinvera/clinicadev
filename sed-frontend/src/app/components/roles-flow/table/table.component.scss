@@ -1,0 +1,80 @@
+table {
+    width: 100%;
+}
+
+.mat {
+    &-form-field {
+        font-size: 13px;
+        width: 100%;
+    }
+    &-paginator {
+        margin-bottom: 25px;
+    }
+    &-input {
+        color: white;
+    }
+}
+
+.filter {
+    background: white;
+    border-left: 10px solid #00a1e1;
+    margin-left: -5px;
+}
+
+.text-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.estado {
+    button {
+        cursor: initial;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-radius: 10px;
+        color: white;
+        font-size: 12px;
+        border: 0px;
+        display: flex;
+        &.activo {
+            background: #249e55;
+        }
+        &.inactivo {
+            background: #c52c2c;
+        }
+        .mat-icon {
+            margin-left: 5px;
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+.icon-table {
+    cursor: pointer;
+}
+
+.htext {
+    font-size: 14px;
+}
+
+.ctext {
+    font-size: 12px;
+}
+
+a.icon-add-file {
+    display: inline-block;
+    color: #0032a0;
+    width: 50px;
+}
+
+.btn{
+    background: linear-gradient(180deg, #65bce8 0%, #306485 100%);
+    transition: all .3s;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-right: -15px;
+}

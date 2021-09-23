@@ -1,0 +1,70 @@
+<div class="content">
+  <div class="content__dialog">
+    <span id="close-icon" mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </span>
+  </div>
+  <p class="tit">Historial</p>
+  <div mat-dialog-content>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z0"><caption class="caption-none"></caption>
+
+      <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th scope="col" mat-header-cell *matHeaderCellDef> Fecha y hora de acción </th>
+        <td mat-cell *matCellDef="let element"> {{element.timestamp | date:'d/MM/YYYY, h:mm a' }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="lote">
+        <th scope="col" mat-header-cell *matHeaderCellDef class="padding-column">Lote</th>
+        <td mat-cell *matCellDef="let element" class="padding-column"> {{element.nroLote}} </td>
+      </ng-container>
+
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th scope="col" mat-header-cell *matHeaderCellDef> Estado </th>
+        <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="weight">
+        <th scope="col" mat-header-cell *matHeaderCellDef> Fecha Lote</th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaLote | date:'d/MM/YYYY'}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="symbol" [sticky]="false">
+        <th scope="col" mat-header-cell *matHeaderCellDef> Fecha Envío</th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaEnvio}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="aceptacion" [sticky]="false">
+        <th scope="col" mat-header-cell *matHeaderCellDef> Fecha Aceptación</th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaAceptacion}} </td>
+      </ng-container>
+       <!-- Symbol Column -->
+       <ng-container matColumnDef="rechazo" [sticky]="false">
+        <th scope="col" mat-header-cell *matHeaderCellDef> Fecha Rechazo</th>
+        <td mat-cell *matCellDef="let element"> {{element.fechaRechazo}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="user" [sticky]="false">
+        <th scope="col" mat-header-cell *matHeaderCellDef>Usuario</th>
+        <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+      </ng-container>
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="registroSolicitud">
+        <th scope="col" mat-header-cell *matHeaderCellDef>Registro Solicitud</th>
+        <td mat-cell *matCellDef="let element"> {{element.registroSolicitud}} </td>
+      </ng-container>
+       
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns, sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>

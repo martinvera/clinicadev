@@ -1,0 +1,67 @@
+<br>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource"><caption class="caption-none"></caption>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th scope="col" mat-header-cell *matHeaderCellDef>Creación Reporte </th>
+      <td mat-cell *matCellDef="let element"> {{element.timestamp | date:"d/MM/YYYY, h:mm a" }} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th scope="col" mat-header-cell *matHeaderCellDef> Usuario que generó </th>
+      <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="estado">
+      <th scope="col" mat-header-cell *matHeaderCellDef> Estado </th>
+      <td class="ctext " mat-cell *matCellDef="let element" class="estado"> <button [ngClass]="[
+    (element.estado === 'GENERADO') ? 'success' : 
+    (element.estado === 'PENDIENTE') ? 'pending':
+    (element.estado === 'EN PROCESO') ? 'progess':
+    (element.estado === 'SINREGISTRO') ? 'sin_registro':
+    (element.estado === 'ERROR') ? 'error':'']">{{[
+          (element.estado === 'GENERADO') ? 'GENERADO' :
+          (element.estado === 'PENDIENTE') ? 'Pendiente':
+          (element.estado === 'EN PROCESO') ? 'En proceso':
+          (element.estado === 'SINREGISTRO') ? 'SINREGISTRO':
+          (element.estado === 'ERROR') ? 'Error':'']}}
+
+        </button> </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th scope="col" mat-header-cell *matHeaderCellDef>Filtros </th>
+      <td mat-cell *matCellDef="let element" [innerText]='element.filtros'> </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="opcion">
+      <th scope="col" mat-header-cell *matHeaderCellDef>Descargar</th>
+      <td mat-cell *matCellDef="let element">
+        <div *ngIf="element.url">
+          <a matTooltip="Descargar reporte" class=" btn descargar" [href]="element.url"
+            *appCheckPermissions="permission.DESCARGAR_REPORTE">
+            <button mat-mini-fab class="download" aria-label="Example icon button with a menu icon">
+              <mat-icon style="margin-top: -10px;">download</mat-icon>
+            </button>
+          </a>
+        </div>
+        <div *ngIf="element.estado == 'SINREGISTRO'">
+          <button mat-raised-button class="btn-sin-registro" *appCheckPermissions="permission.DESCARGAR_REPORTE"
+            (click)="openDialog(element)">VER DETALLE
+          </button>
+        </div>
+
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

@@ -1,0 +1,110 @@
+table {
+  width: 100%;
+}
+.mat-elevation-z8 {
+  overflow-x: auto;
+}
+
+th {
+  width: 2%;
+  align-items: center;
+  font-size: 13px;
+  padding: 4px 1rem !important;
+  box-sizing: border-box;
+}
+
+td {
+  font-size: 12px;
+  padding: 4px 1rem !important;
+}
+
+.mat {
+  &-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  &-paginator {
+    margin-bottom: 25px;
+  }
+  &-input {
+    color: white;
+  }
+  &-expansion-panel-body {
+    padding: 0px !important;
+  }
+}
+
+.filter {
+  background: white;
+  border-left: 10px solid #00a1e1;
+  width: 50%;
+  display: flex;
+  margin-left: 10px;
+  height: 65px;
+  button.fill {
+    border-left: solid 1.8px rgb(121, 120, 120);
+    margin-left: 4px;
+    border-radius: 0px;
+    &:hover:after {
+      content: " Filtros";
+    }
+  }
+}
+.filter2 {
+  background: white;
+  // display: none;
+}
+.container {
+  display: flex;
+}
+.fila1 {
+  display: flex;
+}
+.container2 {
+  display: flex;
+}
+.admision {
+  display: flex;
+}
+.search {
+  background: #00a1e1;
+  color: #fff;
+}
+
+.filtro {
+  background: #00a1e1;
+  color: #fff;
+}
+
+.text-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.htext {
+  font-size: 13px;
+}
+
+.ctext {
+  font-size: 12px;
+}
+
+a.icon-add-file {
+  color: #0032a0;
+}
+
+.btn3 {
+  background: linear-gradient(180deg, #65bce8 0%, #306485 100%);
+  transition: all 0.3s;
+  color: #fff;
+  white-space: normal;
+}

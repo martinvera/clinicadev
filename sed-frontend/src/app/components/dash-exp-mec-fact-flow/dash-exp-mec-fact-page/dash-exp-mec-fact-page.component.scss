@@ -1,0 +1,24 @@
+.filtro-content {
+    border: 0px;
+    border-left: 8px solid #00a1e1 !important;
+    border-radius: 0px;
+
+    .card-body{
+        padding: 1rem 6rem 1rem 2rem;
+        position: relative;
+
+        .btn-search{
+            position: absolute;
+            top: 25%;
+            right: 100px;
+        }
+    }
+
+    mat-form-field{
+        width: 100% !important;
+    }
+}
+.tit{
+    font-size: 28px;
+    font-weight: bold;
+}

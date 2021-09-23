@@ -1,0 +1,54 @@
+<div class="content__dialog">
+    <span id="close-icon" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </span>
+    <div>
+        <p style="font-size: 20px;"> Encuentros Asociados a la factura </p><br>
+        <div mat-dialog-content>
+            <table mat-table [dataSource]="dataSource" matSort><caption class="caption-none"></caption>
+                <ng-container matColumnDef="Encuentro">
+                    <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header> Encuentro </th>
+                    <td mat-cell *matCellDef="let row"> {{row.nroEncuentro}} </td>
+                </ng-container>
+                <ng-container matColumnDef="Fecha creación">
+                    <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header> Fecha creación </th>
+                    <td mat-cell *matCellDef="let row"> {{ row.fechaAtencion? row.fechaAtencion : '-' }} </td>
+                </ng-container>
+                <ng-container matColumnDef="Estado">
+                    <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
+                    <td mat-cell *matCellDef="let row" class="estado">
+                        <button [ngClass]="[
+                        (row.estadoArchivo == 'OK') ? 'success' :
+                        (row.estadoArchivo == 'ERROR') ? 'error' :
+                        (row.estadoArchivo == 'PENDIENTE') ? 'pending':'']" class="mr-2">{{[
+                            (row.estadoArchivo == 'OK') ? 'OK' :
+                            (row.estadoArchivo == 'ERROR') ? 'DATA INCOMPLETA' :
+                            (row.estadoArchivo == 'PENDIENTE') ? 'PENDIENTE':'']}}
+                        </button>
+                    </td>
+                </ng-container>
+                <ng-container matColumnDef="Tipo documento">
+                    <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header> Tipo documento </th>
+                    <td mat-cell *matCellDef="let row"> {{row.tipoDocumentoDes}} </td>
+                </ng-container>
+                <ng-container matColumnDef="Detalle">
+                    <th scope="col" mat-header-cell *matHeaderCellDef mat-sort-header> Detalle </th>
+                    <td mat-cell *matCellDef="let row">
+                        <a matTooltip="Ver documento" class="icon-add-file cursor-pointer" href="{{row.urlArchivo}}"
+                            *ngIf="row.estadoArchivo == 'OK'" target="_blank" rel="noopener">
+                            <mat-icon class="document">content_paste</mat-icon>
+                        </a>
+                        <ng-template [ngIf]="(row.estadoArchivo === 'ERROR' && row.msjError)">
+                            <a matTooltip="Ver documento" class="icon-add-file cursor-pointer" href="javascript:void(0)" (click)="openDialog(row)">
+                                <mat-icon class="document">content_paste</mat-icon>
+                            </a>
+                        </ng-template>
+                    </td>
+
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</div>

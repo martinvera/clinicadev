@@ -1,0 +1,35 @@
+.table-simple-data {
+    width: 100%;
+    td,
+    th {
+        padding: 0.5em;
+    }
+}
+
+.table-data-charts {
+    span.square {
+        display: inline-block;
+        width: 20px;
+        height: 10px;
+        margin-right: 1rem;
+
+        &.square-success {
+            background-color: #2576de;
+        }
+
+        &.square-pendant {
+            background-color: #52b279;
+        }
+
+        &.square-error {
+            background-color: #47c2e9;
+        }
+    }
+}
+.chartConfigCSS-bar{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    margin: 0px auto;
+    height: auto;
+}

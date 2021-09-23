@@ -1,0 +1,71 @@
+<div class="contenido">
+    <div class="content__dialog">
+        <span id="close-icon" mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </span>
+        <div>
+            <p class="tit">Información del Usuario</p>
+            <div mat-dialog-content>
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <img src="../assets/user.svg" alt="" class="user--img">
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-4 mb-3">
+                                <div>
+                                    <strong class="ptext">Nombres Completos:</strong>
+                                    <p class="dtext">{{userItem.nombres}} {{userItem.apellidoPaterno}}
+                                        {{userItem.apellidoMaterno}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div>
+                                    <strong class="ptext">Rol:</strong>
+                                    <p class="dtext">{{userItem.nombreRol}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div>
+                                    <strong class="ptext">Cargo:</strong>
+                                    <p class="dtext">{{userItem.cargo}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 mb-3">
+                                <div>
+                                    <strong class="ptext">Número Documento:</strong>
+                                    <p class="dtext">{{userItem.tipoDocumento}}: {{userItem.numeroDocumento}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div>
+                                    <strong class="ptext">Usuario:</strong>
+                                    <p class="dtext">{{userItem.username}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 mb-3">
+                                <div>
+                                    <strong class="ptext">Teléfono:</strong>
+                                    <p class="dtext">{{userItem.telefono}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 mb-3">
+                                <div>
+                                    <strong class="ptext">Correo:</strong>
+                                    <p class="dtext">{{userItem.userEmail}}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 mb-3">
+                              <div>
+                                  <strong class="ptext">Proveedor:</strong>
+                                  <p class="dtext">{{userItem.proveedor}}</p>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

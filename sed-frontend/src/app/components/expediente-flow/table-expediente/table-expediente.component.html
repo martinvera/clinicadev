@@ -1,0 +1,251 @@
+<div class="row align-items-center">
+
+    <div class="col-8">
+        <form [formGroup]='form'>
+            <div class="filtro" *ngIf="form">
+                <div class="garante">
+                    <mat-form-field class="input-full-width">
+                        <mat-select formControlName="garanteId" placeholder="Garante" required
+                            (selectionChange)="setGarante($event)">
+                            <mat-option *ngFor="let garante of garantes" [value]="garante.codigo">
+                                {{garante.descripcion}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="factura">
+                    <mat-form-field class="input-full-width">
+                        <input formControlName="facturaNro" matInput placeholder="N° de factura" autocomplete="off"
+                            (keydown)="validAlphaNumber($event)">
+                    </mat-form-field>
+                </div>
+                <div class="nroRemesa">
+                    <mat-form-field class="input-full-width">
+                        <input formControlName="nroRemesa" matInput placeholder="N° Remesa" autocomplete="off"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                    </mat-form-field>
+                </div>
+
+                <div class="estado">
+                    <mat-form-field class="input-full-width">
+                        <mat-select formControlName="estatus" placeholder="Estado">
+                            <mat-option *ngFor="let estado of estados" [value]="estado.id">
+                                {{estado.value}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="buttons">
+                    <button class="buscar" matTooltip="Buscar" (click)="searchFilter()" mat-mini-fab color="primary"
+                        [disabled]="form.invalid">
+                        <mat-icon>search</mat-icon>
+                    </button>
+
+                    <button class="limpiarFiltro" matTooltip="Limpiar filtro" (click)="clearForm()" mat-mini-fab
+                        color="warn">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26"
+                            viewBox="0 0 226 226" style=" fill:#000000;">
+                            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,226v-226h226v226z" fill="none"></path>
+                                <g fill="#ffffff">
+                                    <path
+                                        d="M212.41827,0.54327c-1.96935,0.23768 -3.32752,1.05259 -4.07452,2.44471l-34.22596,64.10577l26.62019,11.95192l24.71875,-68.18029c1.08654,-2.98798 -1.66376,-6.92668 -6.2476,-8.96394c-2.27494,-1.01863 -4.82151,-1.59585 -6.79087,-1.35817zM13.03846,34.76923c-7.19832,0 -13.03846,5.84014 -13.03846,13.03846c0,7.19832 5.84014,13.03846 13.03846,13.03846c7.19832,0 13.03846,-5.84014 13.03846,-13.03846c0,-7.19832 -5.84014,-13.03846 -13.03846,-13.03846zM52.15385,43.46154c-4.78756,0 -8.69231,3.90475 -8.69231,8.69231c0,4.78756 3.90475,8.69231 8.69231,8.69231c4.78756,0 8.69231,-3.90475 8.69231,-8.69231c0,-4.78756 -3.90475,-8.69231 -8.69231,-8.69231zM155.64663,74.15625c-10.59375,-0.20372 -20.94982,6.00991 -25.53365,16.29808l82.84856,36.67067c6.11178,-13.71755 -0.16977,-29.77794 -13.85337,-35.85577c-2.92007,-1.29026 -30.21935,-13.378 -33.13942,-14.66827c-3.42938,-1.52794 -6.79087,-2.3768 -10.32212,-2.44471zM47.80769,78.23077c-11.98588,0 -21.73077,9.74489 -21.73077,21.73077c0,11.98588 9.74489,21.73077 21.73077,21.73077c11.98588,0 21.73077,-9.74489 21.73077,-21.73077c0,-11.98588 -9.74489,-21.73077 -21.73077,-21.73077zM123.05048,103.22115c-9.37139,18.0637 -28.14813,28.92909 -46.72115,35.04087c-9.26953,3.05589 -18.30138,4.95734 -25.53365,5.97596c-7.23227,1.01863 -13.27614,1.15445 -14.39663,1.08654c-3.42938,-0.23768 -6.689,1.59586 -8.28486,4.6857c-1.59586,3.05589 -1.22236,6.7569 0.95072,9.4393c51.78035,63.90205 131.19952,66.55048 131.19952,66.55048c2.7503,0.10187 5.36479,-1.12049 7.0625,-3.25962c0,0 23.08894,-28.25 40.47356,-81.21875l-16.56971,-5.43269c-14.90595,45.39693 -31.54357,67.46725 -35.04087,71.98317c-3.97265,-0.30559 -13.44591,-1.35817 -25.80529,-4.61779c3.9387,-4.34615 11.54447,-13.78545 19.55769,-32.05288c-22.71544,20.94982 -36.16136,24.24339 -42.10337,24.44712c-6.82482,-2.78425 -13.64964,-6.11178 -20.91587,-10.32212c3.53125,-3.22566 8.82813,-9.13371 14.9399,-20.3726c-8.18299,8.55649 -18.94651,11.91797 -26.07692,13.3101c-7.16437,-4.95733 -14.29477,-10.66165 -21.1875,-17.38462c7.8774,-1.15444 17.2488,-2.98798 27.16346,-6.2476c21.01773,-6.92668 44.37831,-19.55769 56.77163,-43.46154z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-4 text-right">
+        <button class="boton" mat-raised-button (click)="generarExpediente()"
+            *appCheckPermissions="permission.GENERAR_EXPEDIENTE_DIGITAL">GENERAR EXPEDIENTE </button>
+        <a class="boton" button mat-raised-button href="/documentos/moni-expediente"
+            *appCheckPermissions="permission.MONITOREO_EXPEDIENTE_GENERADOS">MONITOREO EXP. GENERADOS </a>
+    </div>
+</div>
+
+<br>
+
+
+
+
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+        <caption class="caption-none"></caption>
+        <ng-container matColumnDef="select">
+            <th scope="col" mat-header-cell *matHeaderCellDef>
+
+                <mat-checkbox matTooltip="Seleccionar todo" (change)="$event ? masterToggle() : null"
+                    [checked]="selection.hasValue() && isAllSelected()"
+                    [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+                </mat-checkbox>
+
+            </th>
+            <td mat-cell *matCellDef="let row; let i = index;">
+                <ng-container *ngIf="row.modoFacturacionId != 104 && row.modoFacturacionId != 103">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? validStatus($event,row,i) : null"
+                    [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)"
+                    [(ngModel)]="checkSelect[i]">
+                </mat-checkbox>
+        </ng-container>
+        </td>
+        </ng-container>
+        <!-- ID Column -->
+        <ng-container matColumnDef="factura" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header>N° Factura </th>
+            <td class="ctext" mat-cell *matCellDef="let row">
+                {{row.facturaNro}}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipoFactura" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header>Tipo Factura</th>
+            <td class="ctext" mat-cell *matCellDef="let row">
+                {{
+
+                (row.modoFacturacionId === '103'||row.modoFacturacionId === '104') ? 'INAFECTA' : "AFECTA"
+
+                }}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fAsociada" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header>Factura Asociada</th>
+            <td class="ctext" mat-cell *matCellDef="let row">
+                {{(row.facturaNroAfecta ? row.facturaNroAfecta : "-")}}
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="importe" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header>Importe Factura </th>
+            <td class="ctext" mat-cell *matCellDef="let row">{{row.facturaImporte}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="origen" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header> Origen de información </th>
+            <td class="ctext" mat-cell *matCellDef="let row"> {{row.origen}} </td>
+        </ng-container>
+        <ng-container matColumnDef="origenServicio" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header> Origen de Atención</th>
+            <td class="ctext" mat-cell *matCellDef="let row"> {{row.origenServicioDesc}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="mecanismoFacturacion" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header>Mecanismo</th>
+            <td class="ctext" mat-cell *matCellDef="let row"> {{row.mecanismoFacturacionDesc}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="garante" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header> Garante </th>
+            <td class="ctext" mat-cell *matCellDef="let row"> {{row.garanteDescripcion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="modoFacturacion" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header> Modo fact. </th>
+            <td class="ctext" mat-cell *matCellDef="let row"> {{row.modoFacturacion}} </td>
+        </ng-container>
+
+        <!-- Name Column-->
+
+        <ng-container matColumnDef="nroRemesa" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header> N° Remesa </th>
+            <td class="ctext" mat-cell *matCellDef="let row"> {{row.nroRemesa}}</td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="estado" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header>Estado</th>
+            <td mat-cell *matCellDef="let row" class="estado">
+                <button [ngClass]="[
+                (row.estadoFactura === 'COMPLETO') ? 'success' : 
+                (row.estadoFactura ==='INCOMPLETO') ? 'error':'']">{{[
+                    (row.estadoFactura === 'COMPLETO') ? 'TERMINADO' :
+                    (row.estadoFactura === 'INCOMPLETO') ? 'INCOMPLETO':'']}}
+                </button>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ejecutar">
+            <th scope="col" mat-header-cell *matHeaderCellDef>
+                Ejecutar
+            </th>
+            <td mat-cell *matCellDef="let row; let i = index;">
+                <ng-container *ngIf="row.modoFacturacionId != 104 && row.modoFacturacionId != 103">
+                    <mat-checkbox
+                        matTooltip="ADVERTENCIA: Al seleccionar esta opción se omitirán todos de documentos faltantes asociados a esta factura."
+                        (click)="$event.stopPropagation()" (change)="$event ? changeExecute($event,row,i) : null"
+                        [checked]="selection2.isSelected(row)" [aria-label]="checkboxLabelEjecutar(row)"
+                        *appCheckPermissions="permission.EXONERAR_DOCUMENTOS_FALTANTES" [(ngModel)]="executeSelect[i]">
+                    </mat-checkbox>
+                </ng-container>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="PFactura" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header> Factura </th>
+
+            <td mat-cell *matCellDef="let row">
+                <div *ngIf="row.facturaArchivo">
+                    <a matTooltip="Ver factura" class="icon-add-file cursor-pointer" href="{{row.facturaArchivo}}"
+                        *appCheckPermissions="permission.VER_FACTURA" target="_blank" rel="noopener">
+                        <mat-icon>content_paste</mat-icon>
+                    </a>
+                </div>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Anexo" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header> Anexo </th>
+            <td mat-cell *matCellDef="let row">
+                <div *ngIf="row.archivoAnexoDet">
+                    <a matTooltip="Ver anexo" class="icon-add-file cursor-pointer" href="{{row.archivoAnexoDet}}"
+                        *appCheckPermissions="permission.VER_ANEXO" target="_blank" rel="noopener">
+                        <mat-icon>attach_file</mat-icon>
+                    </a>
+                </div>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Documentos" class="mcont">
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header> Documento </th>
+            <td mat-cell *matCellDef="let row">
+                <ng-container *ngIf="row.modoFacturacionId != 104 && row.modoFacturacionId != 103">
+                    <a matTooltip="Ver documentos asociados" class="icon-add-file cursor-pointer"
+                        (click)="docModal(row)" *appCheckPermissions="permission.VER_DOCUMENTO">
+                        <mat-icon>description</mat-icon>
+                    </a>
+                </ng-container>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="12"><strong>NOTA:</strong> {{messaje}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="pagina" *ngIf="pagination.length > 0">
+    <div class="mt-0">
+        <label class="pag" for="Items">Items por página:&nbsp;&nbsp;</label>
+        <select class="items" name="paginas" id="paginas" (change)="setPage($event)" [(ngModel)]="pageSize">
+            <option *ngFor="let item of pageSizeOptions" value="{{ item.code }}">{{ item.name }}</option>
+        </select>
+        <button mat-icon-button matTooltip="Anterior" (click)="goBack()" [disabled]="page > 1? false: true">
+            <mat-icon class="arrow">chevron_left</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Siguiente" (click)="goForward()" [disabled]="siguiente">
+            <mat-icon class="arrow">chevron_right</mat-icon>
+        </button>
+    </div>
+</div>

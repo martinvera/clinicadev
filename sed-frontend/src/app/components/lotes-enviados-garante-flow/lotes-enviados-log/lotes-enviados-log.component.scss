@@ -1,0 +1,57 @@
+.content {
+    width: 1100px;
+    background-color: white;
+}
+.content__dialog {
+    position: relative !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    #close-icon {
+        display: inline-block;
+        position: absolute;
+        right: -5px;
+        top: -10px;
+    }
+}
+
+.mat-dialog-container {
+    padding-top: 2rem;
+}
+
+.mat-dialog-content {
+    font-size: 16px;
+    h3.dialog--title {
+        font-size: 25px;
+    }
+
+    .big-letter {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+}
+
+.mat-dialog-actions {
+    justify-content: center;
+    a.btn--succes {
+        background-color: #039fd7;
+        color: #ffffff;
+    }
+}
+
+.tit {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+ width: 1%;
+}
+
+.padding-column{
+    text-align: center;
+}

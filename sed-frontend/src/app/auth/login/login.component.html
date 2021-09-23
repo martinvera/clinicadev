@@ -1,0 +1,40 @@
+<div class="container-fluid">
+	<div class="row login">
+		<div class="col-md-4 offset-md-4 col-sm-8 offset-sm-2">
+			<div class="login__card">
+				<div>
+
+					<img src="./../../../../assets/logo.png" alt="" />
+					<br>
+					<br>
+					<div *ngIf="formError" class="isvalidate mb-4">
+						Usuario y/o contraseña inválida
+					</div>
+					<form class="example-form" [formGroup]='form' novalidate>
+						<mat-form-field>
+							<input type="text" formControlName="username" matInput placeholder="Usuario" icon="person">
+							<mat-icon matPrefix>person</mat-icon>
+						</mat-form-field>
+						<mat-form-field class="example-full-width">
+							<input type="password" formControlName="password" matInput placeholder="Contraseña">
+							<mat-icon matPrefix>lock_open</mat-icon>
+						</mat-form-field>
+						<div class="col-8 ">
+
+						</div>
+						<button mat-raised-button [disabled]="form.invalid" (click)="isLogin()" class="my-5"
+							color="success">INGRESAR <mat-icon>arrow_right_alt</mat-icon>
+						</button>
+					</form>
+
+
+					<div>
+						<a class="my-3" (click)="forgotPass()">¿Olvidaste tu contraseña?</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>

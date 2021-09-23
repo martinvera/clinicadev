@@ -1,0 +1,32 @@
+table{
+    width: 100%;
+}
+th{
+    width: 5%;
+}
+.filtro-content {
+    width:100%;
+    background: #fff;
+    padding: 0.7rem;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-left: 8px solid #00a1e1;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr) );
+    grid-template-rows: repeat(1, 40px);
+}
+
+.limpiar{
+    margin-left: 20px;
+}
+
+.editar{
+    color: #0032A0;
+   
+}
+
+.log{
+    
+    margin-top: -18px;
+}

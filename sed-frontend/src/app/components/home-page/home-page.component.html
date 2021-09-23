@@ -1,0 +1,54 @@
+<div class="contenedor">
+    <div class="row">
+        <div class="col-12">
+            <h1><strong>Bienvenido</strong></h1>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <!-- LEFT -->
+        <div [ngClass]="box ? 'col-12 col-md-7' : 'col-12 col-md-5'">
+            <h2><strong>Al Sistema</strong><br> <br>
+                <strong>Expediente Digital</strong>
+            </h2>
+            <p class="operacion mt-5 pt-5" *ngIf="box">
+                ¿Qué operación desea realizar?
+            </p>
+        </div>
+        <!-- END LEFT -->
+
+        <!-- RIGHT -->
+        <div [ngClass]="box ? 'col-12 col-md-5' : 'col-12 col-md-7'">
+            <div *ngIf="box">
+                <app-boton-menu *ngFor="let box of hppr.listOption" text="{{box.text}}" icon="{{ box.icon }}"
+                    clase="{{ box.clase }}" path="{{ box.path }}" (propagar)="asignar(box)"
+                    permissionsMenu="{{box?.permissionsMenu}}" permissions="{{ box?.permissions }}"></app-boton-menu>
+            </div>
+
+
+            <div *ngIf="!box">
+                <p class="operacion my-4">
+                    ¿Qué operación desea realizar?
+                </p>
+                <div class="contenido px-3 py-3">
+                    <a class="back" (click)="back()">
+                        <mat-icon>chevron_left</mat-icon>
+                    </a>
+                    <div *ngIf="ges_doc">
+                        <app-boton-menu *ngFor="let box of hppr.listOptionGestion" text="{{box.text}}"
+                            permissions="{{ box.permissions }}" icon="{{ box.icon }}" path="{{ box.path }}">
+                        </app-boton-menu>
+                    </div>
+                    <div *ngIf="exp_dig">
+                        <app-boton-menu *ngFor="let box of hppr.listaOptionExpediente" text="{{box.text}}"
+                            permissions="{{ box.permissions }}" icon="{{ box.icon }}" path="{{ box.path }}">
+                        </app-boton-menu>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END RIGHT -->
+
+    </div>
+
+</div>

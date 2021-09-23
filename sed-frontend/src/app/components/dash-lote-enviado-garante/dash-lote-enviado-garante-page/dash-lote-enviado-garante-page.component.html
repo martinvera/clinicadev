@@ -1,0 +1,89 @@
+<div class="container-fluid contenido py-3 px-5" *appCheckPermissions="permission.DASHBOARD_ENVIADOS_GARANTE">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="justify-content: flex-end; ">
+            <li class="breadcrumb-item">
+                <a matTooltip="Volver a menú principal" href="/business-flow/home">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                    </svg></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Dashboard de Lotes enviados al garante</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <h1 class="tit">Dashboard de Lotes enviados al garante</h1>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-lg-8 col-md-12 mb-3">
+            <div class="card filtro-content">
+                <div class="card-body">
+                    <form [formGroup]='$any(form)'>
+                        <div class="row align-items-center">
+                            <div class="col-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-8">
+                                        <mat-form-field>
+                                            <mat-label>Garante</mat-label>
+                                            <mat-select formControlName="garanteId"
+                                                (selectionChange)="setGarante($event)">
+                                                <mat-option *ngFor="let garante of garantes" [value]="garante.codigo">
+                                                    {{garante.descripcion}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12 col-lg-2">
+                                        Periodo:
+                                    </div>
+                                    <div class="col-md-6 col-lg-5">
+                                        <mat-form-field>
+                                            <input formControlName="fechaDesde" type="text" matInput
+                                                [matDatepicker]="picker" (dateChange)="openEvent($event)"
+                                                oninput="this.value = this.value.replace(/[^0-9/-]/g, '')"
+                                                placeholder="Desde" autocomplete="off">
+                                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="col-md-6 col-lg-5">
+                                        <mat-form-field>
+                                            <input matInput oninput="this.value = this.value.replace(/[^0-9/-]/g, '')"
+                                                formControlName="fechaHasta" [matDatepicker]="picker1"
+                                                placeholder="Hasta" autocomplete="off" id="fechaHasta">
+                                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker1></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="button btn-search">
+                        <button matTooltip="Buscar" [disabled]="form.invalid" mat-mini-fab color="primary"
+                            (click)="searchEnviadoGarante()">
+                            <mat-icon>search</mat-icon>
+                        </button>
+                    </div>
+                    <!-- <div class="button btn-search">
+                        <button matTooltip="Buscar" [disabled]="form.invalid" mat-mini-fab color="primary"
+                            (click)="searchEnviadoGarante()">
+                            <mat-icon>search</mat-icon>
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 mb-3">
+            <app-chart-lote-enviado-garante *ngIf="enviadosGarante.length>0" [enviadosGarante]="enviadosGarante"
+                [header]="header"></app-chart-lote-enviado-garante>
+        </div>
+    </div>
+</div>

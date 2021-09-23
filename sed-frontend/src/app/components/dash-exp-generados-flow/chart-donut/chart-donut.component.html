@@ -1,0 +1,69 @@
+<div class="card p-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-lg-12 mb-2 mb-sm-3">
+                <h2 class="card-title">
+                    Gráfica de expedientes generados con error basados en su origen
+                </h2>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="chart-cake-border">
+                    <div class="chartConfigCSS">
+                        <canvas id="chartDonut"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <table class="table table-borderless"><caption class="caption-none"></caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">&nbsp;</th>
+                            <th scope="col">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lote: {{header.lote}}</td>
+                            <td>Garante: {{header.garanteDescripcion}}</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">
+                                Periodo: {{header.fechaDesdeHasta}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table table-borderless"><caption class="caption-none"></caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">&nbsp;</th>
+                            <th scope="col">FACTURAS</th>
+                            <th scope="col">%</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                    <tr *ngFor="let item of generadosOrigen">
+                        <td>
+                            <ul style="margin-bottom: 0px; padding-left: 20px;">
+                                <li>{{item.origen}}:</li>
+                            </ul>
+                        </td>
+                        <td>{{ item.totalxorigen }}</td>
+                        <td>{{((item.totalxorigen/total)*100) | number:'0.0-2'}}%</td>
+                        
+                    </tr>
+                  
+                    <tr>
+                        <td class="total">Total:</td>
+                        <td class="totales">{{total}}</td>
+                        <td class="totales">{{totalPor}}%</td>
+                    </tr>
+                   </tbody>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

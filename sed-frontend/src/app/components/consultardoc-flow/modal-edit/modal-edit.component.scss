@@ -1,0 +1,52 @@
+.content__dialog{
+    position: relative !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    #close-icon{
+        display: inline-block;
+        position: absolute;
+        right: -5px;
+        top: -10px;
+    }
+}
+table.table--documents{
+    thead{
+        background-color: #218ECB;
+        color: #ffffff;
+    }
+
+    td,th{
+        width: 33%;
+    }
+}
+
+.ptext{
+    font-size: 13px;
+}
+
+.tit{
+    font-size: 20px;
+}
+
+
+
+
+a.icon-add-file{
+    display: inline-block;
+    color: #0032A0;
+    width: 50px;
+    
+}
+a.icon-remove-file{
+    display: inline-block;
+    color: #D45758;
+    width: 50px;
+}
+
+.form-control{
+    appearance: auto !important
+}
+.agregar{
+    display: flex;
+    justify-content: flex-end;
+}

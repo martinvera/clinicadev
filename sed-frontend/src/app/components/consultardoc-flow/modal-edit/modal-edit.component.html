@@ -1,0 +1,215 @@
+<div class="content__dialog">
+    <span id="close-icon" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </span>
+    <p class="tit">Editar Documentos</p>
+    <div class="row">
+        <!-- -->
+        <form [formGroup]="uploadForm" enctype="multipart/form-data">
+            <div mat-dialog-content>
+                <div class="form-row">
+                    <div class="fila1 row">
+                        <div class="col-md-3 mb-3">
+                            <p class="ptext">N° Encuentro: </p>
+                            <p>{{nrEncuentro}}</p>
+                           
+                        </div>
+                        <div class="col-md-5 mb-3">
+                            <mat-form-field appearance="fill" class="example-full-width">
+                                <mat-label>Fecha de atención</mat-label>
+                                <input matInput [matDatepicker]="picker" class="form-control" id="fechaAtencion"
+                                    [formControlName]="'fechaAtencion'" [(ngModel)]="dateDoc" required>
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+
+                            </mat-form-field>
+
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <mat-form-field appearance="fill" class="example-full-width">
+                                <mat-label class="ptext" for="nroHcPaciente">Historia Clínica</mat-label>
+                                <input matInput type="text" class="form-control" id="nroHcPaciente"
+                                    [formControlName]="'nroHcPaciente'"
+                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                                    required>
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+
+                    <div class="fila2 row">
+                        <div class="col-md-4 mb-3">
+                            <mat-form-field appearance="fill" class="example-full-width">
+                                <mat-label class="ptext" for="apellidoPaterno">Apellido Paterno</mat-label>
+                                <input matInput type="text" class="form-control" id="apellidoPaterno"
+                                onkeyup="javascript:this.value=this.value.toUpperCase();"
+                                    [formControlName]="'apellidoPaterno'" required>
+                            </mat-form-field>
+
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <mat-form-field appearance="fill" class="example-full-width">
+                                <mat-label class="ptext" for="apellidoMaterno">Apellido Materno</mat-label>
+                                <input matInput type="text" class="form-control" id="apellidoMaterno"
+                                onkeyup="javascript:this.value=this.value.toUpperCase();"
+                                    [formControlName]="'apellidoMaterno'" required>
+                            </mat-form-field>
+
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <mat-form-field appearance="fill" class="example-full-width">
+                                <mat-label class="ptext" for="nombrePaciente">Nombres del Paciente</mat-label>
+                                <input matInput type="text" class="form-control" id="nombrePaciente"
+                                onkeyup="javascript:this.value=this.value.toUpperCase();"
+                                    [formControlName]="'nombrePaciente'" required>
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+
+                    <div class="fila3 row">
+
+                        <div class="col-md-4 mb-3">
+                            <mat-form-field appearance="fill" class="example-full-width">
+                                <mat-label class="ptext" for="tipoDocumento">Tipo de Documento</mat-label>
+                                <mat-select [formControlName]="'tipoDocumento'" id="tipoDocumento"
+                                    (change)="selectFunctionTipoDocumentUser($event)">
+                                    <mat-option *ngFor="let document of loadedDocuments" [value]="document.codigo">
+                                        {{document.descripcion}}</mat-option>
+                                </mat-select>
+                                <input matInput [(ngModel)]="descriptionDocumentUser"
+                                    formControlName="tipoDocumentoDescUser" matInput style="display: none;">
+                            </mat-form-field>
+
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <mat-form-field appearance="fill" class="example-full-width">
+                                <mat-label class="ptext" for="pacienteID">Nro. Documento:</mat-label>
+                                <input matInput type="text" class="form-control" [formControlName]="'pacienteID'"
+                                    id="pacienteID" required>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <mat-form-field appearance="fill" class="example-full-width">
+                                <mat-label class="ptext" for="servicio">Elegir origen de servicio</mat-label>
+                                <mat-select [formControlName]="'servicio'" id="servicio"
+                                    (selectionChange)="selectFunctionService($event)">
+                                    <mat-option *ngFor="let service of loadedServices" [value]="service.codigo">
+                                        {{service.descripcion}}</mat-option>
+                                </mat-select>
+                                <input matInput [(ngModel)]="descripService" formControlName="descriptionService"
+                                    matInput style="display: none;">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <mat-form-field appearance="fill" class="example-full-width">
+                                <mat-label class="ptext" for="servicio">Beneficio</mat-label>
+                                <mat-select [formControlName]="'beneficio'">
+                                    <mat-option *ngFor="let benefit of loadedBenefits" [value]="benefit.codigo">
+                                        {{benefit.descripcion}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <mat-form-field appearance="fill" class="example-full-width pb-0">
+                                <mat-label class="ptext">Elegir Sede</mat-label>
+                                <mat-select disableRipple formControlName="sede">
+                                    <mat-option *ngFor="let sede of loadedSedes" [value]="sede.descripcion">
+                                        {{sede.descripcion}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <mat-form-field appearance="fill" class="example-full-width pb-0">
+                                <mat-label class="ptext">Garante</mat-label>
+                                <mat-select disableRipple formControlName="garanteId"
+                                    (selectionChange)="setGarante($event)">
+                                    <mat-option *ngFor="let garante of garantes" [value]="garante.codigo">
+                                        {{garante.descripcion}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+
+                <table class="table table--documents"><caption class="caption-none"></caption>
+                    
+                    <thead>
+                        <tr>
+                            <th scope="col" >Tipo Documento</th>
+                            <th scope="col" >Nombre del Documento</th>
+                            <th scope="col" >Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody [formArrayName]="'archivos'" *ngFor="let archivo of formarchivos.controls; let i = index">
+                        <ng-container [formGroup]="$any(archivo)">
+                            <tr>
+                                
+                                <td>
+                                    <mat-form-field appearance="fill" class="example-full-width pb-0">
+                                        <input matInput type="text" formControlName="nroEncuentro" matInput
+                                            [(ngModel)]="nrEncuentro" style="display: none;" />
+                                        <mat-select [attr.disabled]="archivo.value.existe? '': null"
+                                            [formControlName]="'tipoDocumentoId'" (selectionChange)="onSelectOption($event,i)">
+                                            <mat-option *ngFor='let file of loadedFiles' [value]="file.codigo">
+                                                {{file.descripcion}}
+                                            </mat-option>
+                                        </mat-select>
+                                        <input [(ngModel)]="loadedDocumentsDesc[i]" formControlName="tipoDocumentoDesc"
+                                            matInput style="display: none;" />
+                                    </mat-form-field>
+
+                                </td>
+                                <td>
+                                    <p><strong [innerHTML]="nameFile[i]"></strong></p>
+                                </td>
+
+                                <td>
+
+                                    <input type="file" alife-file-to-base64 (onFileChanged)="onFileSelected($event,i)"
+                                        id="file-{{i}}" class="form-control" accept="application/pdf" multiple=false
+                                        style="display: none;" />
+
+                                    <input [(ngModel)]="base64[i]" [formControlName]="'archivoBytes'"
+                                        style="display: none;" />
+                                    <input class="nombreArchivo" [(ngModel)]="nameFile[i]" id="name-{{i}}"
+                                        [formControlName]="'nombreArchivo'" style="display: none;" />
+
+                                    <a matTooltip="Cargar documento" class="icon-add-file cursor-pointer"
+                                        (click)="triggerFile(i)">
+                                        <mat-icon class="icon">upload_file</mat-icon>
+                                    </a>
+                                    <a matTooltip="Borrar campo" class="icon-remove-file cursor-pointer"
+                                        (click)="onRemoveItem(i)">
+                                        <mat-icon class="icon">restore_from_trash</mat-icon>
+                                    </a>
+                                </td>
+
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+
+                <div class="agregar">
+                    <button type="button" matTooltip="Click para agregar campo" class="btn btn-cli-success"
+                        (click)="onAddDocument()">Agregar</button>
+                </div>
+            </div>
+            <div mat-dialog-actions>
+                <div>
+                    <button class="btn btn-cli-primary" (click)="isCreate()" mat-button>ACTUALIZAR</button>
+                    <button class="btn btn-cli-danger" mat-dialog-close>CANCELAR</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

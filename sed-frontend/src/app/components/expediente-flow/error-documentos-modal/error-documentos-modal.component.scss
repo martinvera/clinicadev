@@ -1,0 +1,23 @@
+.acept {
+    background-color: #47c2e9;
+    color: #fff;
+    margin-left: 330px;
+}
+
+.content__dialog {
+    position: relative !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    #close-icon {
+        display: inline-block;
+        position: absolute;
+        right: -5px;
+        top: -10px;
+    }
+}
+
+.estado button.success {
+    min-width: 35% ;
+    justify-content: center;
+}
+

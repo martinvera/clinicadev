@@ -1,0 +1,61 @@
+table {
+    width: 100%;
+}
+
+th {
+   width: 5%;
+   font-size: 13px;
+}
+td{
+    font-size: 12px;
+}
+.download{
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+    background-color: #249E55;
+}
+.estado {
+    button {
+        cursor: initial;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-radius: 10px;
+        color: white;
+        font-size: 12px;
+        border: 0px;
+        display: flex;
+        &.success {
+            background: #249e55;
+            width: 105px;
+            display: flex;
+            justify-content: center;
+        }
+        &.error {
+            background: #c52c2c;
+            width: 105px;
+            display: flex;
+            justify-content: center;
+        }
+        &.progess {
+            background: #e26f2e;
+            width: 105px;
+            display: flex;
+            justify-content: center;
+        }
+
+        &.pending {
+            background: #d4c42d;
+            width: 105px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mat-icon {
+            margin-left: 5px;
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
