@@ -210,7 +210,7 @@ public class DocumentoServiceImpl extends GenericUtil implements DocumentoServic
             where += " AND UPPER(c.fullName) like '%" + busqueda.getFullName().toUpperCase() + "%'";
 
         String query = "select c.nroEncuentro, c.pacienteNombre, c.pacienteApellidoPaterno, c.pacienteApellidoMaterno, c.facturaNro, " +
-                " c.fechaAtencion, c.sede, c.facturaImporte, c.garanteDescripcion, c.nroLote, c.nroRemesa, c.pacienteTipoDocIdentDesc, " +
+                " c.fechaAtencion, c.sede, c.sedeDesc, c.facturaImporte, c.garanteDescripcion, c.nroLote, c.nroRemesa, c.pacienteTipoDocIdentDesc, " +
                 " c.origenDescripcion, c.pacienteNroDocIdent, c.pacienteTipoDocIdentId, c.userName, c.userId from c where 1=1 " + where;
 
 
@@ -424,5 +424,15 @@ public class DocumentoServiceImpl extends GenericUtil implements DocumentoServic
         target.setGaranteDescripcion(source.getGaranteDescripcion());
 
     }
+    @Override
+    public Optional<Documento> findById(String nroEncuentro) {
+        return documentRepository.findById(nroEncuentro);
+    }
+
+    @Override
+    public void delete(Documento documento) {
+        documentRepository.delete(documento);
+    }
+
 
 }
