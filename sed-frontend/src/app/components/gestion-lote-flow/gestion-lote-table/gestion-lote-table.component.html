@@ -131,7 +131,7 @@
                     </span>
                 </ng-container>
                 <ng-container *ngIf="element.estado == 'TERMINADO' && element.estadoGarante == 'RECHAZADO' ">
-                    <span matTooltip="Reprocesar" class=" d-inline" style="cursor: pointer;"
+                    <span matTooltip="Regenerar expediente" class=" d-inline" style="cursor: pointer;"
                         (click)="openReprocess(element)" *appCheckPermissions="permission.BOTON_REPROCESAR_GESTION_LOTE">
                         <mat-icon>restore</mat-icon>
                     </span>

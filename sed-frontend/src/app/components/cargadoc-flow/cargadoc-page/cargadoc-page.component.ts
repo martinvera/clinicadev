@@ -155,8 +155,8 @@ export class CargadocPageComponent implements OnInit {
       codigoSede: new FormControl(''),
       descriptionService: new FormControl(''),
       archivos: new FormArray([this.FormDocumentosArray()]),
-      garante: new FormControl('',  Validators.required),
-      garanteId: new FormControl('',  Validators.required),
+      garante: new FormControl('', Validators.required),
+      garanteId: new FormControl('', Validators.required),
       beneficioDesc: new FormControl('')
     });
   }
@@ -320,8 +320,9 @@ export class CargadocPageComponent implements OnInit {
 
   isCreate() {
     let createDocument = this.uploadForm.value;
-    if (this.disabledApePaterno){
-      createDocument.apellidoPaterno = 'NO TIENE APELLIDO PATERNO'  }
+    if (this.disabledApePaterno) {
+      createDocument.apellidoPaterno = 'NO TIENE APELLIDO PATERNO'
+    }
     let fechaActual: any;
     if (this.docFromGroupDates.value !== '') {
       const date = new Date(this.docFromGroupDates.value);
@@ -379,7 +380,6 @@ export class CargadocPageComponent implements OnInit {
         }
       }
     ));
-
   }
 
   onFileSelected(event: any, i: any) {
@@ -420,7 +420,7 @@ export class CargadocPageComponent implements OnInit {
       this.uploadForm.controls.apellidoPaterno.updateValueAndValidity();
     }
   }
-  
+
   setGarante(event) {
     let tempGarante: any = this.garantes;
     let data = tempGarante.find(value => value.codigo == event.value)

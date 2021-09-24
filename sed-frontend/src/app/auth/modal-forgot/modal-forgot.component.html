@@ -2,15 +2,44 @@
     <span id="close-icon" mat-dialog-close>
         <mat-icon>close</mat-icon>
     </span>
-    <div>
+    <ng-container *ngIf="correo == true">
         <div mat-dialog-content>
             <p class="big-letter">
                 ¿Olvidaste tu usuario y/o contraseña?
             </p>
-            <p>Comuníquese con el administrador de sistemas de Clínica Internacional para solucionar este problema.</p>
+            <p> Ingrese el correo con el que fue registrado su usuario, se le enviará un link de restablecimiento de
+                contraseña. </p>
+
+            <form class="example-form" [formGroup]='form'>
+                <mat-form-field>
+                    <input type="text" formControlName="email" matInput placeholder="Email" icon="email">
+                    <mat-icon matPrefix>email</mat-icon>
+                </mat-form-field>
+            </form>
         </div>
         <div mat-dialog-actions>
-            <a class="btn--succes" mat-button [mat-dialog-close]="true">Aceptar</a>
-        </div>
+            <button class=" btn btn-cli-primary align-items-center justify-content-center-flex"
+            [disabled]="form.invalid" (click)="sentMail()">
+            ENVIAR
+        </button>
     </div>
+</ng-container>
+    <ng-container *ngIf="correo == false">
+        <div mat-dialog-content>
+            <p class="big-letter">
+                <strong>
+                    Restablecer Contraseña
+                </strong>
+            </p>
+            <mat-icon matPrefix  class="customIconSize mb-3">check_circle_outline</mat-icon>
+            <p> Se envió un mensaje al correo electrónico, siga las instrucciones del mensaje para restablecer la contraseña. </p>
+        </div>
+
+        <div mat-dialog-actions>
+            <button class=" btn btn-cli-primary align-items-center justify-content-center-flex" (click)="closeEmail()">
+                ENVIAR
+            </button>
+        </div>
+    </ng-container>
+
 </div>

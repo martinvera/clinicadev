@@ -15,6 +15,9 @@ import { ReporteParcialPageComponent } from './reporte-parcial-flow/reporte-parc
 import { ReporteTotalPageComponent } from './reporte-total-flow/reporte-total-page/reporte-total-page.component';
 import { RolPageComponent } from './roles-flow/rol-page/rol-page.component';
 import { UserPageComponent } from './user-flow/user-page/user-page.component';
+import { CambiarContrasenaPageComponent } from './cambiar-contrasena-flow/cambiar-contrasena-page/cambiar-contrasena-page.component';
+import { ReprocesarColaPageComponent } from './reprocesar-cola-flow/reprocesar-cola-page/reprocesar-cola-page.component';
+import { ReprocesarWindowComponent } from './reprocesar-cola-flow/reprocesar-window/reprocesar-window.component';
 
 
 const routes: Routes = [
@@ -197,6 +200,48 @@ const routes: Routes = [
         data: {
           title: "Lotes enviados al Garante",
           breadcrumb: "Lotes enviados al Garante"
+        }
+      },
+    ]
+  },
+
+  {
+    path: 'cambiar',
+    children: [
+      {
+        path: 'contrasena',
+        component: CambiarContrasenaPageComponent,
+        data: {
+          title: "Cambiar contraseña",
+          breadcrumb: "Cambiar contraseña"
+        }
+      },
+    ]
+  },
+
+  {
+    path: 'reprocesar',
+    children: [
+      {
+        path: 'cola',
+        component: ReprocesarColaPageComponent,
+        data: {
+          title: "Reprocesar Cola",
+          breadcrumb: "Reprocesar Cola"
+        }
+      },
+    ]
+  },
+
+  {
+    path: 'reprocesar',
+    children: [
+      {
+        path: 'window',
+        component: ReprocesarWindowComponent,
+        data: {
+          title: "Reprocesar window",
+          breadcrumb: "Reprocesar window"
         }
       },
     ]

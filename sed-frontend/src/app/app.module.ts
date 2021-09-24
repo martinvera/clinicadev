@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './auth/login/login.component';
 import { DemoMaterialModule } from './material-modules';
 import { RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings, RECAPTCHA_SETTINGS } from 'ng-recaptcha';
-import { environment } from 'src/environments/environment';
 import { httpInterceptorProviders } from './shared/services/interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { ModalForgotComponent } from './auth/modal-forgot/modal-forgot.component';
@@ -33,9 +32,6 @@ import { ModalForgotComponent } from './auth/modal-forgot/modal-forgot.component
     DemoMaterialModule,
     RecaptchaModule,
     RecaptchaFormsModule,
-
-
-
   ],
   providers: [
     httpInterceptorProviders,

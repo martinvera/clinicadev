@@ -8,7 +8,8 @@ export enum ENDPOINT_USERS {
     UPDATE_ROLE = '/v1/rol/modificar',
     TYPE_DOCUMENT_LIST = '/v1/catalogo/TIPODOCUMENTOUSUARIO',
     GET_ROL_USER = '/v1/usuario/:user',
-    GET_ROL = '/v1/rol/:idRol'
+    GET_ROL = '/v1/rol/:idRol',
+    CHANGE_PASSWORD = '/v1/usuario/cambiarContrasenia'
 }
 
 export enum ENDPOINT_DOCUMENTS {
@@ -80,4 +81,9 @@ export enum ENPOINT_ENVIADOS_GARANTE {
     LOG_ENVIADOS_GARANTE = '/v1/gestionlotes/buscarHistorial',
     DASHBOARD_ENVIADOS_GARANTE = '/v1/gestionlotes/listarEnviadoGarante',
     REPORTE_ENVIADOS_GARANTE = '/v1/reporte/enviar'
+}
+
+export enum ENPOINT_REPORCESAR {
+    REPROCESAR_FACTURAS = '/v1/clinicalrecord/procesarFacturasError',
+    REPROCESAR_ENCUENTRO = '/v1/documento/procesarEncuentrosError'
 }

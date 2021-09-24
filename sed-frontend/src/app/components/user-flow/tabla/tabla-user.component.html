@@ -13,17 +13,17 @@
                 <span class="m-1">CREAR NUEVO USUARIO</span>
                 <mat-icon>add</mat-icon>
             </button>
-           
         </div>
     </div>
 </div>
 
 
 <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource" matSort><caption class="caption-none"></caption>
+    <table mat-table [dataSource]="dataSource" matSort>
+        <caption class="caption-none"></caption>
         <!-- Name Column -->
         <ng-container matColumnDef="fullName">
-            <th scope="col"  class="htext" mat-header-cell *matHeaderCellDef mat-sort-header> Nombres Completos </th>
+            <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header> Nombres Completos </th>
             <td class="ctext" mat-cell *matCellDef="let row"> {{row.fullName}}</td>
         </ng-container>
 
@@ -50,10 +50,12 @@
         <ng-container matColumnDef="opciones">
             <th scope="col" class="htext" mat-header-cell *matHeaderCellDef mat-sort-header> Opción </th>
             <td mat-cell *matCellDef="let row">
-                <a matTooltip="Editar" class="icon-add-file cursor-pointer" (click)="edit(row)" *appCheckPermissions="permission.EDITAR_USUARIO">
+                <a matTooltip="Editar" class="icon-add-file cursor-pointer" (click)="edit(row)"
+                    *appCheckPermissions="permission.EDITAR_USUARIO">
                     <mat-icon>edit</mat-icon>
                 </a>
-                <a matTooltip="Ver detalle" class="icon-add-file cursor-pointer" (click)="view(row)" *appCheckPermissions="permission.VISUALIZAR_USUARIO">
+                <a matTooltip="Ver detalle" class="icon-add-file cursor-pointer" (click)="view(row)"
+                    *appCheckPermissions="permission.VISUALIZAR_USUARIO">
                     <mat-icon>visibility</mat-icon>
                 </a>
             </td>

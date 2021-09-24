@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
-import { environment } from 'src/environments/environment';
 import { Parameter } from 'src/app/shared/model/common/parameter';
 import { LoginService } from 'src/app/shared/services/security/login.service';
 import { LOGIN_APIS } from 'src/app/shared/utils/apis';

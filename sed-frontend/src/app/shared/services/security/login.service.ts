@@ -10,9 +10,9 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginService {
 
-  constructor(private _request: HttpRequestService,private http: HttpClient) { }
+  constructor(private _request: HttpRequestService, private http: HttpClient) { }
   login(parametro: Parameter) {
-    const apiUrl = environment.API_BASE+parametro.url
+    const apiUrl = environment.API_BASE + parametro.url
     const headers = new HttpHeaders({
       'Authorization': `Basic Y2xpbmljYS1pbnRlcm5hY2lvbmFsOnNlY3JldA==`
     });
@@ -30,6 +30,10 @@ export class LoginService {
   }
 
   resetPassword(parametro: Parameter): Observable<any> {
+    return this._request.http(parametro);
+  }
+
+  changePassword(parametro: Parameter): Observable<any> {
     return this._request.http(parametro);
   }
 

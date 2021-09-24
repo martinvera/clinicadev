@@ -27,7 +27,8 @@ export class ModalCreateComponent implements OnInit {
   dellSuscribe: Subscription = new Subscription();
   @Input() dataUserItem: any;
   userName: string | undefined;
-
+  visible = false;
+  inputType = 'password';
   //validaciones de campos obligatorios
   tipoDocumento = new FormControl('', [
     Validators.required,
@@ -54,7 +55,7 @@ export class ModalCreateComponent implements OnInit {
   ]);
 
   telefono = new FormControl('', [
-    
+
   ]);
 
   role = new FormControl('', [
@@ -66,7 +67,7 @@ export class ModalCreateComponent implements OnInit {
   ]);
 
   userEmail = new FormControl('', [
-    
+
   ]);
 
   password = new FormControl('', [
@@ -74,7 +75,7 @@ export class ModalCreateComponent implements OnInit {
   ]);
 
   proveedor = new FormControl('', [
-    
+
   ]);
 
 
@@ -133,7 +134,7 @@ export class ModalCreateComponent implements OnInit {
       tipoDocumento: new FormControl('', Validators.required),
       numeroDocumento: new FormControl('', Validators.required),
       estado: new FormControl('', Validators.required),
-      
+
       nombres: new FormControl('', Validators.required),
       apellidoPaterno: new FormControl('', Validators.required),
       apellidoMaterno: new FormControl('', Validators.required),
@@ -235,7 +236,7 @@ export class ModalCreateComponent implements OnInit {
     parametro.request = 'PUT';
 
     this.dellSuscribe.add(this.userService.updateUser(parametro).pipe(
-    
+
     ).subscribe(
       async (value: any) => {
         this.dialogRef.close(value);
@@ -253,4 +254,17 @@ export class ModalCreateComponent implements OnInit {
     let data = tempRol.find(value => value.codigo == event.value)
     this.createform.controls.nombreRol.setValue(data.nombre);
   }
+
+  toggleVisibility() {
+    if (this.visible) {
+      this.inputType = 'password';
+      this.visible = false;
+      // this.cd.markForCheck();
+    } else {
+      this.inputType = 'text';
+      this.visible = true;
+      // this.cd.markForCheck();
+    }
+  }
+
 }

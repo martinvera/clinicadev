@@ -64,6 +64,11 @@
           Facturación)</button>
       </mat-menu>
 
+      <button mat-button [matMenuTriggerFor]="menu6"
+        *appPermissionsHeader="[permission.REPROCESAR_COLA]">Reprocesar</button>
+      <mat-menu #menu6="matMenu">
+        <button mat-menu-item routerLink="/reprocesar/window">Reprocesar cola</button>
+      </mat-menu>
 
 
     </div>
@@ -112,57 +117,75 @@
 
       <div>
         <button mat-button [matMenuTriggerFor]="menu2"
-          *appPermissionsHeader="[permission.CARGAR_DOCUMENTO,permission.VISUALIZAR_DETALLE_DOCUMENTOS]">Gestión Doc.
-          Digitales</button>
-        <mat-menu #menu2="matMenu">
-          <button mat-menu-item routerLink="/documento/carga" *appCheckPermissions="permission.CARGAR_DOCUMENTO">Carga
-            Documentos</button>
-          <button mat-menu-item routerLink="/documentos/consulta"
-            *appCheckPermissions="permission.VISUALIZAR_DETALLE_DOCUMENTOS">Consulta Documentos</button>
-        </mat-menu>
+        *appPermissionsHeader="[permission.CARGAR_DOCUMENTO,permission.VISUALIZAR_DETALLE_DOCUMENTOS]">Gestión Doc.
+        Digitales</button>
+      <mat-menu #menu2="matMenu">
+        <button mat-menu-item routerLink="/documento/carga" *appCheckPermissions="permission.CARGAR_DOCUMENTO">Carga
+          Documentos</button>
+        <button mat-menu-item routerLink="/documentos/consulta"
+          *appCheckPermissions="permission.VISUALIZAR_DETALLE_DOCUMENTOS">Consulta Documentos</button>
+
+      </mat-menu>
       </div>
+      <!-- <div>
+        <button mat-button [matMenuTriggerFor]="menu3">Expediente Digital</button>
+        <mat-menu #menu3="matMenu">
+          <<<<<<< HEAD <button mat-menu-item routerLink="/gestion/lote">Gestión de Lotes y Generación de Exp.</button>
+            =======
+            <button mat-menu-item routerLink="/gestion/lote">Gestión de Lotes</button>
+            <button mat-menu-item routerLink="/genererar/expediente">Generar Expediente Digital</button>
+            <button mat-menu-item routerLink="/documentos/moni-expediente">Monitoreo Exp. Generados</button>
+        </mat-menu>
+      </div> -->
       <div>
         <button mat-button [matMenuTriggerFor]="menu3"
-          *appPermissionsHeader="[permission.IR_EXPEDIENTE_DIGITAL,permission.GENERAR_EXPEDIENTE_DIGITAL, permission.MONITOREO_EXPEDIENTE_GENERADOS]">Expediente
-          Digital</button>
-        <mat-menu #menu3="matMenu">
-          <button mat-menu-item routerLink="/gestion/lote"
-            *appCheckPermissions="permission.IR_EXPEDIENTE_DIGITAL">Gestión
-            de Lotes y Generación de Exp.</button>
-          <button mat-menu-item routerLink="/documentos/moni-expediente"
-            *appCheckPermissions="permission.MONITOREO_EXPEDIENTE_GENERADOS">Monitoreo Expedientes Generados</button>
-          <button mat-menu-item routerLink="/lote/enviados-garante">Lotes Enviados al Garante</button>
+        *appPermissionsHeader="[permission.IR_EXPEDIENTE_DIGITAL,permission.GENERAR_EXPEDIENTE_DIGITAL, permission.MONITOREO_EXPEDIENTE_GENERADOS]">Expediente
+        Digital</button>
+      <mat-menu #menu3="matMenu">
+        <button mat-menu-item routerLink="/gestion/lote" *appCheckPermissions="permission.IR_EXPEDIENTE_DIGITAL">Gestión
+          de Lotes y Generación de Exp.</button>
+        <button mat-menu-item routerLink="/documentos/moni-expediente"
+          *appCheckPermissions="permission.MONITOREO_EXPEDIENTE_GENERADOS">Monitoreo Expedientes Generados</button>
+        <button mat-menu-item routerLink="/lote/enviados-garante">Lotes Enviados al Garante</button>
 
-        </mat-menu>
+      </mat-menu>
       </div>
       <div>
         <button mat-button [matMenuTriggerFor]="menu4"
-          *appPermissionsHeader="[permission.DESCARGAR_REPORTE_TOTAL,permission.GENERAR_REPORTE_PARCIAL,permission.DESCARGAR_REPORTE]">Reportes</button>
-        <mat-menu #menu4="matMenu">
-          <button mat-menu-item routerLink="/reporte/total"
-            *appCheckPermissions="permission.DESCARGAR_REPORTE_TOTAL">Reporte Total</button>
-          <button mat-menu-item routerLink="/reporte/parcial"
-            *appCheckPermissions="permission.GENERAR_REPORTE_PARCIAL">Reporte Parcial</button>
-          <button mat-menu-item routerLink="/otros/reportes" *appCheckPermissions="permission.DESCARGAR_REPORTE">Otros
-            Reportes </button>
-        </mat-menu>
+        *appPermissionsHeader="[permission.DESCARGAR_REPORTE_TOTAL,permission.GENERAR_REPORTE_PARCIAL,permission.DESCARGAR_REPORTE]">Reportes</button>
+      <mat-menu #menu4="matMenu">
+        <button mat-menu-item routerLink="/reporte/total"
+          *appCheckPermissions="permission.DESCARGAR_REPORTE_TOTAL">Reporte Total</button>
+        <button mat-menu-item routerLink="/reporte/parcial"
+          *appCheckPermissions="permission.GENERAR_REPORTE_PARCIAL">Reporte Parcial</button>
+        <button mat-menu-item routerLink="/otros/reportes" *appCheckPermissions="permission.DESCARGAR_REPORTE">Otros
+          Reportes </button>
+      </mat-menu>
       </div>
 
       <div>
 
         <button mat-button [matMenuTriggerFor]="menu5"
-          *appPermissionsHeader="[permission.DASHBOARD_EXPEDIENTES_GENERADOS,permission.GENERAR_REPORTE_MECANISMO]">Dashboards</button>
-        <mat-menu #menu5="matMenu">
-          <button mat-menu-item routerLink="/dashboard/dash-exp-generados"
-            *appCheckPermissions="permission.DASHBOARD_EXPEDIENTES_GENERADOS">Expedientes Generados</button>
-          <button mat-menu-item routerLink="/dash/lote-enviado-garante"
-            *appCheckPermissions="permission.DASHBOARD_ENVIADOS_GARANTE">Lotes enviados al Garante</button>
-          <button mat-menu-item routerLink="/dashboard/dash-exp-mec-fact"
-            *appCheckPermissions="permission.GENERAR_REPORTE_MECANISMO">Exp. Generados (Mecanismo -
-            Facturación)</button>
-        </mat-menu>
+        *appPermissionsHeader="[permission.DASHBOARD_EXPEDIENTES_GENERADOS,permission.GENERAR_REPORTE_MECANISMO]">Dashboards</button>
+      <mat-menu #menu5="matMenu">
+        <button mat-menu-item routerLink="/dashboard/dash-exp-generados"
+          *appCheckPermissions="permission.DASHBOARD_EXPEDIENTES_GENERADOS">Expedientes Generados</button>
+        <button mat-menu-item routerLink="/dash/lote-enviado-garante"
+          *appCheckPermissions="permission.DASHBOARD_ENVIADOS_GARANTE">Lotes enviados al Garante</button>
+        <button mat-menu-item routerLink="/dashboard/dash-exp-mec-fact"
+          *appCheckPermissions="permission.GENERAR_REPORTE_MECANISMO">Exp. Generados (Mecanismo -
+          Facturación)</button>
+      </mat-menu>
       </div>
 
+      <div>
+        
+      <button mat-button [matMenuTriggerFor]="menu6"
+      *appPermissionsHeader="[permission.REPROCESAR_COLA]">Reprocesar</button>
+    <mat-menu #menu6="matMenu">
+      <button mat-menu-item routerLink="/reprocesar/window">Reprocesar cola</button>
+    </mat-menu>
+      </div>
     </mat-sidenav>
   </mat-sidenav-container>
 </div>

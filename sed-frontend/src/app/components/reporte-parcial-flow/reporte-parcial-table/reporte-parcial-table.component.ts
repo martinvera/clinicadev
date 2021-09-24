@@ -78,7 +78,7 @@ export class ReporteParcialTableComponent implements OnInit {
   form: FormGroup;
   constructor(
     private reporteParcialService: ReporteParcialService,
-    private catalogoService: CatalogoService,
+    private catalogoService:CatalogoService,
     private toastrService: ToastrService,
     private pipe: DatePipe,
     public dialog: MatDialog,

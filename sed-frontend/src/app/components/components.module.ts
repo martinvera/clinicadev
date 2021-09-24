@@ -59,6 +59,12 @@ import { ModalMensajeErrorComponent } from './otros-reportes-flow/modal-mensaje-
 import { ModalReprocesoComponent } from './gestion-lote-flow/modal-reproceso/modal-reproceso.component';
 import { ErrorDocumentosModalComponent } from './expediente-flow/error-documentos-modal/error-documentos-modal.component';
 import { ErrorModalParcialComponent } from './reporte-parcial-flow/error-modal-parcial/error-modal-parcial.component';
+import { CambiarContrasenaPageComponent } from './cambiar-contrasena-flow/cambiar-contrasena-page/cambiar-contrasena-page.component';
+import { ModalCambioConfirmacionComponent } from './cambiar-contrasena-flow/modal-cambio-confirmacion/modal-cambio-confirmacion.component';
+import { ReprocesarColaPageComponent } from './reprocesar-cola-flow/reprocesar-cola-page/reprocesar-cola-page.component';
+import { ReprocesarWindowComponent } from './reprocesar-cola-flow/reprocesar-window/reprocesar-window.component'
+
+
 
 export const MY_FORMATS = {
   parse: {
@@ -123,6 +129,11 @@ export const MY_FORMATS = {
     ModalReprocesoComponent,
     ErrorDocumentosModalComponent,
     ErrorModalParcialComponent,
+    CambiarContrasenaPageComponent,
+    ModalCambioConfirmacionComponent,
+    ReprocesarColaPageComponent,
+    ReprocesarWindowComponent,
+   
 
   ],
   imports: [

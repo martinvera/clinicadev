@@ -1,0 +1,71 @@
+<div class="container-fluid contenido py-3 px-5">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="justify-content: flex-end; ">
+            <li class="breadcrumb-item">
+                <a matTooltip="Volver a menú principal" href="/business-flow/home">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+                    </svg></a>
+            </li>
+
+            <li class="breadcrumb-item active" aria-current="page">Cambiar contraseña</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <h1 class="mb-3" class="tit">Cambiar Contraseña</h1>
+    </div>
+    <form class="example-form" [formGroup]='form'>
+        <div class="container">
+            <div class="container2">
+                <div>
+                    <p>CONTRASEÑA ACTUAL:</p>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Escribir contraseña</mat-label>
+                        <input matInput [type]="currentPassword ? 'password' : 'text'" formControlName="currentPass">
+                        <button mat-icon-button matSuffix (click)="currentPassword = !currentPassword"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="currentPassword">
+                            <mat-icon>{{currentPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <p>CONTRASEÑA NUEVA:</p>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Escribir contraseña</mat-label>
+                        <input matInput [type]="newPassword ? 'password' : 'text'" formControlName="newPass">
+                        <button mat-icon-button matSuffix (click)="newPassword = !newPassword"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="newPassword">
+                            <mat-icon>{{newPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <p>CONFIRMAR NUEVA CONTRASEÑA:</p>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Escribir contraseña</mat-label>
+                        <input matInput [type]="confirmNewPassword ? 'password' : 'text'" formControlName="confirmPass">
+                        <button mat-icon-button matSuffix (click)="confirmNewPassword = !confirmNewPassword"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="confirmNewPassword">
+                            <mat-icon>{{confirmNewPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+                <mat-error class="mat-error" *ngIf="checarSiSonIguales()">Las contraseñas no coinciden</mat-error>
+                <button mat-raised-button (click)="openDialog()" class="my-5" [disabled]="form.invalid"
+                    color="success">CAMBIAR CONTRASEÑA
+                </button>
+            </div>
+        </div>
+    </form>

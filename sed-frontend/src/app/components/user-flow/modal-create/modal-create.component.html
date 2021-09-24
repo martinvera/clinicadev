@@ -68,7 +68,7 @@
                         <mat-form-field class="example-full-width">
                             <mat-label class="ptext">Apellido Materno</mat-label>
                             <input type="text" formControlName="apellidoMaterno" matInput placeholder="Apellido Materno"
-                            onkeyup="javascript:this.value=this.value.toUpperCase();"
+                                onkeyup="javascript:this.value=this.value.toUpperCase();"
                                 oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\u00f1\u00d1\s]/g, '');">
 
                             <mat-error *ngIf="apellidoMaterno.hasError('required')">
@@ -82,7 +82,7 @@
                         <mat-form-field class="example-full-width">
                             <mat-label class="ptext">Cargo</mat-label>
                             <input matInput type="text" formControlName="cargo" placeholder="Cargo"
-                            onkeyup="javascript:this.value=this.value.toUpperCase();"
+                                onkeyup="javascript:this.value=this.value.toUpperCase();"
                                 oninput="this.value = this.value.replace(/[^a-zA-ZÀ-ÿ\u00f1\u00d1\s]/g, '');">
 
                             <mat-error *ngIf="cargo.hasError('required')">
@@ -147,11 +147,16 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <mat-form-field class="example-full-width">
                             <mat-label class="ptext">Contraseña</mat-label>
-                            <input type="password" formControlName="password" matInput placeholder="Contraseña">
+                            <input [type]="inputType" formControlName="password" matInput placeholder="Contraseña">
 
                             <mat-error *ngIf="password.hasError('required')">
                                 El campo es obligatorio
                             </mat-error>
+                            <button (click)="toggleVisibility()" mat-icon-button matSuffix
+                                matTooltip="Toggle Visibility" type="button">
+                                <span *ngIf="visible" class="material-icons">visibility</span>
+                                <span *ngIf="!visible" class="material-icons">visibility_off</span>
+                            </button>
                         </mat-form-field>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
