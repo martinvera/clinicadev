@@ -3,6 +3,7 @@ package pe.com.ci.sed.web.service.impl;
 import static pe.com.ci.sed.web.util.GenericUtil.getResult;
 import static pe.com.ci.sed.web.util.GenericUtil.getResultNotFound;
 
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -26,6 +27,7 @@ import lombok.extern.log4j.Log4j2;
 import pe.com.ci.sed.web.errors.AutenticacionException;
 import pe.com.ci.sed.web.model.generic.HeaderRequest;
 import pe.com.ci.sed.web.model.request.Busqueda;
+import pe.com.ci.sed.web.model.request.RequestContrasenia;
 import pe.com.ci.sed.web.model.response.UsuarioResponse;
 import pe.com.ci.sed.web.persistence.entity.Rol;
 import pe.com.ci.sed.web.persistence.entity.Usuario;
@@ -154,6 +156,28 @@ public class UsuarioServiceImpl extends ConexionUtil implements UsuarioService, 
             throw new AutenticacionException("Rol de Usuario se encuentra inactivo");
         GrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPasswordencrip(), Collections.singletonList(authority));
+    }
+
+    @Override
+    public Object obtenerNuevaContrasenia(RequestContrasenia request, Principal principal){
+        try{
+            TableOperation retrieveSmithJeff = TableOperation.retrieve(principal.getName(), principal.getName(), Usuario.class);
+            Usuario usuario = getTable(tableName).execute(retrieveSmithJeff).getResultAsType();
+            if(usuario.getPassword().equals(request.getActualcontrasenia())){
+                usuario.setPassword(request.getNuevacontrasenia());
+                usuario.setPasswordencrip(request.getPasswordencrip());
+                TableOperation update = TableOperation.replace(usuario);
+                TableResult tableResult = getTable(tableName).execute(update);
+                if(HttpStatus.NO_CONTENT.value()==tableResult.getHttpStatusCode())
+                    return getResult(request.getHeader(), "contraseña actualizada");
+                else
+                    return getResultNotFound(request.getHeader(), "No se actualizó la contraseña");
+            }
+            else
+                throw new AutenticacionException("Contraseña actual no coinciden", HttpStatus.CONFLICT, request.getHeader());
+        }catch (StorageException e){
+            throw new AutenticacionException(e.getMessage());
+        }
     }
 
     private UsuarioResponse getUsuarioResponseAndRol(String username) {

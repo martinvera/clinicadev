@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import pe.com.ci.sed.web.model.request.Busqueda;
+import pe.com.ci.sed.web.model.request.RequestContrasenia;
 import pe.com.ci.sed.web.persistence.entity.Usuario;
 import pe.com.ci.sed.web.service.UsuarioService;
 
@@ -70,5 +71,11 @@ public class UsuarioController extends BaseController {
     @GetMapping("/{username}")
     public ResponseEntity<Object> obtenerUsuario(@PathVariable String username, Principal principal) {
         return ResponseEntity.ok(usuarioService.obtenerUsuario(username, getHeader(principal)));
+    }
+
+    @PostMapping("/cambiarContrasenia")
+    public ResponseEntity<Object> obtenerNuevaContrasenia(@Valid @RequestBody RequestContrasenia request, Principal principal){
+        request.setPasswordencrip(passwordEncoder.encode(request.getNuevacontrasenia()));
+        return ResponseEntity.ok(usuarioService.obtenerNuevaContrasenia(request, principal));
     }
 }

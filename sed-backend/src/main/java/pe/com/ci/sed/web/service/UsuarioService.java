@@ -2,8 +2,10 @@ package pe.com.ci.sed.web.service;
 
 import pe.com.ci.sed.web.model.request.Busqueda;
 import pe.com.ci.sed.web.model.generic.HeaderRequest;
+import pe.com.ci.sed.web.model.request.RequestContrasenia;
 import pe.com.ci.sed.web.persistence.entity.Usuario;
 
+import java.security.Principal;
 import java.util.List;
 
 public interface UsuarioService {
@@ -20,5 +22,7 @@ public interface UsuarioService {
     public Object listarUsuarios(Busqueda param);
 
     public Object obtenerUsuario(String username, HeaderRequest header);
+
+    public Object obtenerNuevaContrasenia(RequestContrasenia request, Principal principal);
 
 }
