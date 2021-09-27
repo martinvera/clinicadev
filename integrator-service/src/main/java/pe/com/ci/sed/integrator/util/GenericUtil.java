@@ -5,8 +5,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.UUID;
 
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.http.HttpStatus;
 
 import pe.com.ci.sed.integrator.model.request.RequestHeader;
@@ -25,11 +27,12 @@ public class GenericUtil {
     }
 
     public static RequestHeader getHeader(Principal principal, String applicationId) {
-        return RequestHeader.builder().userId(principal.getName()).applicationId(applicationId).transactionId(UUID.randomUUID().toString()).build();
+        var userId = Objects.nonNull(principal.getName()) ? principal.getName() : Strings.EMPTY;
+        return RequestHeader.builder().userId(userId).applicationId(applicationId).transactionId(UUID.randomUUID().toString()).build();
     }
-    
+
     public static Date toDate(String strDate, String dateFormat) throws ParseException {
-		SimpleDateFormat formatter = new SimpleDateFormat(dateFormat, Locale.getDefault());
-		return formatter.parse(strDate);
-	}
+        SimpleDateFormat formatter = new SimpleDateFormat(dateFormat, Locale.getDefault());
+        return formatter.parse(strDate);
+    }
 }

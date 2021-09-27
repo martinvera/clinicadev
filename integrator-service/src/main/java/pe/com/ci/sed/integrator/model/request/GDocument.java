@@ -9,10 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class GenericDocument<T> {
-
-	private String sistemaOrigen;
-	private T contenido;
-	
-	
+public class GDocument {
+    private String sistemaOrigen;
+    private String contenido;
 }

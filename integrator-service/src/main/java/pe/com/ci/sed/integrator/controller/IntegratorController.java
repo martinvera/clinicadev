@@ -1,24 +1,21 @@
 package pe.com.ci.sed.integrator.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.validation.Valid;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import lombok.AllArgsConstructor;
+import pe.com.ci.sed.integrator.model.request.EnterpriseIRequest;
 import pe.com.ci.sed.integrator.model.request.RegistrarDocFromUnilabRequest;
 import pe.com.ci.sed.integrator.model.request.RegistrarFacturaFromCdRequest;
 import pe.com.ci.sed.integrator.model.request.RegistrarFacturaFromIafaRequest;
+import pe.com.ci.sed.integrator.model.response.EiResponse;
 import pe.com.ci.sed.integrator.service.QueueServiceImpl;
 
 @RestController
@@ -43,12 +40,17 @@ public class IntegratorController {
     public ResponseEntity<Object> registrarCd(@Valid @RequestBody List<@Valid RegistrarFacturaFromCdRequest> request) {
         return ResponseEntity.ok(queueService.encolarFacturaFromCd(request));
     }
- 
+
     @GetMapping(value = "/health", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> health() {
-        Map<String,String> result = new HashMap<>();
+        Map<String, String> result = new HashMap<>();
         result.put("status", "UP");
         return ResponseEntity.ok(result);
+    }
+
+    @PostMapping(value = "/enterpriseimaging", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<EiResponse> registrarEi(@Valid @RequestBody List<@Valid EnterpriseIRequest> request) {
+        return queueService.encolarFacturaFromEi(request);
     }
 
 }

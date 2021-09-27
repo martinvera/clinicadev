@@ -1,6 +1,7 @@
 package pe.com.ci.sed.integrator.errors;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
 import pe.com.ci.sed.integrator.model.request.RequestHeader;
 
 import org.springframework.context.ApplicationContext;
@@ -95,13 +96,15 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     protected ResponseEntity<Object> handleMethodArgumentTypeMismatch(MethodArgumentTypeMismatchException ex, WebRequest request) {
         Error error = new Error(BAD_REQUEST);
-        if(Objects.nonNull(ex.getRequiredType()))
+        if (Objects.nonNull(ex.getRequiredType()))
             error.setMensaje(String.format("The parameter '%s' of value '%s' could not be converted to type '%s'", ex.getName(), ex.getValue(), ex.getRequiredType().getSimpleName()));
         return buildResponseEntity(getBody(error, getHeaders(request)), error.getStatus());
     }
 
     private ResponseEntity<Object> buildResponseEntity(Map<String, Object> body, HttpStatus status) {
-        return new ResponseEntity<>(body, status);
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        return new ResponseEntity<>(body, headers, status);
     }
 
     private Map<String, Object> getBody(Error error, Object header) {
@@ -112,6 +115,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     private RequestHeader getHeaders(WebRequest request) {
-        return getHeader(Objects.requireNonNull(request.getUserPrincipal()), context.getId());
+        return getHeader(request.getUserPrincipal(), context.getId());
     }
 }
