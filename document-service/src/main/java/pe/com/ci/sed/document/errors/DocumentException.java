@@ -8,14 +8,12 @@ import org.springframework.http.HttpStatus;
 @Setter
 public class DocumentException extends RuntimeException {
 
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private HttpStatus status = HttpStatus.NOT_FOUND;
+    private static final long serialVersionUID = 1L;
+    private final HttpStatus status;
 
     public DocumentException(String mensaje) {
         super(mensaje);
+        this.status = HttpStatus.NOT_FOUND;
     }
 
     public DocumentException(String mensaje, HttpStatus status) {

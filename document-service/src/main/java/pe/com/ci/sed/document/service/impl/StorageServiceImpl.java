@@ -1,7 +1,5 @@
 package pe.com.ci.sed.document.service.impl;
 
-import static pe.com.ci.sed.document.util.Constants.EXCEL_FILE_EXT;
-
 import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
@@ -34,6 +32,11 @@ import pe.com.ci.sed.document.errors.DocumentException;
 import pe.com.ci.sed.document.service.StorageService;
 import pe.com.ci.sed.document.util.Constants;
 
+import static pe.com.ci.sed.document.util.Constants.JSON_FILE_EXT;
+import static pe.com.ci.sed.document.util.Constants.NOMBRE_CARPETA_DOCUMENTOS;
+import static pe.com.ci.sed.document.util.Constants.NOMBRE_CARPETA_INTEGRACION;
+import static pe.com.ci.sed.document.util.Constants.OCURRIO_UN_ERROR_EN_LA_CARGA_DEL_DOCUMENTOS;
+import static pe.com.ci.sed.document.util.Constants.PDF_FILE_EXT;
 
 @Log4j2
 @Service
@@ -42,21 +45,13 @@ public class StorageServiceImpl implements StorageService {
     private final BlobContainerClient blobContainerClient;
     private final BlobContainerClient blobContainerClientSas;
     private final StorageConfiguration storageConfiguration;
-    private static final String PDF_FILE_EXT = ".pdf";
-    private static final String NOMBRE_CARPETA_DOCUMENTOS = "documentos";
-
-    /**
-     * Paramentros de Reportes
-     */
-    private static final String NOMBRE_CARPETA_REPORTE = "reportes";
-    private static final String CONTENT_EXCEL = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
 
     public String getFileName(String facturaNumero, String numeroEncuentro, String codigoTipoDocumento) {
         return String.format("%s_%s_%s%s", facturaNumero, numeroEncuentro, codigoTipoDocumento, PDF_FILE_EXT);
     }
 
     public String getPath(long lote, String facturaNumero, String numeroEncuentro, String filename) {
-        return String.format("%s/%s/%s/%s/%s", StorageServiceImpl.NOMBRE_CARPETA_DOCUMENTOS, lote, facturaNumero, numeroEncuentro, filename);
+        return String.format("%s/%s/%s/%s/%s", NOMBRE_CARPETA_DOCUMENTOS, lote, facturaNumero, numeroEncuentro, filename);
     }
 
     public String upload(String bytes, long lote, String facturaNumero, String numeroEncuentro, String codigoTipoDocumento) {
@@ -81,34 +76,51 @@ public class StorageServiceImpl implements StorageService {
 
         } else {
             log.error("Error Numero encuentro = {} ,numero factura = {} , numero de lote = {}, error = {}", numeroEncuentro, facturaNumero, lote, result.getStatusCode());
-            throw new DocumentException("Ocurrió un error en la carga del documentos", HttpStatus.EXPECTATION_FAILED);
+            throw new DocumentException(OCURRIO_UN_ERROR_EN_LA_CARGA_DEL_DOCUMENTOS, HttpStatus.EXPECTATION_FAILED);
         }
 
         return rutaArchivo;
     }
 
-    public Map<String, String> uploadeExcel(byte[] bytes, String nombreReporte) {
+    public String uploadJsonUnilab(byte[] bytes, String origen, String nroEncuentro) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy-HH.mm.ss");
         String fechaArchivo = LocalDateTime.now().format(formatter);
 
-        if (bytes == null || bytes.length <= 1)
-            throw new DocumentException("No existe archivo detallado", HttpStatus.BAD_REQUEST);
+        String filename = String.format("%s_%s_%s%s", origen, nroEncuentro, fechaArchivo, JSON_FILE_EXT);
+        String rutaArchivo = String.format("%s/%s/%s", NOMBRE_CARPETA_INTEGRACION, origen, filename);
 
-        String filename = String.format("%s-%s%s", nombreReporte, fechaArchivo, EXCEL_FILE_EXT);
-        String rutaArchivo = String.format("%s/%s/%s", NOMBRE_CARPETA_REPORTE, nombreReporte, filename);
-
-        Response<BlockBlobItem> result = this.uploadResponse(bytes, rutaArchivo, CONTENT_EXCEL, null);
+        Map<String, String> metadata = new HashMap<>();
+        Response<BlockBlobItem> result = uploadResponse(bytes, rutaArchivo, MediaType.APPLICATION_JSON_VALUE, metadata);
 
         if (result.getStatusCode() == HttpStatus.CREATED.value()) {
-            log.info("Carga archivo OK ,nombreReporte = {} , rutaArchivo = {}", nombreReporte, rutaArchivo);
-            Map<String, String> response = new HashMap<>();
-            response.put("nombre", filename);
-            response.put("url", blobContainerClient.getBlobContainerUrl() + "/" + rutaArchivo);
-            return response;
+            log.info("Carga archivo OK , Numero encuentro = {} , url = {}", nroEncuentro, rutaArchivo);
+
         } else {
-            log.error("Error nombreReporte = {} , error = {}", nombreReporte, result.getStatusCode());
-            throw new DocumentException("Ocurrió un error en la carga del reporte", HttpStatus.EXPECTATION_FAILED);
+            log.error("Error numero encuentro = {} , error = {}", nroEncuentro, result.getStatusCode());
+            throw new DocumentException(OCURRIO_UN_ERROR_EN_LA_CARGA_DEL_DOCUMENTOS, HttpStatus.EXPECTATION_FAILED);
         }
+
+        return rutaArchivo;
+    }
+
+    public String uploadJsonFileIafasCtrlDoc(byte[] bytes, String origen, long lote, String facturaNumero) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy-HH.mm.ss");
+        String fechaArchivo = LocalDateTime.now().format(formatter);
+
+        String filename = String.format("%s_%s_%s_%s%s", origen, lote, facturaNumero, fechaArchivo, JSON_FILE_EXT);
+        String rutaArchivo = String.format("%s/%s/%s", NOMBRE_CARPETA_INTEGRACION, origen, filename);
+
+        Map<String, String> metadata = new HashMap<>();
+        Response<BlockBlobItem> result = uploadResponse(bytes, rutaArchivo, MediaType.APPLICATION_JSON_VALUE, metadata);
+
+        if (result.getStatusCode() == HttpStatus.CREATED.value()) {
+            log.info("Carga archivo OK , Numero factura = {} , numero de lote = {}, url = {}", facturaNumero, lote, rutaArchivo);
+
+        } else {
+            log.error("Error numero factura = {} , numero de lote = {}, error = {}", facturaNumero, lote, result.getStatusCode());
+            throw new DocumentException(OCURRIO_UN_ERROR_EN_LA_CARGA_DEL_DOCUMENTOS, HttpStatus.EXPECTATION_FAILED);
+        }
+        return rutaArchivo;
     }
 
     private Response<BlockBlobItem> uploadResponse(byte[] bytes, String rutaArchivo, String mediaType, Map<String, String> metadata) {

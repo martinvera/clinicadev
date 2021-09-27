@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class GenericDocument<T> {
+public class DocumentRequest {
     private String tipoDocumento;
     private String sistemaOrigen;
-    private T contenido;
+    private String contenido;
 }

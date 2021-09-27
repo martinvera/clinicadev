@@ -3,7 +3,6 @@ package pe.com.ci.sed.document.service.impl;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Objects;
@@ -17,10 +16,10 @@ import java.util.stream.Stream;
 import org.apache.logging.log4j.ThreadContext;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.http.HttpStatus;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import com.azure.core.http.rest.PagedIterable;
 import com.azure.core.http.rest.Response;
 import com.azure.core.util.Context;
 import com.azure.storage.blob.models.BlobStorageException;
@@ -34,16 +33,20 @@ import lombok.extern.log4j.Log4j2;
 import pe.com.ci.sed.document.errors.DocumentException;
 import pe.com.ci.sed.document.model.request.RegistrarDocFromUnilabRequest;
 import pe.com.ci.sed.document.model.request.RegistrarDocRequest;
+import pe.com.ci.sed.document.model.request.enterprise.EnterpriseIRequest;
 import pe.com.ci.sed.document.persistence.entity.Archivo;
 import pe.com.ci.sed.document.persistence.entity.Documento;
-import pe.com.ci.sed.document.persistence.entity.GenericDocument;
+import pe.com.ci.sed.document.persistence.entity.DocumentRequest;
 import pe.com.ci.sed.document.persistence.entity.QueueMessageProcess;
 import pe.com.ci.sed.document.property.SedeProperty;
 import pe.com.ci.sed.document.service.DocumentoService;
-import pe.com.ci.sed.document.service.StorageService;
+import pe.com.ci.sed.document.service.EnterpriceImageService;
 import pe.com.ci.sed.document.util.Constants;
 import pe.com.ci.sed.document.util.Constants.ORIGEN_SISTEMA;
 import pe.com.ci.sed.document.util.GenericUtil;
+
+import static pe.com.ci.sed.document.util.GenericUtil.writeValueAsBytes;
+import static pe.com.ci.sed.document.util.GenericUtil.writeValueAsString;
 
 @Log4j2
 @Service
@@ -53,61 +56,124 @@ public class QueueServiceImpl {
     private final QueueClient queueClientError;
     private DocumentoService documentoService;
     private final SalesForceServiceImpl salesForceService;
+    private final EnterpriceImageService enterpriceImageService;
     private final XhisServiceImpl xhisService;
-    private StorageService storageService;
+    private StorageServiceImpl storageService;
     private final SedeProperty sedeProperty;
 
     public QueueServiceImpl(QueueClient queueClient, QueueClient queueClientError, DocumentoService documentoService,
-                            SalesForceServiceImpl salesForceService, XhisServiceImpl xhisService,
+                            SalesForceServiceImpl salesForceService, EnterpriceImageService enterpriceImageService, XhisServiceImpl xhisService,
                             StorageServiceImpl storageService, SedeProperty sedeProperty) {
         this.queueClient = queueClient;
         this.queueClientError = queueClientError;
         this.documentoService = documentoService;
         this.salesForceService = salesForceService;
+        this.enterpriceImageService = enterpriceImageService;
         this.xhisService = xhisService;
         this.storageService = storageService;
         this.sedeProperty = sedeProperty;
     }
 
+    public void procesarDocumentoError() {
+        queueClientError.receiveMessages(32).forEach(this::enviarColaEncuentros);
+    }
+
+    private void enviarColaEncuentros(QueueMessageItem message) {
+        Response<SendMessageResult> result = this.genericEnviarCola(queueClient, message.getBody().toString());
+        if (result.getStatusCode() == HttpStatus.CREATED.value()) {
+            log.debug("El mensaje fue encolado con exito en la cola {}", queueClient.getQueueName());
+            this.eliminarCola(queueClientError, message);
+        } else {
+            log.debug("Hubo un error");
+        }
+    }
+
+    private Response<SendMessageResult> genericEnviarCola(QueueClient queueClient, String data) {
+        return queueClient.sendMessageWithResponse(data, null, Duration.ofSeconds(-1), null, Context.NONE);
+    }
+
+    @Async
     @Scheduled(fixedDelay = 5000)
     public void registrarDocumento() {
         String transactionId = UUID.randomUUID().toString();
         ThreadContext.put("transactionId", transactionId);
 
         try {
-            PagedIterable<QueueMessageItem> listMessage = queueClient.receiveMessages(30, Duration.ofSeconds(60), null, Context.NONE);
-
-            listMessage.stream().parallel().map(this.crearDocumento).map(this.registrarDocumento).forEach(x -> {
-
-                if (x.isError()) {
-                    log.debug("Encuentro {} con error, se elimina el mensaje de la cola {}", x.getDocumento().getNroEncuentro(), queueClient.getQueueName());
+            Optional.ofNullable(queueClient.receiveMessage()).ifPresent(cd -> Stream.ofNullable(cd).map(this.crearDocumento).map(this.registrarDocumento).forEach(x -> {
+                if (x.isError()) this.validarRegistrosConError(cd, x);
+                else {
+                    log.debug("Encuentros {}, se elimina el mensaje de la cola {}", x.getNroEncuentro(), queueClient.getQueueName());
+                    log.info("Se procesó con exito el Encuentro Numero {}", x.getNroEncuentro());
+                    log.info("Fin de procesamiento del documento MessageId: {}", x.getQueueMessageItem().getMessageId());
                     this.eliminarCola(x.getQueueMessageItem());
-                    log.debug("Encuentro {} con error, se envía a la cola {}", x.getDocumento().getNroEncuentro(), queueClientError.getQueueName());
-                    this.enviarColaError(x.getQueueMessageItem());
-                    log.info("Se procesó con error el Encuentro Numero {}", x.getDocumento().getNroEncuentro());
-
-                    log.debug("Encuentro {} , se elimina el archivo {}", x.getDocumento().getNroEncuentro(), x.getUrl());
                     storageService.delete(x.getUrl());
-
-                } else {
-                    log.debug("Encuentro {}, se elimina el mensaje de la cola {}", x.getDocumento().getNroEncuentro(), queueClient.getQueueName());
-                    this.eliminarCola(x.getQueueMessageItem());
-                    log.info("Se procesó con exito el Encuentro Numero {}", x.getDocumento().getNroEncuentro());
                 }
-
-                log.info("Fin de procesamiento del documento MessageId: {}", x.getQueueMessageItem().getMessageId());
-
-
-            });
-
+            }));
         } catch (Exception e) {
-            log.fatal("El mensaje pudo ser procesado por sistema SED", e);
-            log.error("Ocurrió un error en el registro del documento, error = {}", e);
+            log.fatal("El mensaje no se pudo encolar en el sistema SED", e);
+            log.error("Ocurrió un error en el registro del documento, error = {}", e.getMessage());
+        }
+    }
+
+    private void validarRegistrosConError(QueueMessageItem cd, QueueMessageProcess x) {
+        log.info("INTENTO NRO: {}", cd.getDequeueCount());
+        if (cd.getDequeueCount() >= 3) {
+            log.debug("Encuentro {} con error, se elimina el mensaje de la cola {}", x.getNroEncuentro(), queueClient.getQueueName());
+            this.eliminarCola(x.getQueueMessageItem());
+            log.debug("Encuentro {} con error, se envía a la cola {}", x.getNroEncuentro(), queueClientError.getQueueName());
+            this.enviarColaError(x.getQueueMessageItem());
+            log.info("Se procesó con error el Encuentro Numero {}", x.getNroEncuentro());
+            log.debug("Encuentro {} , se elimina el archivo {}", x.getNroEncuentro(), x.getUrl());
+        } else {
+            if (x.getSistemaOrigen().equals(ORIGEN_SISTEMA.UNILAB.name())) {
+                RegistrarDocFromUnilabRequest documentUnilab = GenericUtil.readValue(storageService.download(x.getUrl()), RegistrarDocFromUnilabRequest.class);
+                this.volverEncolarDocumentoUnilab(documentUnilab, x);
+            }
+            if (x.getSistemaOrigen().equals(ORIGEN_SISTEMA.IAFAS.name()) || x.getSistemaOrigen().equals(ORIGEN_SISTEMA.CONTROLDOCUMENTARIO.name())) {
+                RegistrarDocRequest documentFromIafas = GenericUtil.readValue(storageService.download(x.getUrl()), RegistrarDocRequest.class);
+                var encuentros = documentFromIafas.getEncuentros().stream()
+                        .filter(d -> x.getEncuentrosError().contains(d.getCoPrestacion())).collect(Collectors.toList());
+                documentFromIafas.setEncuentros(encuentros);
+                this.volverEncolarDocumentoIafasCtrlDoc(documentFromIafas, x);
+            }
+        }
+    }
+
+    private void volverEncolarDocumentoUnilab(RegistrarDocFromUnilabRequest request, QueueMessageProcess process) {
+        DocumentRequest documentRequest = new DocumentRequest();
+        String url = storageService.uploadJsonUnilab(writeValueAsBytes(request), process.getSistemaOrigen(), request.getRequest().getCabecera().getNuEncuentro());
+        documentRequest.setSistemaOrigen(process.getSistemaOrigen());
+        documentRequest.setContenido(url);
+
+        Response<SendMessageResult> result = queueClient.sendMessageWithResponse(writeValueAsString(documentRequest), null, Duration.ofSeconds(-1), null, Context.NONE);
+        if (result.getStatusCode() == HttpStatus.CREATED.value()) {
+            log.info("Mensaje de unilab encolado con exito, messageId {}", result.getValue().getMessageId());
+            this.eliminarCola(process.getQueueMessageItem());
+            storageService.delete(process.getUrl());
+        }
+    }
+
+    private void volverEncolarDocumentoIafasCtrlDoc(RegistrarDocRequest p, QueueMessageProcess process) {
+        DocumentRequest documentRequest = new DocumentRequest();
+        String url = storageService.uploadJsonFileIafasCtrlDoc(writeValueAsBytes(p), process.getSistemaOrigen(), p.getNuLote(), p.getNuDocPago());
+        documentRequest.setSistemaOrigen(process.getSistemaOrigen());
+        documentRequest.setContenido(url);
+
+        Response<SendMessageResult> result = queueClient.sendMessageWithResponse(writeValueAsString(documentRequest), null, Duration.ofSeconds(-1), null, Context.NONE);
+        if (result.getStatusCode() == HttpStatus.CREATED.value()) {
+            log.info("La factura fue encolada con exito, numero factura = {} , numero de lote = {}, messageId = {}", p.getNuDocPago(), p.getNuLote(), result.getValue().getMessageId());
+
+            this.eliminarCola(process.getQueueMessageItem());
+            storageService.delete(process.getUrl());
         }
     }
 
     private void eliminarCola(QueueMessageItem message) {
-        queueClient.deleteMessage(message.getMessageId(), message.getPopReceipt());
+        Optional.ofNullable(message).ifPresent(m -> queueClient.deleteMessage(m.getMessageId(), m.getPopReceipt()));
+    }
+
+    private void eliminarCola(QueueClient queueClient, QueueMessageItem message) {
+        Optional.ofNullable(message).ifPresent(m -> queueClient.deleteMessage(m.getMessageId(), m.getPopReceipt()));
     }
 
     private void enviarColaError(QueueMessageItem message) {
@@ -121,80 +187,87 @@ public class QueueServiceImpl {
         }
     }
 
-    private Documento procesarMensajeIafas(RegistrarDocRequest documentIafas) {
-        Documento temp = this.buildDocumentoFromIAFACD(documentIafas, ORIGEN_SISTEMA.IAFAS);
-        temp.getArchivos().addAll(xhisService.generarDocumentosXhis(temp));
-        return temp;
-    }
-
-    private Documento procesarMensajeCd(RegistrarDocRequest documentCd) {
-        Documento temp = this.buildDocumentoFromIAFACD(documentCd, ORIGEN_SISTEMA.CONTROLDOCUMENTARIO);
-        temp.getArchivos().addAll(salesForceService.generarDocumentoSalesforce(temp));
-        List<List<RegistrarDocRequest.Comprobante>> comprobantes = Arrays.stream(documentCd.getEncuentros())
-                .map(RegistrarDocRequest.Detalle::getComprobantes)
-                .filter(Objects::nonNull).collect(Collectors.toList());
-        if (!comprobantes.isEmpty())
-            temp.getArchivos().addAll(xhisService.descargaComprobantes(documentCd.getEncuentros()));
-        return temp;
-    }
-
-    private Documento procesarMensajeUnilab(RegistrarDocFromUnilabRequest documentUnilab) {
-        return this.buildDocumentoFromUnilab(documentUnilab);
-    }
-
     private final Function<QueueMessageItem, QueueMessageProcess> crearDocumento = message -> {
-        Documento documento = null;
-        String url;
-
+        List<Documento> documentos = new ArrayList<>();
+        DocumentRequest documentRequest = GenericUtil.readValue(message.getBody().toString(), new TypeReference<>() {
+        });
+        String url = documentRequest.getContenido();
         try {
-            GenericDocument<String> genericDocument = GenericUtil.mapper.readValue(message.getBody().toString(), new TypeReference<>() {
-            });
-            url = genericDocument.getContenido();
+            log.info("Inicio de procesamiento del documentos MessageId: {} | sistema origen : {}", message.getMessageId(), documentRequest.getSistemaOrigen());
+            log.info("body: {}", documentRequest.getContenido());
 
-            log.info("Inicio de procesamiento del documento MessageId: {} | sistema origen : {}", message.getMessageId(), genericDocument.getSistemaOrigen());
-            log.info("body: {}", GenericUtil.writeValueAsString(genericDocument.getContenido()));
-
-            if (genericDocument.getSistemaOrigen().equals(ORIGEN_SISTEMA.UNILAB.name())) {
+            if (documentRequest.getSistemaOrigen().equals(ORIGEN_SISTEMA.UNILAB.name())) {
                 RegistrarDocFromUnilabRequest documentUnilab = GenericUtil.mapper.readValue(storageService.download(url), RegistrarDocFromUnilabRequest.class);
-                documento = this.procesarMensajeUnilab(documentUnilab);
+                documentos = List.of(this.buildDocumentoFromUnilab(documentUnilab));
             }
 
-            if (genericDocument.getSistemaOrigen().equals(ORIGEN_SISTEMA.IAFAS.name())) {
+            if (documentRequest.getSistemaOrigen().equals(ORIGEN_SISTEMA.IAFAS.name())) {
                 RegistrarDocRequest documentFromIafas = GenericUtil.mapper.readValue(storageService.download(url), RegistrarDocRequest.class);
-                documento = this.procesarMensajeIafas(documentFromIafas);
+                documentos = this.procesarMensajeIafas(documentFromIafas);
             }
 
-            if (genericDocument.getSistemaOrigen().equals(ORIGEN_SISTEMA.CONTROLDOCUMENTARIO.name())) {
+            if (documentRequest.getSistemaOrigen().equals(ORIGEN_SISTEMA.CONTROLDOCUMENTARIO.name())) {
                 RegistrarDocRequest documentFromCd = GenericUtil.mapper.readValue(storageService.download(url), RegistrarDocRequest.class);
-                documento = this.procesarMensajeCd(documentFromCd);
+                documentos = this.procesarMensajeCd(documentFromCd);
             }
-            return QueueMessageProcess.builder().error(false).queueMessageItem(message).documento(documento).url(url).build();
+            if (documentRequest.getSistemaOrigen().equals(ORIGEN_SISTEMA.ENTERPRISEIMAGING.name())) {
+                EnterpriseIRequest documentFromEi = GenericUtil.mapper.readValue(storageService.download(url), EnterpriseIRequest.class);
+                documentos = List.of(this.buildDocumentoFromEImaging(documentFromEi));
+            }
+            return QueueMessageProcess.builder().error(false)
+                    .sistemaOrigen(documentRequest.getSistemaOrigen())
+                    .queueMessageItem(message)
+                    .nroEncuentro(documentos.stream().map(Documento::getNroEncuentro).collect(Collectors.joining(",")))
+                    .documentos(documentos).url(url).build();
 
         } catch (IOException | DocumentException | BlobStorageException | QueueStorageException | NoSuchElementException e) {
             log.error("Ocurrió un error al leer el mensaje {}, error = {}", message.getMessageId(), e);
-            return QueueMessageProcess.builder().error(true).messageError(e.getMessage()).queueMessageItem(message).build();
+            return QueueMessageProcess.builder()
+                    .queueMessageItem(message)
+                    .sistemaOrigen(documentRequest.getSistemaOrigen())
+                    .url(url)
+                    .nroEncuentro(documentos.stream().map(Documento::getNroEncuentro).collect(Collectors.joining(",")))
+                    .error(true)
+                    .messageError(e.getMessage())
+                    .build();
         }
     };
 
+    private List<Documento> procesarMensajeIafas(RegistrarDocRequest documentIafas) {
+        List<Documento> temps = this.buildDocumentoFromIAFACD(documentIafas, ORIGEN_SISTEMA.IAFAS);
+        return temps.stream().peek(temp -> temp.getArchivos().addAll(xhisService.generarDocumentosXhis(temp))).collect(Collectors.toList());
+    }
+
+    private List<Documento> procesarMensajeCd(RegistrarDocRequest documentCd) {
+        List<Documento> temps = this.buildDocumentoFromIAFACD(documentCd, ORIGEN_SISTEMA.CONTROLDOCUMENTARIO);
+        return temps.stream().peek(temp -> {
+            temp.getArchivos().addAll(salesForceService.generarDocumentoSalesforce(temp));
+            List<List<RegistrarDocRequest.Comprobante>> comprobantes = documentCd.getEncuentros().stream()
+                    .map(RegistrarDocRequest.Detalle::getComprobantes)
+                    .filter(Objects::nonNull).collect(Collectors.toList());
+            if (!comprobantes.isEmpty())
+                temp.getArchivos().addAll(xhisService.descargaComprobantes(documentCd.getEncuentros()));
+        }).collect(Collectors.toList());
+    }
+
 
     private final UnaryOperator<QueueMessageProcess> registrarDocumento = queueMessageProcess -> {
-
-        Documento documento = queueMessageProcess.getDocumento();
-
-        if (Objects.nonNull(documento))
-            documentoService.findById(documento.getNroEncuentro())
-                    .ifPresentOrElse(
-                            documentoExistente -> {
+        if (!queueMessageProcess.isError())
+            queueMessageProcess.getDocumentos().stream().filter(Objects::nonNull).forEach(documento -> documentoService.findById(documento.getNroEncuentro())
+                    .ifPresentOrElse(documentoExistente -> {
                                 log.debug("Encuentro {} existente", documentoExistente.getNroEncuentro());
                                 try {
                                     documentoService.delete(documentoExistente);
                                     log.debug("Se eliminó el encuentro sin lote, encuentro {}", documentoExistente.getNroEncuentro());
+
                                     documentoService.modificarDocumentoIntegracion(documentoExistente, documento);
                                     log.debug("Se creó el nuevamente el encuentro Encuentro {} actualizado", documento.getNroEncuentro());
+
                                 } catch (Exception e1) {
                                     log.error("Error al actualizar el documento, error {}", e1.getMessage());
                                     queueMessageProcess.setError(true);
                                     queueMessageProcess.setMessageError(e1.getMessage());
+                                    queueMessageProcess.getEncuentrosError().add(documento.getNroEncuentro());
                                 }
                             },
                             () -> {
@@ -206,16 +279,16 @@ public class QueueServiceImpl {
                                     log.error("Error al insertar el documento en cosmos db, error {}", e2.getMessage());
                                     queueMessageProcess.setError(true);
                                     queueMessageProcess.setMessageError(e2.getMessage());
+                                    queueMessageProcess.getEncuentrosError().add(documento.getNroEncuentro());
                                 }
 
                             }
-                    );
+                    ));
         return queueMessageProcess;
     };
 
-    private Documento buildDocumentoFromIAFACD(RegistrarDocRequest factura, ORIGEN_SISTEMA origenSistema) {
-
-        return Stream.of(factura.getEncuentros()).map(encuentro -> {
+    private List<Documento> buildDocumentoFromIAFACD(RegistrarDocRequest factura, ORIGEN_SISTEMA origenSistema) {
+        return factura.getEncuentros().stream().map(encuentro -> {
 
             List<Archivo> list = documentoService.inicializarTipoDocumentoRequerido(encuentro.getCoServicio(), factura.getCoMecaPago(), factura.getCoSubMecaPago(), factura.getCoGarante());
             String sede = Strings.EMPTY;
@@ -259,13 +332,20 @@ public class QueueServiceImpl {
                     .modoFacturacionId(factura.getCoSubMecaPago())
                     .origenDescripcion(origenSistema.name())
                     .garanteDescripcion(factura.getNoGarante())
-                    .beneficioDesc(Optional.ofNullable(encuentro.getDeBeneficio()).map(String::toUpperCase).get())
-                    .beneficio(Optional.ofNullable(encuentro.getCoBeneficio()).map(String::toUpperCase).get())
+                    .beneficioDesc(Optional.ofNullable(encuentro.getDeBeneficio()).map(String::toUpperCase).orElse(null))
+                    .beneficio(Optional.ofNullable(encuentro.getCoBeneficio()).map(String::toUpperCase).orElse(null))
                     .archivos(list)
                     .build();
 
-        }).findFirst().orElseThrow(() -> new DocumentException("Error creando la entidad de documento", HttpStatus.BAD_REQUEST));
+        }).collect(Collectors.toList());
 
+    }
+
+    private String getSede(String coCentro) {
+        String sedeDescripcion = sedeProperty.getSedes().get(coCentro);
+        if (Strings.isNotBlank(sedeDescripcion))
+            return sedeDescripcion;
+        else return sedeProperty.getEquivalencias().get(coCentro);
     }
 
     public Documento buildDocumentoFromUnilab(RegistrarDocFromUnilabRequest unilabCreateRequest) {
@@ -300,10 +380,32 @@ public class QueueServiceImpl {
         return documento;
     }
 
-    private String getSede(String coCentro) {
-        String sedeDescripcion = sedeProperty.getSedes().get(coCentro);
-        if (Strings.isNotBlank(sedeDescripcion))
-            return sedeDescripcion;
-        else return sedeProperty.getEquivalencias().get(coCentro);
+    public Documento buildDocumentoFromEImaging(EnterpriseIRequest request) {
+        Documento documento = new Documento();
+        try {
+            documento.setCodigoApp(request.getCoOrigenApp());
+            documento.setPacienteNroDocIdent(request.getNuDocumentoPac());
+            documento.setPacienteTipoDocIdentId(request.getTiDocumentoPac());
+            documento.setPacienteApellidoPaterno(request.getApePaternoPac());
+            documento.setPacienteNombre(request.getNomPac());
+            documento.setPacienteApellidoMaterno(request.getApeMaternoPac());
+            documento.setSexoPaciente(request.getCoSexoPac());
+            documento.setCodigoServicioOrigen(request.getCoServOrigen());
+            documento.setCodigoCamaPaciente(request.getCoCamaPac());
+            documento.setSede(request.getCoSede());
+            documento.setCodigoCMP(request.getCoCmp());
+            documento.setCodigoServDestino(request.getCoServDestino());
+            documento.setDescripServDestino(request.getDeServDestino());
+            documento.setMecanismoFacturacionId(Integer.parseInt(request.getCoMecaPago()));
+            documento.setNroEncuentro(request.getNuEncuentro());
+            documento.setPeticionHisID(request.getIdPeticionHis());
+            documento.setGaranteDescripcion(request.getNoGarante());
+            documento.setOrigenDescripcion(ORIGEN_SISTEMA.ENTERPRISEIMAGING.name());
+            documento.setArchivos(new ArrayList<>());
+            documento.getArchivos().add(enterpriceImageService.obtenerInformeImagenes(request));
+        } catch (Exception e) {
+            throw new DocumentException("Error creando la entidad de documento para unilab", HttpStatus.BAD_REQUEST);
+        }
+        return documento;
     }
 }

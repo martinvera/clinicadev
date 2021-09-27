@@ -18,12 +18,7 @@ import pe.com.ci.sed.document.util.TipoDocXhis;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static org.apache.logging.log4j.util.Strings.EMPTY;
@@ -42,7 +37,7 @@ public class GenFormatXhisImpl implements GenFormatXhisService {
     private final Validator validator;
 
     @Override
-    public List<Archivo>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     generarFormatos(Xhis request, Documento documento) {
+    public List<Archivo> generarFormatos(Xhis request, Documento documento) {
         request.getCabecera().setFechaEnc(request.getCabecera().getFechaEnc().replace(FORMAT_HORA, EMPTY));
         request.getCabecera().setFechaNacPaciente(request.getCabecera().getFechaNacPaciente().replace(FORMAT_HORA, EMPTY));
         request.getCabecera().setFechaVenc(request.getCabecera().getFechaVenc().replace(FORMAT_HORA, EMPTY));
@@ -93,7 +88,7 @@ public class GenFormatXhisImpl implements GenFormatXhisService {
             }
         });
 
-        archivos.addAll(generarBoletaFarmacia(request));
+        archivos.add(generarBoletaFarmacia(request));
 
         return archivos.stream().filter(Objects::nonNull).collect(Collectors.toList());
     }
@@ -155,7 +150,7 @@ public class GenFormatXhisImpl implements GenFormatXhisService {
         return generarPdf(json, request, TipoDocXhis.ORDEN_LABORATORIO);
     }
 
-    private List<Archivo> generarBoletaFarmacia(Xhis request) {
+    private Archivo generarBoletaFarmacia(Xhis request) {
         List<List<Archivo>> archivos = request.getGuiaFarmacia().getFacturas().stream().filter(Objects::nonNull).map(f -> f.getMontoGuias().stream()
                         .filter(c -> Strings.isNotBlank(c.getUrlDocFarmacia()) && Objects.nonNull(c.getUrlDocFarmacia()))
                         .map(c -> {
@@ -165,15 +160,15 @@ public class GenFormatXhisImpl implements GenFormatXhisService {
                                     .build();
                         }).filter(a -> Objects.nonNull(a.getBytes())).collect(Collectors.toList()))
                 .collect(Collectors.toList());
-        if (archivos.isEmpty()) return new ArrayList<>();
-        List<Archivo> archivoss = new ArrayList<>();
-        archivos.forEach(archivoss::addAll);
-        return List.of(Archivo.builder()
+        if (archivos.isEmpty()) return null;
+        List<Archivo> unirArchivos = new ArrayList<>();
+        archivos.stream().filter(l -> !l.isEmpty()).forEach(unirArchivos::addAll);
+        return Archivo.builder()
                 .nroEncuentro(request.getEpisodio())
-                .archivoBytes(FileUtil.unirArchivosPdf(archivoss, true))
+                .archivoBytes(FileUtil.unirArchivosPdf(unirArchivos, true))
                 .tipoDocumentoId(TipoDocXhis.BOLETA_FARMACIA.getCodigo())
                 .tipoDocumentoDesc(TipoDocXhis.BOLETA_FARMACIA.getNombre())
-                .build());
+                .build();
     }
 
     private Archivo generarPdf(String json, Xhis request, TipoDocXhis tipodoc) {

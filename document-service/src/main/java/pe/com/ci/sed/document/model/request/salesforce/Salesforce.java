@@ -14,12 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pe.com.ci.sed.document.model.validacion.FormatoFarmacia;
-import pe.com.ci.sed.document.model.validacion.GuiaFarmacia;
-import pe.com.ci.sed.document.model.validacion.OrdenAtencionMedica;
-import pe.com.ci.sed.document.model.validacion.OrdenHospitalizacion;
-import pe.com.ci.sed.document.model.validacion.OrdenProcedimiento;
-import pe.com.ci.sed.document.model.validacion.PaseAmbulatorio;
+import pe.com.ci.sed.document.model.validacion.*;
 
 @Data
 @Validated
@@ -179,7 +174,7 @@ public class Salesforce {
         private String nroOrdenAfecto;
 
         @JsonProperty("NU_ENCUENTRO")
-        @NotEmpty(message = "El campo Admisión está vacio", groups = {OrdenProcedimiento.class, GuiaFarmacia.class, PaseAmbulatorio.class, FormatoFarmacia.class, OrdenHospitalizacion.class, OrdenAtencionMedica.class})
+        @NotEmpty(message = "El campo Admisión está vacio", groups = {OrdenProcedimiento.class, GuiaFarmacia.class, PaseAmbulatorio.class, FormatoFarmacia.class, OrdenHospitalizacion.class, OrdenAtencionMedica.class, SalesforceValidator.class})
         private String nroEnc;
 
         @JsonProperty("NU_DOC_TITULAR")

@@ -21,7 +21,6 @@ import pe.com.ci.sed.document.util.Constants.TipoDetalle;
 import pe.com.ci.sed.document.util.FileUtil;
 import pe.com.ci.sed.document.util.TipoDocSalesforce;
 
-import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -32,7 +31,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 import static org.apache.logging.log4j.util.Strings.EMPTY;
@@ -42,6 +40,7 @@ import static pe.com.ci.sed.document.util.FileUtil.getArchivoByte;
 import static pe.com.ci.sed.document.util.FileUtil.getFirma;
 import static pe.com.ci.sed.document.util.FileUtil.getJson;
 import static pe.com.ci.sed.document.util.FileUtil.getJsonMap;
+import static pe.com.ci.sed.document.util.GenericUtil.getValidations;
 
 @Log4j2
 @Service
@@ -238,7 +237,7 @@ public class GenFormatSalesforceImpl implements GenFormatSalesforceService {
         params.put("FIRMAMEDICO", getFirma(request.getEncounter().getFirmaMedico()));
 
         String pdfBase64 = EMPTY;
-        String messageError = getValidations(request, tclass);
+        String messageError = getValidations(validator, request, tclass);
         if (Strings.isEmpty(messageError)) {
             pdfBase64 = Base64.getEncoder().encodeToString(generarReporte(json, params, "salesforce/" + tipodoc.getName()));
             log.debug("Documento {} generado correctamente ", tipodoc.getNombre());
@@ -252,7 +251,7 @@ public class GenFormatSalesforceImpl implements GenFormatSalesforceService {
         Map<String, Object> params = getJsonMap(request.getEncounter());
         params.put("FIRMAMEDICO", getFirma(request.getEncounter().getFirmaMedico()));
 
-        String messageError = getValidations(request, GuiaFarmacia.class);
+        String messageError = getValidations(validator, request, GuiaFarmacia.class);
 
         byte[] bytes = null;
         if (Strings.isEmpty(messageError)) {
@@ -262,11 +261,6 @@ public class GenFormatSalesforceImpl implements GenFormatSalesforceService {
             log.debug("Documento {} no se pudo generar, no pasó las siguientes validaciones : {} ", tipodoc.getName(), messageError);
         }
         return getArchivoByte(Strings.isNotBlank(messageError), tipodoc, messageError, bytes, nroEncuentro);
-    }
-
-    private <E> String getValidations(E object, Class<?> tclass) {
-        Set<ConstraintViolation<E>> violations = validator.validate(object, tclass);
-        return violations.stream().map(ConstraintViolation::getMessage).collect(Collectors.joining(" \n "));
     }
 
 }

@@ -14,6 +14,7 @@ import java.util.stream.Stream;
 import org.apache.logging.log4j.ThreadContext;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.http.HttpStatus;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
@@ -60,16 +61,15 @@ public class QueueService {
         this.gestionLotesService = gestionLotesService;
     }
 
-    @Scheduled(initialDelay = 5000, fixedDelay = 5000)
     public void procesarMensajeConError() {
         try {
-            PagedIterable<QueueMessageItem> listMessage = queueClientError.receiveMessages(30, Duration.ofSeconds(60), null, Context.NONE);
-            listMessage.forEach(this.registrarFactura);
+            queueClientError.receiveMessages(32).forEach(this::enviarColaClinical);
         } catch (Exception e) {
             log.error("Ocurrió un error al obtener los mensajes de la cola {} : {}", queueClientError.getQueueName(), e);
         }
     }
 
+    @Async
     @Scheduled(initialDelay = 5000, fixedDelay = 5000)
     public void procesarMensaje() {
         try {
@@ -81,7 +81,7 @@ public class QueueService {
 
     }
 
-    private Consumer<QueueMessageItem> registrarFactura = message -> {
+    private final Consumer<QueueMessageItem> registrarFactura = message -> {
         ThreadContext.put("transactionId", UUID.randomUUID().toString());
         ClinicalRecord clinicalRecord;
         RegistrarFacturaRequest factura = null;
@@ -150,13 +150,15 @@ public class QueueService {
             log.info("Factura {} registrada en SED exitosamente", clinicalRecord.getFacturaNro());
         } catch (ClinicalInafectaException ce) {
             log.info(ce.getMessage());
-	} catch (Exception e) {
-            log.error("Error  : ocurrió un error inesperado al procesar el mensaje {} , detalle = {}", message.getMessageId(), factura);
+        } catch (Exception e) {
+            log.error("Error  : ocurrió un error inesperado al procesar el mensaje {} , detalle = {}", message.getMessageId(), e.getMessage());
             log.error(e);
-            this.eliminarCola(message);
-            this.enviarColaError(message);
+            log.info("INTENTO: {}", message.getDequeueCount());
+            if (message.getDequeueCount() >= 3) {
+                this.eliminarCola(message);
+                this.enviarColaError(message);
+            }
         }
-
     };
 
     private InputStream obtenerPdfFromUrl(String url) {
@@ -176,7 +178,6 @@ public class QueueService {
             String[] encuentros = Stream.of(factura.getEncuentros()).map(RegistrarFacturaRequest.Detalle::getCoPrestacion).toArray(String[]::new);
             var facturas = clinicalRecordService.findByNroEncuentro(encuentros).stream()
                     .filter(e -> !MODO_FACTURACION_INAFECTA.contains(Long.valueOf(e.getModoFacturacionId()))).collect(Collectors.toList());
-            log.info(facturas);
             if (facturas.size() == 1) {
                 Optional.ofNullable(facturas.get(0)).ifPresentOrElse(existe -> {
                     log.info("Existe factura-afecta: {} ,para factura-inafecta: {}", existe.getFacturaNro(), nroFacturaInafecta);
@@ -203,7 +204,7 @@ public class QueueService {
 
     private void volverEncolarClinical(GenericDocument<String> genericDocument, String nroFactura, QueueMessageItem message) {
         log.info("Eliminando cola factura inafecta: {}", nroFactura);
-        this.eliminarCola(message);
+        this.eliminarCola(queueClientClinicalRecord, message);
         log.info("Enviar a encolar factura inafecta: {}", nroFactura);
         Response<SendMessageResult> result = this.genericEnviarCola(queueClientClinicalRecord, convertString(genericDocument));
         if (result.getStatusCode() == HttpStatus.CREATED.value()) {
@@ -226,12 +227,26 @@ public class QueueService {
         queueClientClinicalRecord.deleteMessageWithResponse(message.getMessageId(), message.getPopReceipt(), null, Context.NONE);
     }
 
+    private void eliminarCola(QueueClient queueClient, QueueMessageItem message) {
+        queueClient.deleteMessageWithResponse(message.getMessageId(), message.getPopReceipt(), null, Context.NONE);
+    }
+
+    private void enviarColaClinical(QueueMessageItem message) {
+        Response<SendMessageResult> result = this.genericEnviarCola(queueClientClinicalRecord, message.getBody().toString());
+        if (result.getStatusCode() == HttpStatus.CREATED.value()) {
+            log.debug("El mensaje fue encolado con exito en la cola {}", queueClientClinicalRecord.getQueueName());
+            this.eliminarCola(queueClientError, message);
+        } else {
+            log.debug("Hubo un error");
+        }
+    }
+
     private void enviarColaError(QueueMessageItem message) {
         log.error("Se envia la trama {} a la cola de error {}", message.getBody().toString(), queueClientError.getQueueName());
 
         Response<SendMessageResult> result = this.genericEnviarCola(queueClientError, message.getBody().toString());
         if (result.getStatusCode() == HttpStatus.CREATED.value()) {
-            log.debug("El mensaje fue encolado con exito en la cola de error");
+            log.debug("El mensaje fue encolado con exito en la cola {}", queueClientError.getQueueName());
         } else {
             log.debug("Hubo un error");
         }

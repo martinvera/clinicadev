@@ -3,6 +3,7 @@ package pe.com.ci.sed.document.model.request;
 import java.util.Date;
 import java.util.List;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
@@ -111,7 +112,7 @@ public class RegistrarDocRequest {
 
     @NotNull
     @JsonProperty("ENCUENTROS")
-    private Detalle[] encuentros;
+    private List<Detalle> encuentros;
 
     @JsonProperty("CO_CENTRO")
     private String coCentro;
@@ -159,14 +160,16 @@ public class RegistrarDocRequest {
         @JsonProperty("DE_BENEFICIO")
         private String deBeneficio;
 
-        @JsonProperty("COMPROBANTES")
-        private List<Comprobante> comprobantes;
+        @JsonProperty("COMP_ENCUENTRO")
+        @NotEmpty(message = "No existe comprobantes de pago")
+        private List<@Valid Comprobante> comprobantes;
 
         private String tipoDocumentoDesc;
         private String tipoDocumentoId;
     }
 
     @Data
+    @Validated
     @NoArgsConstructor
     @AllArgsConstructor
     public static class Comprobante {
@@ -183,6 +186,7 @@ public class RegistrarDocRequest {
         private String fecEmision;
 
         @JsonProperty("URL_DOC_FARMACIA")
+        @NotEmpty(message = "URL de comprobante es obligatorio")
         private String urlDoc;
 
         private String tipoDocumentoDesc;

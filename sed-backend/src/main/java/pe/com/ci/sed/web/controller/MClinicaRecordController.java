@@ -39,4 +39,10 @@ public class MClinicaRecordController extends BaseController {
         request.put(Constants.PARAM_HEADER, getHeader(principal));
         return ResponseEntity.ok(restTemplateClinicalRecord.postForEntity("/clinicalrecord/registrarSiniestro", request, Object.class).getBody());
     }
+
+    @PostMapping("/clinicalrecord/procesarFacturasError")
+    public ResponseEntity<Object> procesarFacturasError(@RequestBody Map<String, Object> request, Principal principal) {
+        request.put(Constants.PARAM_HEADER, getHeader(principal));
+        return ResponseEntity.ok(restTemplateClinicalRecord.postForEntity("/clinicalrecord/procesarFacturasError", request, Object.class).getBody());
+    }
 }

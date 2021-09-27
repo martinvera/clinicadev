@@ -7,16 +7,19 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class QueueMessageProcess {
-
-	private boolean error;
-	private String messageError;
-	private QueueMessageItem queueMessageItem;
-	private Documento documento;
-	private String url;
-	
+    private boolean error;
+    private String messageError;
+    private QueueMessageItem queueMessageItem;
+    private List<Documento> documentos;
+    private String nroEncuentro;
+    private List<String> encuentrosError;
+    private String url;
+    private String sistemaOrigen;
 }

@@ -35,20 +35,20 @@ public class MDocumentController extends BaseController {
     }
 
     @PostMapping("/documentoXfactura")
-    public ResponseEntity<Object> obtenerDocumento(@RequestBody Map<String,Object> request, Principal principal) {
+    public ResponseEntity<Object> obtenerDocumento(@RequestBody Map<String, Object> request, Principal principal) {
         request.put(Constants.PARAM_HEADER, getHeader(principal));
         return ResponseEntity.ok(restTemplateDocument.postForEntity("/documentoXfactura", request, Object.class).getBody());
     }
 
     @PostMapping("/eliminarDocXlote")
-    public ResponseEntity<Object> eliminarDocumentosXlote(@RequestBody Map<String,Object> request, Principal principal) {
+    public ResponseEntity<Object> eliminarDocumentosXlote(@RequestBody Map<String, Object> request, Principal principal) {
         request.put(Constants.PARAM_HEADER, getHeader(principal));
         return ResponseEntity.ok(restTemplateDocument.postForEntity("/eliminarDocXlote", request, Object.class).getBody());
     }
 
     @GetMapping("/{nrLote}/{facturaNro}")
     public ResponseEntity<Object> obtenerDocumento(@PathVariable String facturaNro, Principal principal) {
-        return ResponseEntity.ok(restTemplateDocument.postForEntity( "/" + facturaNro, getHeader(principal), Object.class).getBody());
+        return ResponseEntity.ok(restTemplateDocument.postForEntity("/" + facturaNro, getHeader(principal), Object.class).getBody());
     }
 
     @PutMapping("/modificar")
@@ -57,10 +57,16 @@ public class MDocumentController extends BaseController {
         HttpEntity<Object> http = new HttpEntity<>(request);
         return ResponseEntity.ok(restTemplateDocument.exchange("/modificar", HttpMethod.PUT, http, Object.class).getBody());
     }
+
     @PostMapping("/detalle")
     public ResponseEntity<Object> detalle(@RequestBody Map<String, Object> request, Principal principal) {
         request.put(Constants.PARAM_HEADER, getHeader(principal));
         return ResponseEntity.ok(restTemplateDocument.postForEntity("/detalle", request, Object.class).getBody());
     }
 
+    @PostMapping("/procesarEncuentrosError")
+    public ResponseEntity<Object> procesarEncuentrosError(@RequestBody Map<String, Object> request, Principal principal) {
+        request.put(Constants.PARAM_HEADER, getHeader(principal));
+        return ResponseEntity.ok(restTemplateDocument.postForEntity("/procesarEncuentrosError", request, Object.class).getBody());
+    }
 }

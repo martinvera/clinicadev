@@ -3,6 +3,7 @@ package pe.com.ci.sed.document.service.impl;
 import static org.apache.logging.log4j.util.Strings.EMPTY;
 import static org.apache.logging.log4j.util.Strings.isNotBlank;
 import static pe.com.ci.sed.document.util.Constants.VALUE_OK;
+import static pe.com.ci.sed.document.util.GenericUtil.*;
 
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -11,6 +12,7 @@ import java.util.stream.IntStream;
 
 import com.azure.cosmos.models.CosmosQueryRequestOptions;
 import com.azure.cosmos.models.FeedResponse;
+import lombok.RequiredArgsConstructor;
 import com.azure.spring.data.cosmos.exception.CosmosAccessException;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.http.HttpStatus;
@@ -21,7 +23,6 @@ import com.azure.cosmos.util.CosmosPagedIterable;
 import com.microsoft.azure.storage.table.CloudTable;
 import com.microsoft.azure.storage.table.TableQuery;
 
-import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import pe.com.ci.sed.document.errors.DocumentException;
 import pe.com.ci.sed.document.model.generic.GenericRequest;
@@ -44,8 +45,8 @@ import pe.com.ci.sed.document.util.GenericUtil;
 
 @Log4j2
 @Service
-@AllArgsConstructor
-public class DocumentoServiceImpl extends GenericUtil implements DocumentoService {
+@RequiredArgsConstructor
+public class DocumentoServiceImpl implements DocumentoService {
 
     private final DocumentRepository documentRepository;
     private final CosmosContainer cosmosContainer;
@@ -174,6 +175,16 @@ public class DocumentoServiceImpl extends GenericUtil implements DocumentoServic
     }
 
     @Override
+    public Optional<Documento> findById(String nroEncuentro) {
+        return documentRepository.findById(nroEncuentro);
+    }
+
+    @Override
+    public void delete(Documento documento) {
+        documentRepository.delete(documento);
+    }
+
+    @Override
     public Object obtenerDocumento(DocRequest request) {
         List<Documento> listaDocumentos = new ArrayList<>();
         List<Doc> response = new ArrayList<>();
@@ -199,7 +210,6 @@ public class DocumentoServiceImpl extends GenericUtil implements DocumentoServic
         });
         return getResult(response.stream().filter(distinctByKey(Doc::getTipoDocumentoId)).sorted(Comparator.comparing(Doc::getEstadoArchivo)).collect(Collectors.toList()), request.getHeader());
     }
-
 
     @Override
     public Object listarDocumentos(GenericRequest<BusquedaRequest> request) {
@@ -425,15 +435,5 @@ public class DocumentoServiceImpl extends GenericUtil implements DocumentoServic
         target.setGaranteDescripcion(source.getGaranteDescripcion());
 
     }
-    @Override
-    public Optional<Documento> findById(String nroEncuentro) {
-        return documentRepository.findById(nroEncuentro);
-    }
-
-    @Override
-    public void delete(Documento documento) {
-        documentRepository.delete(documento);
-    }
-
 
 }

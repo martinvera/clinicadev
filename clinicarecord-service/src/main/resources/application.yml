@@ -10,7 +10,7 @@ spring:
 azure:
   storage:
     container-expiryTime : 10
-    key: hfvi4pqqO+IklIl44+VzgB88rDCHTphIFOPyio4G16ErA3YjbtTGKkZX5akSczRcuIao2GTvSZe2m6axSLQ9+w==
+    key: ${AZURE_STORAGE_KEY:hfvi4pqqO+IklIl44+VzgB88rDCHTphIFOPyio4G16ErA3YjbtTGKkZX5akSczRcuIao2GTvSZe2m6axSLQ9+w==}
     container-account: ${AZURE_STORAGE_ACCOUNT:clinicainternacional}
     container-name: documentstorage
     blob-endpoint: ${AZURE_STORAGE_BLOB_ENDPOINT:https://expdigstorage.blob.core.windows.net/?sv=2020-08-04&ss=bfqt&srt=sco&sp=rwdlacupitfx&se=2022-08-07T06:45:47Z&st=2021-08-06T22:45:47Z&spr=https&sig=nyA1FQmwmM0d%2F%2B1ggYKq58pWjBreIRPdj1Uy2D0OhqU%3D}

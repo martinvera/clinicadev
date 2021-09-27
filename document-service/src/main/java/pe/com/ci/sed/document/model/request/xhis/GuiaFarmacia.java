@@ -5,8 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.validation.annotation.Validated;
+import pe.com.ci.sed.document.model.validacion.XhisValidator;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 @Data
@@ -16,13 +19,13 @@ import java.util.List;
 public class GuiaFarmacia {
 
     @JsonProperty("OBJ_DET_GUIA")
-    private @Valid List<GuiaDetalle> detalles;
+    private List<@Valid GuiaDetalle> detalles;
 
     @JsonProperty("OBJ_DIAGNOSTICO")
-    private @Valid List<PaseAmbulatorio.Diagnostico> diagnosticos;
+    private List<PaseAmbulatorio.@Valid Diagnostico> diagnosticos;
 
     @JsonProperty("OBJ_FACTURAS")
-    private @Valid List<Factura> facturas;
+    private List<@Valid Factura> facturas;
 
     @Data
     @Validated
@@ -85,7 +88,8 @@ public class GuiaFarmacia {
         private String nuComprobSap;
 
         @JsonProperty("OBJ_MONTOS_GUIA")
-        private List<MontoGuia> montoGuias;
+        @NotEmpty(message = "Debe contener documentos de farmacia", groups = {XhisValidator.class})
+        private List<@Valid MontoGuia> montoGuias;
     }
 
     @Data
@@ -116,6 +120,7 @@ public class GuiaFarmacia {
         private String feEmiDocFarmacia;
 
         @JsonProperty("URL_DOC_FARMACIA")
+        @NotBlank(message = "URL de documento farmacia no debe ser vacio", groups = {XhisValidator.class})
         private String urlDocFarmacia;
     }
 }

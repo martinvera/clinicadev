@@ -5,15 +5,15 @@ import lombok.AllArgsConstructor;
 
 public class Constants {
 
+    public static final String QUERY = "query = ";
+    public static final String MESSAGE = "datos : {}";
+    public static final String OCURRIO_UN_ERROR_EN_LA_CARGA_DEL_DOCUMENTOS = "Ocurrió un error en la carga del documentos";
+
     private Constants() {
         throw new IllegalStateException("Utility class");
     }
 
-    public static final String ZONE_ID = "America/Lima";
-
-    public static final String UNILAB_FECHA_MSG = "YYYYMMDDHHMMSS";
     public static final String UNILAB_FECHA_TRX = "YYYYMMDDHHMMSS";
-    public static final String UNILAB_FECHA_EFEC_ORDEN = "YYYYMMDDHHMMSS";
     public static final String IAFAS_FORMAT_DATE = "yyyy-MM-dd";
     public static final String IAFAS_FORMAT_HOUR = "hh:mm:ss";
     public static final String FORMAT_HORA = "00:00:00";
@@ -32,7 +32,7 @@ public class Constants {
      */
 
     public static final String PDF_FILE_EXT = ".pdf";
-    public static final String EXCEL_FILE_EXT = ".xlsx";
+    public static final String JSON_FILE_EXT = ".json";
 
     /**
      * Constantes de Param
@@ -49,5 +49,8 @@ public class Constants {
 
     public enum ESTADO_FACTURA {INCOMPLETO, COMPLETO}
 
-    public enum ORIGEN_SISTEMA {UNILAB, SALESFORCE, IAFAS, CONTROLDOCUMENTARIO}
+    public enum ORIGEN_SISTEMA {UNILAB, SALESFORCE, IAFAS, CONTROLDOCUMENTARIO, ENTERPRISEIMAGING}
+
+    public static final String NOMBRE_CARPETA_DOCUMENTOS = "documentos";
+    public static final String NOMBRE_CARPETA_INTEGRACION = "integracion";
 }

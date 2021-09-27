@@ -17,8 +17,11 @@ import pe.com.ci.sed.document.model.request.DocRequest;
 import pe.com.ci.sed.document.persistence.entity.Archivo;
 import pe.com.ci.sed.document.persistence.entity.Documento;
 import pe.com.ci.sed.document.service.DocumentoService;
+import pe.com.ci.sed.document.service.EnterpriceImageService;
+import pe.com.ci.sed.document.service.impl.QueueServiceImpl;
 import pe.com.ci.sed.document.service.impl.SalesForceServiceImpl;
 import pe.com.ci.sed.document.service.impl.XhisServiceImpl;
+import pe.com.ci.sed.document.util.GenericUtil;
 
 @RestController
 @AllArgsConstructor
@@ -27,7 +30,9 @@ public class DocumentoController {
 
     private final DocumentoService documentoService;
     private final SalesForceServiceImpl salesForceService;
+    private final EnterpriceImageService enterpriceImageService;
     private final XhisServiceImpl xhisService;
+    private final QueueServiceImpl queueService;
 
     @PostMapping(value = "/registro", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> registrarPublicDocumento(@Valid @RequestBody GenericRequest<Documento> request) {
@@ -64,6 +69,7 @@ public class DocumentoController {
     public ResponseEntity<List<Archivo>> integrarsalesforce(@RequestBody Documento documento) {
         return ResponseEntity.ok(salesForceService.generarDocumentoSalesforce(documento));
     }
+
     @PostMapping(value = "/integracionxhis", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Archivo>> integrarxhis(@RequestBody Documento documento) {
         return ResponseEntity.ok(xhisService.generarDocumentosXhis(documento));
@@ -71,8 +77,19 @@ public class DocumentoController {
 
     @GetMapping(value = "/health", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> health() {
-        Map<String,String> result = new HashMap<>();
+        Map<String, String> result = new HashMap<>();
         result.put("status", "UP");
         return ResponseEntity.ok(result);
+    }
+
+    @PostMapping(value = "/procesarEncuentrosError", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Object> reprocesarFacturaConError(@RequestBody GenericRequest<String> request) {
+        queueService.procesarDocumentoError();
+        return ResponseEntity.ok(GenericUtil.getResult("Encuentros se mandaron a reprocesar", request.getHeader()));
+    }
+
+    @PostMapping(value = "/descargar")
+    public ResponseEntity<String> descargar(@RequestBody GenericRequest<String> request) {
+        return ResponseEntity.ok(enterpriceImageService.obtenerPdfFromUrl(request.getRequest()));
     }
 }

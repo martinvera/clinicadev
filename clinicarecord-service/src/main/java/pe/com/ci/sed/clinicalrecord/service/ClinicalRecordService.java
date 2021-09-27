@@ -66,15 +66,13 @@ public class ClinicalRecordService {
             query.append(" and c.facturaNro = '").append(request.getFacturaNro()).append("'");
 
         log.info("query = " + query);
-        CosmosQueryRequestOptions options = new CosmosQueryRequestOptions();
-        options.setQueryMetricsEnabled(true);
 
         FeedResponse<ClinicalRecord> response;
         if (Strings.isNullOrEmpty(request.getSiguiente()))
-            response = cosmosContainer.queryItems(query.toString(), options, ClinicalRecord.class)
+            response = cosmosContainer.queryItems(query.toString(), null, ClinicalRecord.class)
                     .iterableByPage(request.getSize()).iterator().next();
         else
-            response = cosmosContainer.queryItems(query.toString(), options, ClinicalRecord.class)
+            response = cosmosContainer.queryItems(query.toString(), null, ClinicalRecord.class)
                     .iterableByPage(request.getSiguiente(), request.getSize()).iterator().next();
 
         response.getResults().forEach(x -> {

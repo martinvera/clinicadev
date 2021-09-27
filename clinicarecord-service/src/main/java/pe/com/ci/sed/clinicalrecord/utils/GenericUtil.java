@@ -17,8 +17,11 @@ import org.apache.logging.log4j.util.Strings;
 import com.microsoft.azure.storage.ResultContinuation;
 import com.microsoft.azure.storage.ResultSegment;
 
-import org.jetbrains.annotations.NotNull;
-import org.springframework.http.*;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 import pe.com.ci.sed.clinicalrecord.errors.ClinicalRecordException;
 import pe.com.ci.sed.clinicalrecord.model.generic.GenericRequest;
