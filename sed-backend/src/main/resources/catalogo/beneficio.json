@@ -1,0 +1,1661 @@
+  [
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "38",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5308",
+      "descripcion": "ABORTO NO PROVOCADO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "39",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6308",
+      "descripcion": "ABORTO O AMENAZA DE ABORTO POR EMERGENCIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "40",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5309",
+      "descripcion": "ABORTO O AMENAZA DE ABORTO-MV"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "41",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4308",
+      "descripcion": "ABORTO/AMENAZA DE ABORTO AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "42",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4101",
+      "descripcion": "ACCIDENTE DE TRABAJO AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "43",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6500",
+      "descripcion": "ACCIDENTE DE TRABAJO EMERGENCIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "44",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5250",
+      "descripcion": "ACCIDENTES DE TRABAJO HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "45",
+      "catalogo": "BENEFICIOS",
+      "codigo": "212",
+      "descripcion": "ALIMENTACIÓN PARA ACOMPAÑANTE DE PACIENTE HOSPITALIZADO NO ONCOLÓGICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "46",
+      "catalogo": "BENEFICIOS",
+      "codigo": "211",
+      "descripcion": "ALIMENTACIÓN PARA ACOMPAÑANTE ONCOLÓGIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "47",
+      "catalogo": "BENEFICIOS",
+      "codigo": "210",
+      "descripcion": "ALIMENTACIÓN PARA ACOMPAÑANTE PACIENTE HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "48",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4105",
+      "descripcion": "AMBULATORIO CON RECUPERO ESPECIAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "49",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4046",
+      "descripcion": "AMBULATORIO GINECOLOGIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "50",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4047",
+      "descripcion": "AMBULATORIO MEDICINA INTERNA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "51",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4045",
+      "descripcion": "AMBULATORIO PEDIATRA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "52",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4933",
+      "descripcion": "AMBULATORIO POR TRATAMIENTO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "53",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4205",
+      "descripcion": "AMBULATORIO POST-OPERATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "54",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4092",
+      "descripcion": "APARATO CARDIOVASCULAR"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "55",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4093",
+      "descripcion": "APARATO DIGESTIVO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "56",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4094",
+      "descripcion": "APARATO GENITAL FEMENINO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "57",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4095",
+      "descripcion": "APARATO GENITAL MASCULINO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "58",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4096",
+      "descripcion": "APARATO MUSCULO-ESQUELETICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "59",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4097",
+      "descripcion": "APARATO RESPIRATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "60",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4098",
+      "descripcion": "APARATO URINARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "61",
+      "catalogo": "BENEFICIOS",
+      "codigo": "213",
+      "descripcion": "APOYO PARCIAL PARA CASOS DE HOSP."
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "62",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4001",
+      "descripcion": "ASMA SP (SIN PROTOCOLO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "63",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4212",
+      "descripcion": "ATENCION A CREDITO EN CLINICAS AFILIADAS (EXTRANJERO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "64",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4150",
+      "descripcion": "ATENCION A CREDITO EN CLINICAS AFILIADAS (PERU)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "65",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6000",
+      "descripcion": "ATENCION DE EMERGENCIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "66",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4152",
+      "descripcion": "ATENCION DIRECTA EN CLINICAS AFILIADAS EN EL PERU"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "67",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6113",
+      "descripcion": "ATENCION POR EMERGENCIA ACCIDENTAL BE38"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "68",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6300",
+      "descripcion": "ATENCION POR EMERGENCIA OBSTETRICA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "69",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4153",
+      "descripcion": "ATENCION POR ENFERMEDAD (AMBULATORIO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "70",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5153",
+      "descripcion": "ATENCION POR ENFERMEDAD (HOSPITALARIO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "71",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1603",
+      "descripcion": "AVION NACIONAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "72",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4976",
+      "descripcion": "CAMPIMETRIA Y/O PERIMETRIA COMPUTARIZADA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "73",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5302",
+      "descripcion": "CESAREA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "74",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5303",
+      "descripcion": "CESAREA (EN CARENCIA)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "75",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9206",
+      "descripcion": "CHEQUEO GINECOLOGICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "76",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9200",
+      "descripcion": "CHEQUEO MEDICO GENERAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "77",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9250",
+      "descripcion": "CHEQUEO MEDICO SCTR"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "78",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9202",
+      "descripcion": "CHEQUEO ODONTOLOGICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "79",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9204",
+      "descripcion": "CHEQUEO OFTALMOLOGICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "80",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9230",
+      "descripcion": "CHEQUEOS MEDICOS ANUALES"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "81",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4200",
+      "descripcion": "CIRUGIA AMBULATORIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "82",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4233",
+      "descripcion": "CIRUGÍA AMBULATORIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "83",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5423",
+      "descripcion": "CIRUGIA DE HALLAZGO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "84",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5428",
+      "descripcion": "CIRUGÍA DEL SISTEMA NERVIOSO HOSPITALARIO A CREDITO EN ENTRANJERO NV17"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "85",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4424",
+      "descripcion": "CIRUGIA ONCOLOGICA AMBULATORIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "86",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5430",
+      "descripcion": "CIRUGIA POR SOSPECHA ONCOLÓGICA INICIAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "87",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4934",
+      "descripcion": "COBERTURA ONCOLOGÍCA PREEXISTENTE INEN"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "88",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5185",
+      "descripcion": "COBERTURAS DE COMPLICACIONES ONCOLÓGICAS PARCIALES"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "89",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4223",
+      "descripcion": "COBERTURAS DE COMPLICACIONES ONCOLÓGICAS TOTALES"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "90",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5184",
+      "descripcion": "COBERTURAS DE COMPLICACIONES ONCOLÓGICAS TOTALES"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "91",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4305",
+      "descripcion": "COMPLICACIONES EMBARAZO AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "92",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5305",
+      "descripcion": "COMPLICACIONES EMBARAZO HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "93",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5306",
+      "descripcion": "COMPLICACIONES EN EMBARAZO Y PUERPERIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "94",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5340",
+      "descripcion": "COMPLICACIONES ORGÁNICAS DEL EMBARAZO (AMENAZA DE PARTO PREMATURO Y/O INMADURO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "95",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4171",
+      "descripcion": "CON ATENCION DIRECTA EN CLINICAS AFILIADAS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "96",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4100",
+      "descripcion": "CONSULTA AMBULATORIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "97",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4992",
+      "descripcion": "CONSULTA AMBULATORIA POST HOSPITALARIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "98",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1101",
+      "descripcion": "CONSULTA DOMICILIO MED.INTERNA/PEDIATRIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "99",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1100",
+      "descripcion": "CONSULTA MAD ESPECIALISTA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "100",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1002",
+      "descripcion": "CONSULTA MAD MEDICINA GENERAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "101",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1003",
+      "descripcion": "CONSULTA MAD PEDIATRICA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "102",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4502",
+      "descripcion": "CONSULTA PSICOLÓGICA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "103",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4501",
+      "descripcion": "CONSULTA PSIQUIATRICA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "104",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4300",
+      "descripcion": "CONSULTAS PRE/POST NATALES"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "105",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4401",
+      "descripcion": "CONTINUACION DE EMERGENCIA ACCIDENTAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "106",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4206",
+      "descripcion": "CONTROL AMBULATORIO POST HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "107",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9030",
+      "descripcion": "CONTROL DE NIÑO SANO - 2 AÑOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "108",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9031",
+      "descripcion": "CONTROL DE NIÑO SANO - 3 AÑOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "109",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9032",
+      "descripcion": "CONTROL DE NIÑO SANO - 4 AÑOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "110",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9033",
+      "descripcion": "CONTROL DE NIÑO SANO - 5 AÑOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "111",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9234",
+      "descripcion": "CONTROL DE NIÑO SANO - 6 AÑOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "112",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9029",
+      "descripcion": "CONTROL DE NIÑO SANO DESDE 29 DÍAS A MENOR 1 AÑO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "113",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9035",
+      "descripcion": "CONTROL DE NIÑO SANO DESDE 7 A 11 AÑOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "114",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9004",
+      "descripcion": "CONTROL DE NIÑO SANO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "115",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9021",
+      "descripcion": "CONTROL DE NIÑO SANO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "116",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9003",
+      "descripcion": "CONTROL DE NIÑO SANO - 1 AÑO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "117",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9005",
+      "descripcion": "CONTROL DE NIÑO SANO 0 A 28 DIAS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "118",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9007",
+      "descripcion": "CONTROL DE NIÑO SANO DE 1 A 2 AÑOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "119",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9008",
+      "descripcion": "CONTROL DE NIÑO SANO DE 2 A 4 AÑOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "120",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9006",
+      "descripcion": "CONTROL DE NIÑO SANO 29 DIAS A 1 AÑO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "121",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9009",
+      "descripcion": "CONTROL DE NIÑO SANO 5 A 11 AÑOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "122",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4208",
+      "descripcion": "CONTROL POST CIRUGIA AMBULATORIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "123",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4207",
+      "descripcion": "CONTROL POST CIRUGIA HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "124",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4307",
+      "descripcion": "CONTROL POST NATAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "125",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9022",
+      "descripcion": "CONTROL POST NATAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "126",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9023",
+      "descripcion": "CONTROL PRE Y/O POST-NATAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "127",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4306",
+      "descripcion": "CONTROL PRENATAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "128",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9025",
+      "descripcion": "CONTROL PRE-NATAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "129",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9026",
+      "descripcion": "CONTROL Y PERFIL PRENATAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "130",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1111",
+      "descripcion": "CUIDADO PALIATIVO EN EL HOGAR"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "131",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4117",
+      "descripcion": "DENTAL SCTR"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "132",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4400",
+      "descripcion": "DESASTRES NATURALES AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "133",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5400",
+      "descripcion": "DESASTRES NATURALES HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "134",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4065",
+      "descripcion": "DESPISTAJES ONCOLOGICOS ANUALES GRATUITOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "135",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4949",
+      "descripcion": "DESPRENDIMIENTO DE RETINA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "136",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4003",
+      "descripcion": "DIABETES SP (SIN PROTOCOLO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "137",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4162",
+      "descripcion": "DIAGNOSTICO EN PERSONA SANA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "138",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4005",
+      "descripcion": "DISLIPIDEMIA SP (SIN PROTOCOLO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "139",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4977",
+      "descripcion": "ECOBIOMETRIA UNILATERAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "140",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4916",
+      "descripcion": "ECOGRAFIAS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "141",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4041",
+      "descripcion": "EDUCARE ASMA AMI"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "142",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4042",
+      "descripcion": "EDUCARE DIABETES AMI"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "143",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4044",
+      "descripcion": "EDUCARE DISLIPIDEMIA AMI"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "144",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4043",
+      "descripcion": "EDUCARE HIPERTENSION ARTERIAL AMI"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "145",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6819",
+      "descripcion": "EMERGENCIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "146",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6101",
+      "descripcion": "EMERGENCIA ACCIDENTAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "147",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6107",
+      "descripcion": "EMERGENCIA ACCIDENTAL AMBULATORIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "148",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6100",
+      "descripcion": "EMERGENCIA MEDICA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "149",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6106",
+      "descripcion": "EMERGENCIA MEDICA-CE"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "150",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4406",
+      "descripcion": "ENFERMEDAD CONGENITA AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "151",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5405",
+      "descripcion": "ENFERMEDAD CONGENITA HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "152",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5129",
+      "descripcion": "ENFERMEDAD DE ALTO RIESGO (CATASTROFICAS)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "153",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4452",
+      "descripcion": "ENFERMEDADES CONGENITAS (NO CONOCIDAS) EN EL PERU"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "154",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4407",
+      "descripcion": "ENFERMEDADES CONGENITAS NO CONOCIDAS AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "155",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5406",
+      "descripcion": "ENFERMEDADES CONGENITAS NO CONOCIDAS HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "156",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4000",
+      "descripcion": "ENFERMEDADES CRONICAS ASMA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "157",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4002",
+      "descripcion": "ENFERMEDADES CRONICAS DIABETES"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "158",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4004",
+      "descripcion": "ENFERMEDADES CRONICAS DISLIPIDEMIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "159",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4006",
+      "descripcion": "ENFERMEDADES CRONICAS HTA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "160",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4008",
+      "descripcion": "ENFERMEDADES CRONICAS OSTEOPOROSIS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "161",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4247",
+      "descripcion": "ENFERMEDADES DE LA PIEL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "162",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4102",
+      "descripcion": "ENFERMEDADES DE TRABAJO AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "163",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6501",
+      "descripcion": "ENFERMEDADES DE TRABAJO EMERGENCIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "164",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5150",
+      "descripcion": "ENFERMEDADES DE TRABAJO HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "165",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4114",
+      "descripcion": "ENFERMEDADES EPIDEMICAS AMBULATORIAS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "166",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5114",
+      "descripcion": "ENFERMEDADES EPIDEMICAS HOSPITALARIAS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "167",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4438",
+      "descripcion": "ENFERMEDADES ONCOLOGICAS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "168",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5438",
+      "descripcion": "ENFERMEDADES ONCOLOGICAS BE17"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "169",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4443",
+      "descripcion": "ENFERMEDADES ONCOLOGICAS EN EL PERU-MV"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "170",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5443",
+      "descripcion": "ENFERMEDADES ONCOLOGICAS EN EL PERU-MV MV68"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "171",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4439",
+      "descripcion": "ENFERMEDADES ONCOLOGICAS-MV"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "172",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5439",
+      "descripcion": "ENFERMEDADES ONCOLOGICAS-MV MV75"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "173",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1601",
+      "descripcion": "EVACUACION EN AMBULANCIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "174",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1607",
+      "descripcion": "EVACUACION EN AVION TERRITORIO NACIONAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "175",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4921",
+      "descripcion": "EXAMENES DIAGNÓSTICOS CARDIOLOGIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "176",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4927",
+      "descripcion": "EXAMENES DIAGNÓSTICOS ESPECIALIZADOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "177",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4952",
+      "descripcion": "EXAMENES DIAGNÓSTICOS NEUMOLOGÍA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "178",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4926",
+      "descripcion": "EXAMENES DIAGNÓSTICOS NEUROLOGÍA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "179",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4920",
+      "descripcion": "EXAMENES DIAGNÓSTICOS OFTALMOLOGIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "180",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4922",
+      "descripcion": "EXAMENES DIAGNÓSTICOS OTORRINOLARINGOLOGIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "181",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4923",
+      "descripcion": "EXAMENES DIAGNÓSTICOS UROLOGIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "182",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4902",
+      "descripcion": "FARMACIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "183",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4085",
+      "descripcion": "FARMACIA VIH SIDA PEAS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "184",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4466",
+      "descripcion": "FISIOTERAPIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "185",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4221",
+      "descripcion": "GASTOS DE CURACION (POR ACCIDENTE) AP15"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "186",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6221",
+      "descripcion": "GASTOS DE CURACION (POR ACCIDENTE) AP15"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "187",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4110",
+      "descripcion": "GASTOS DE CURACION AM98"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "188",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4175",
+      "descripcion": "GASTOS DE EXÁMENES AUXILIARES"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "189",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4118",
+      "descripcion": "GASTOS ODONTOLOGICOS POR ACCIDENTE"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "190",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4178",
+      "descripcion": "GASTOS ONCOLOGICOS AMBULATORIOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "191",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5178",
+      "descripcion": "GASTOS ONCOLOGICOS HOSPITALARIOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "192",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5209",
+      "descripcion": "HABITACION, MEDICIONAS, HONORARIOS MEDICOS Y SERVICIOS EN GENERAL (EN EL PERU)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "193",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4007",
+      "descripcion": "HIPERTENSION SP (SIN PROTOCOLO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "194",
+      "catalogo": "BENEFICIOS",
+      "codigo": "19",
+      "descripcion": "HONORARIOS MÉDICOS (ASUMIDO POR EL ASEGURADO 40%)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "195",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5100",
+      "descripcion": "HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "196",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5135",
+      "descripcion": "HOSPITALARIO (QUIRÚRGICO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "197",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5102",
+      "descripcion": "HOSPITALARIO MEDICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "198",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5200",
+      "descripcion": "HOSPITALARIA POR CIRUGIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "199",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5201",
+      "descripcion": "HOSPITALARIO POR EMERGENCIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "200",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5101",
+      "descripcion": "HOSPITALARIO POR TRATAMIENTO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "201",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5136",
+      "descripcion": "HOSPITALIZACION"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "202",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5103",
+      "descripcion": "HOSPITALIZACIÓN (DERECHOS ENFRAESTRUCTURA)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "203",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5138",
+      "descripcion": "HOSPITALIZACION A CREDITO EN EL PERU"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "204",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5137",
+      "descripcion": "HOSPITALIZACION-AM"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "205",
+      "catalogo": "BENEFICIOS",
+      "codigo": "6401",
+      "descripcion": "HUELGAS, CONMOCION CIVIL, DAÑO MALICIOSO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "206",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9101",
+      "descripcion": "INMUNIZACIONES"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "207",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4912",
+      "descripcion": "LABORATORIO AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "208",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4913",
+      "descripcion": "LABORATORIO CLÍNICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "209",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4915",
+      "descripcion": "LABORATORIO PATOLOGICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "210",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4959",
+      "descripcion": "LAVADO Y SONDEO DE TRACTO LAGRIMAL, CATETERIZACIÓN"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "211",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1050",
+      "descripcion": "MANEJO DE CASO SCTR"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "212",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1000",
+      "descripcion": "MANEJO DE CASOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "213",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4301",
+      "descripcion": "MATERNIDAD AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "214",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5301",
+      "descripcion": "MATERNIDAD HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "215",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4600",
+      "descripcion": "MEDICINA FISICA Y REHABILITACION"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "216",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4993",
+      "descripcion": "MEDICINAS ALTO COSTO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "217",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4994",
+      "descripcion": "MEDICINAS ALTO COSTO ONCOLOGICOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "218",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1110",
+      "descripcion": "MEDICOS A DOMICILIO (FONOMEDIC) MED GRAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "219",
+      "catalogo": "BENEFICIOS",
+      "codigo": "98",
+      "descripcion": "MUERTE DEL TITULAR POR ACCIDENTE"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "220",
+      "catalogo": "BENEFICIOS",
+      "codigo": "114",
+      "descripcion": "MUERTE NATURAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "221",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4029",
+      "descripcion": "NUTRICION PARENTERAL ATENCION A CREDITO EN EL PERU"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "222",
+      "catalogo": "BENEFICIOS",
+      "codigo": "27",
+      "descripcion": "NUTRICION PARENTERAL HOSPITALARIO REEMBOLSO EN EXTRANJERO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "223",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4116",
+      "descripcion": "ODONTOLOGIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "224",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4123",
+      "descripcion": "OFTALMOLOGIA AMBULATORIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "225",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5409",
+      "descripcion": "ONCOLOGIA HOSPITALARIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "226",
+      "catalogo": "BENEFICIOS",
+      "codigo": "201",
+      "descripcion": "ONCOLOGICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "227",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4409",
+      "descripcion": "ONCOLOGICO AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "228",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4127",
+      "descripcion": "OPTOMETRIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "229",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4122",
+      "descripcion": "ORTODONCIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "230",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4930",
+      "descripcion": "OTRRINOLARINGOLOGIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "231",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9036",
+      "descripcion": "OTRAS ENFERMEDADES"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "232",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4937",
+      "descripcion": "OTROS PROCEDIMIENTOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "233",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5304",
+      "descripcion": "PARTO MULTIPLE"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "234",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5300",
+      "descripcion": "PARTO NORMAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "235",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9817",
+      "descripcion": "PEAS PLANIFICACION FAMILIAR"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "236",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4813",
+      "descripcion": "PEAS VIH SIDA AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "237",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9300",
+      "descripcion": "PLANIFICACION FAMILIAR"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "238",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4987",
+      "descripcion": "PROCEDIMIENTOS AMBULATORIOS"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "239",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4121",
+      "descripcion": "PROTESIS DENTAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "240",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4716",
+      "descripcion": "PROTESIS QUIRURGICAS (EXCLUYE DENTALES)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "241",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4609",
+      "descripcion": "PROTESIS QUIRURGICAS AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "242",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5700",
+      "descripcion": "PROTESIS QUIRURGICAS INTERNA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "243",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9301",
+      "descripcion": "PSICOPROFILAXIS DEL PARTO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "244",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4914",
+      "descripcion": "RADIOLOGIA CONVENCIONAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "245",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4411",
+      "descripcion": "RECONSTRUCCION MAMARIA AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "246",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5411",
+      "descripcion": "RECONSTRUCCION MAMARIA HOSPITALARIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "247",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4347",
+      "descripcion": "RED DE APOYO AL DIAGNOSTICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "248",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4049",
+      "descripcion": "RED DE IMÁGENES"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "249",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4821",
+      "descripcion": "RESONANCIA AMBULATORIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "250",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4918",
+      "descripcion": "RESONANCIA MAGNETICA (RNM)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "251",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4204",
+      "descripcion": "RIESGO QUIRURGICO PARA HOSPITALIZACION"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "252",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4465",
+      "descripcion": "SALUD MENTAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "253",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4500",
+      "descripcion": "SALUD MENTAL AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "254",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4909",
+      "descripcion": "SEGUNDA OPINION INTERNACIONAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "255",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4908",
+      "descripcion": "SEGUNDA OPINION NACIONAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "256",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4433",
+      "descripcion": "SEGUNDO CANCER PRIMARIO AMBULATORIO CREDITO EN EXTRANJERO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "257",
+      "catalogo": "BENEFICIOS",
+      "codigo": "12",
+      "descripcion": "SEPELIO ADICIONAL -MV"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "258",
+      "catalogo": "BENEFICIOS",
+      "codigo": "7",
+      "descripcion": "SEPELIO VIP"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "259",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1116",
+      "descripcion": "SERVICIO DE EMERGENCIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "260",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4931",
+      "descripcion": "SISTEMA ENDOCRINO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "261",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4932",
+      "descripcion": "SISTEMA NERVIOSO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "262",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4917",
+      "descripcion": "TAC TEM"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "263",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4464",
+      "descripcion": "TAMIZAJE NEONATAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "264",
+      "catalogo": "BENEFICIOS",
+      "codigo": "1048",
+      "descripcion": "TELECONSULTA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "265",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4972",
+      "descripcion": "TERAPIA FOTODINÁMICA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "266",
+      "catalogo": "BENEFICIOS",
+      "codigo": "2101",
+      "descripcion": "TOPICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "267",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4066",
+      "descripcion": "TRATAMIENTO DE DOLENCIAS A CONSECUENCIA DEL TRATAMIENTO ONCOLOGICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "268",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5417",
+      "descripcion": "TRATAMIENTO DE DOLENCIAS A CONSECUENCIA DEL TRATAMIENTO ONCOLOGICO NV01"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "269",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4514",
+      "descripcion": "TRATAMIENTO DE PATOLOGIAS ATENCION A CREDITO EN EL PERU"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "270",
+      "catalogo": "BENEFICIOS",
+      "codigo": "9019",
+      "descripcion": "TRATAMIENTO PRE-NATAL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "271",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5269",
+      "descripcion": "TRATAMIENTO QUIMIOTERAPIA HOSPITALARIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "272",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4402",
+      "descripcion": "VIH SIDA AMBULATORIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "273",
+      "catalogo": "BENEFICIOS",
+      "codigo": "5402",
+      "descripcion": "VIH SIDA HOSPITALARIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "274",
+      "catalogo": "BENEFICIOS",
+      "codigo": "4971",
+      "descripcion": "VITRESTOMIA POSTERIOR"
+    }
+  ]

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO" packages="pe.com.ci.sed.web.logging">
+	
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}{GMT-5:00}][WEB_APPLICATION] [%-5p] (%F:%L) | %custommsg %n" />
+        </Console>
+        <Console name="logbook" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS}{GMT-5:00}][WEB_APPLICATION] [%-5p] (%F:%L) | %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="pe.com.ci.sed.web" level="DEBUG" additivity="false">
+            <appender-ref ref="console" />
+        </Logger>
+        <Logger name="org.zalando.logbook" level="DEBUG" additivity="false">
+            <appender-ref ref="logbook" />
+        </Logger>
+        <Root level="OFF" additivity="false">
+            <appender-ref ref="console" />
+        </Root>
+     </Loggers>
+</Configuration>

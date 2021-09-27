@@ -1,0 +1,55 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: expedientedigital
+  labels:
+    name: expedientedigital
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-service
+  namespace: expedientedigital
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-service
+  template:
+    metadata:
+      labels:
+        app: web-service
+    spec:
+      containers:
+        - name: webservice
+          image: acrexpedientedigital.azurecr.io/expedientedigital/web-service:v3
+          ports:
+            - containerPort: 80
+          env:
+            - name: HOST_EXPEDIENTE_SERVICE
+              value: 20.88.192.100
+            - name: HOST_DOCUMENT_SERVICE
+              value: 20.45.4.208
+            - name: HOST_CLINICALRECORD_SERVICE
+              value: 20.88.194.38
+            - name: HOST_REPORTE_SERVICE
+              value: 52.152.26.144
+            - name: AZURE_STORAGE_TABLE_ENDPOINT
+              value: TableEndpoint=https://expdigstorage.table.core.windows.net/;SharedAccessSignature=sv=2020-02-10&ss=bfqt&srt=sco&sp=rwdlacuptfx&se=2022-06-25T00:48:40Z&st=2021-06-24T16:48:40Z&spr=https&sig=tKEz6vo74SQzV27P09TKr%2F42oUOAbjF54Tc5vBjyosg%3D
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+  namespace: expedientedigital
+  labels:
+    app: webservice
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+  selector:
+    app: web-service

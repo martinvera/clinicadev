@@ -1,0 +1,30 @@
+[
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "800",
+    "catalogo": "SEDE",
+    "descripcion": "Lima",
+    "codigo": "00015610"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "801",
+    "catalogo": "SEDE",
+    "descripcion": "San Borja",
+    "codigo": "00009682"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "802",
+    "catalogo": "SEDE",
+    "descripcion": "San Isidro",
+    "codigo": "00008215"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "803",
+    "catalogo": "SEDE",
+    "descripcion": "Surco",
+    "codigo": "00024299"
+  }
+]

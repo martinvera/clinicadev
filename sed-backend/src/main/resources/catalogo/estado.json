@@ -1,0 +1,65 @@
+[
+  {
+    "partitionKey": "ESTADOGARANTE",
+    "rowKey": "01",
+    "catalogo": "ESTADOGARANTE",
+    "codigo": "E01",
+    "descripcion": "Terminado"
+  },
+  {
+    "partitionKey": "ESTADOGARANTE",
+    "rowKey": "02",
+    "catalogo": "ESTADOGARANTE",
+    "codigo": "E02",
+    "descripcion": "En proceso"
+  },
+  {
+    "partitionKey": "ESTADOGARANTE",
+    "rowKey": "03",
+    "catalogo": "ESTADOGARANTE",
+    "codigo": "E03",
+    "descripcion": "Pendiente"
+  },
+  {
+    "partitionKey": "ESTADOMONITOREO",
+    "rowKey": "04",
+    "catalogo": "ESTADOMONITOREO",
+    "codigo": "E04",
+    "descripcion": "Pendiente"
+  },
+  {
+    "partitionKey": "ESTADOMONITOREO",
+    "rowKey": "05",
+    "catalogo": "ESTADOMONITOREO",
+    "codigo": "E05",
+    "descripcion": "En proceso"
+  },
+  {
+    "partitionKey": "ESTADOMONITOREO",
+    "rowKey": "06",
+    "catalogo": "ESTADOMONITOREO",
+    "codigo": "E06",
+    "descripcion": "Terminado"
+  },
+  {
+    "partitionKey": "ESTADOMONITOREO",
+    "rowKey": "07",
+    "catalogo": "ESTADOMONITOREO",
+    "codigo": "E07",
+    "descripcion": "Error"
+  },
+  {
+    "partitionKey": "ESTADOEXPEDIENTE",
+    "rowKey": "08",
+    "catalogo": "ESTADOEXPEDIENTE",
+    "codigo": "E08",
+    "descripcion": "Completo"
+  },
+  {
+    "partitionKey": "ESTADOEXPEDIENTE",
+    "rowKey": "09",
+    "catalogo": "ESTADOEXPEDIENTE",
+    "codigo": "E09",
+    "descripcion": "Incompleto"
+  }
+]

@@ -1,0 +1,216 @@
+[
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "700",
+    "catalogo": "GARANTE",
+    "descripcion": "MEF",
+    "especial" :1,
+    "codigo": "30002",
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "702",
+    "catalogo": "GARANTE",
+    "descripcion": "COLEGIO MÉDICO",
+    "especial" :1,
+    "codigo": "00000",
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "703",
+    "catalogo": "GARANTE",
+    "descripcion": "RIMAC SEGUROS Y REASEGUROS",
+    "especial" :0,
+    "codigo": "40007",
+    "codigopadre": "3"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "704",
+    "catalogo": "GARANTE",
+    "descripcion": "PACIFICO EPS",
+    "codigo": "20002",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "705",
+    "catalogo": "GARANTE",
+    "descripcion": "RIMAC EPS",
+    "codigo": "20001",
+    "especial" :0,
+    "codigopadre": "2"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "706",
+    "catalogo": "GARANTE",
+    "descripcion": "LA POSITIVA",
+    "codigo": "40005",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "707",
+    "catalogo": "GARANTE",
+    "descripcion": "PACIFICO SEGUROS",
+    "codigo": "40003",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "708",
+    "catalogo": "GARANTE",
+    "descripcion": "MAPFRE PERÚ EPS",
+    "codigo": "20004",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "709",
+    "catalogo": "GARANTE",
+    "descripcion": "MAPFRE SEGUROS",
+    "codigo": "40006",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "710",
+    "catalogo": "GARANTE",
+    "descripcion": "POSITIVA SANITAS EPS",
+    "codigo": "20005",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "711",
+    "catalogo": "GARANTE",
+    "descripcion": "FEBAN",
+    "codigo": "30004",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "712",
+    "catalogo": "GARANTE",
+    "descripcion": "CARDIF",
+    "codigo": "40002",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "713",
+    "catalogo": "GARANTE",
+    "descripcion": "BCRP",
+    "codigo": "30003",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "714",
+    "catalogo": "GARANTE",
+    "descripcion": "SEMEFA",
+    "codigo": "30009",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "715",
+    "catalogo": "GARANTE",
+    "descripcion": "FOSPEME",
+    "codigo": "10006",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "716",
+    "catalogo": "GARANTE",
+    "descripcion": "ONCOSALUD",
+    "codigo": "20006",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "717",
+    "catalogo": "GARANTE",
+    "descripcion": "CLÍNICA RICARDO PALMA",
+    "codigo": "20007",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "718",
+    "catalogo": "GARANTE",
+    "descripcion": "COMPLEJO HOSPITALARIO SAN PABLO",
+    "codigo": "20008",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "719",
+    "catalogo": "GARANTE",
+    "descripcion": "CLÍNICA EL GOLF",
+    "codigo": "20019",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "720",
+    "catalogo": "GARANTE",
+    "descripcion": "CLÍNICA SAN BORJA",
+    "codigo": "20020",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "721",
+    "catalogo": "GARANTE",
+    "descripcion": "CLINICA GOOD HOPE",
+    "codigo": "20023",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "722",
+    "catalogo": "GARANTE",
+    "descripcion": "FESALUD SA",
+    "codigo": "20028",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "723",
+    "catalogo": "GARANTE",
+    "descripcion": "LA POSITIVA EPS",
+    "codigo": "20029",
+    "especial" :0,
+    "codigopadre": "1"
+  },
+  {
+    "partitionKey": "GARANTE",
+    "rowKey": "724",
+    "catalogo": "GARANTE",
+    "descripcion": "TODOS",
+    "codigo": "TODOS"
+  }
+]

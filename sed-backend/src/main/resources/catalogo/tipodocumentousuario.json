@@ -1,0 +1,26 @@
+[
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "200",
+    "codigo": "1",
+    "catalogo": "TIPODOCUMENTOUSUARIO",
+    "descripcion": "DOCUMENTO NACIONAL DE IDENTIDAD",
+    "size": 8
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "201",
+    "codigo": "4",
+    "catalogo": "TIPODOCUMENTOUSUARIO",
+    "descripcion": "CARNET DE EXTRANJERIA",
+    "size": 12
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "203",
+    "codigo": "7",
+    "catalogo": "TIPODOCUMENTOUSUARIO",
+    "descripcion": "PASAPORTE",
+    "size": 12
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "26",
+    "catalogo": "SERVICIOS",
+    "codigo": "1",
+    "descripcion": "Ambulatorio"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "27",
+    "catalogo": "SERVICIOS",
+    "codigo": "2",
+    "descripcion": "Cirugía día"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "28",
+    "catalogo": "SERVICIOS",
+    "codigo": "3",
+    "descripcion": "Emergencia"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "30",
+    "catalogo": "SERVICIOS",
+    "codigo": "5",
+    "descripcion": "Hospitalización"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "37",
+    "catalogo": "SERVICIOS",
+    "codigo": "12",
+    "descripcion": "Urgencia"
+  }
+
+]

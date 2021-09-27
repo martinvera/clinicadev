@@ -1,0 +1,7094 @@
+[
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10001,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10002,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10003,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10004,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10005,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10006,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10007,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10008,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10009,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10010,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10011,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10012,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10013,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA006",
+    "descripcion": "Denuncia Policial",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10014,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA005",
+    "descripcion": "Certificado SOAT",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10015,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de Devolución",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10016,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA026",
+    "descripcion": "Registro de Terapia",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10017,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10018,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10019,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10020,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10021,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10022,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10023,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10024,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10025,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10026,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10027,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10028,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_100",
+    "rowKey": 10029,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10030,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10031,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10032,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10033,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10034,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10035,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA033",
+    "descripcion": "Solicitud SCTR",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10036,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10037,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10038,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10039,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10040,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10041,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10042,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10043,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10044,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10045,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10046,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de Devolución",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10047,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10048,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10049,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10050,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10051,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10052,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10053,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10054,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10055,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10056,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10057,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10058,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10059,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "1_1_101",
+    "rowKey": 10060,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10061,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE017",
+    "descripcion": "Pase de Emergencia",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10062,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE012",
+    "descripcion": "Historia Clínica",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10063,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE018",
+    "descripcion": "Procedimientos Ambultorios (Resúmen)",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10064,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE014",
+    "descripcion": "Orden de Atención Médica (Hoja Sited)",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10065,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10066,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE004",
+    "descripcion": "Carta de Garantia / Correo de Autorización",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10067,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE015",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10068,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE011",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10069,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE023",
+    "descripcion": "Resultados de procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10070,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE016",
+    "descripcion": "Orden de Laboratorio / Imágenes /Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10071,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE020",
+    "descripcion": "Resultado de Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10072,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE021",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10073,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE022",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10074,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE006",
+    "descripcion": "Denuncia Policial",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10075,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE005",
+    "descripcion": "Certificado SOAT",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10076,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE003",
+    "descripcion": "Carta de Devolución",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10077,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10078,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE009",
+    "descripcion": "Factura / Boleta",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10079,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE010",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10080,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE013",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10081,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10082,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE027",
+    "descripcion": "Evaluación Pre Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10083,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE028",
+    "descripcion": "Evaluación Post Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10084,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE029",
+    "descripcion": "Registro de Anestesiología",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_100",
+    "rowKey": 10085,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE030",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "100"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10086,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE017",
+    "descripcion": "Pase de Emergencia",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10087,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE012",
+    "descripcion": "Historia Clínica",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10088,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE018",
+    "descripcion": "Procedimientos Ambultorios (Resúmen)",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10089,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE014",
+    "descripcion": "Orden de Atención Médica (Hoja Sited)",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10090,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10091,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE025",
+    "descripcion": "Solicitud SCTR",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10092,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE004",
+    "descripcion": "Carta de Garantia / Correo de Autorización",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10093,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE015",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10094,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE011",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10095,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE023",
+    "descripcion": "Resultado de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10096,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE016",
+    "descripcion": "Orden de Laboratorio / Imágenes /Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10097,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE020",
+    "descripcion": "Resultado de Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10098,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE021",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10099,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE022",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10100,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE003",
+    "descripcion": "Carta de Devolución",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10101,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10102,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE009",
+    "descripcion": "Factura / Boleta",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10103,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE010",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10104,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE024",
+    "descripcion": "Siteds ingresado Digital",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10105,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE027",
+    "descripcion": "Evaluación Pre Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10106,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE028",
+    "descripcion": "Evaluación Post Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10107,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE029",
+    "descripcion": "Registro de Anestesiología",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_101",
+    "rowKey": 10108,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE030",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "101"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10109,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE017",
+    "descripcion": "Pase de Emergencia",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10110,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE012",
+    "descripcion": "Historia Clínica",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10111,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE018",
+    "descripcion": "Procedimientos Ambultorios (Resúmen)",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10112,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE014",
+    "descripcion": "Orden de Atención Médica (Hoja Sited)",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10113,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10114,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE025",
+    "descripcion": "Solicitud SCTR",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10115,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE004",
+    "descripcion": "Carta de Garantia / Correo de Autorización",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10116,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE015",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10117,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE011",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10118,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE023",
+    "descripcion": "Resultado de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10119,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE016",
+    "descripcion": "Orden de Laboratorio / Imágenes /Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10120,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE020",
+    "descripcion": "Resultado de Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10121,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE021",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10122,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE022",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10123,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10124,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE019",
+    "descripcion": "Registros de terapia",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10125,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10126,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE009",
+    "descripcion": "Factura / Boleta",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10127,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE010",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10128,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE024",
+    "descripcion": "Siteds Ingresado Digital",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10129,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE027",
+    "descripcion": "Evaluación Pre Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10130,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE028",
+    "descripcion": "Evaluación Post Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10131,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE029",
+    "descripcion": "Registro de Anestesiología",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_102",
+    "rowKey": 10132,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE030",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10133,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE012",
+    "descripcion": "Historia Clínica",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10134,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE018",
+    "descripcion": "Procedimientos Ambultorios (Resúmen)",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10135,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE014",
+    "descripcion": "Orden de Atención Médica (Hoja Sited)",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10136,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10137,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE004",
+    "descripcion": "Carta de Garantia / Correo de Autorización",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10138,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE015",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10139,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE011",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10140,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10141,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10142,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE009",
+    "descripcion": "Factura / Boleta",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10143,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE010",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10144,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE024",
+    "descripcion": "Siteds Ingresado Digital",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_107",
+    "rowKey": 10145,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE030",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "107"
+  },
+  {
+    "partitionKey": "3_1_108",
+    "rowKey": 10146,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "3_1_108",
+    "rowKey": 10147,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "3_1_108",
+    "rowKey": 10148,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10149,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE004",
+    "descripcion": "Carta de Garantia / Correo de Autorización",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10150,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE009",
+    "descripcion": "Factura / Boleta",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10151,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE010",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10152,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE011",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10153,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE012",
+    "descripcion": "Historia Clínica",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10154,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE014",
+    "descripcion": "Orden de Atención Médica (Hoja Sited)",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10155,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE015",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10156,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE016",
+    "descripcion": "Orden de Laboratorio / Imágenes /Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10157,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE017",
+    "descripcion": "Pase a Emergencia",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10158,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE018",
+    "descripcion": "Procedimientos Ambultorios (Resúmen)",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10159,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE019",
+    "descripcion": "Registros de terapia",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10160,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE020",
+    "descripcion": "Resultado de Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10161,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE021",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10162,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE022",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10163,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE023",
+    "descripcion": "Resultados de procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10164,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE024",
+    "descripcion": "Siteds Ingresado Digital",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10165,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE027",
+    "descripcion": "Evaluación Pre Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10166,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE028",
+    "descripcion": "Evaluación Post Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10167,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE029",
+    "descripcion": "Registro de Anestesiología",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_109",
+    "rowKey": 10168,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE030",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10169,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE017",
+    "descripcion": "Pase de Emergencia",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10170,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE012",
+    "descripcion": "Historia Clínica",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10171,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE018",
+    "descripcion": "Procedimientos Ambultorios (Resúmen)",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10172,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE014",
+    "descripcion": "Orden de Atención Médica (Hoja Sited)",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10173,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10174,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE004",
+    "descripcion": "Carta de Garantia / Correo de Autorización",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10175,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE015",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10176,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE011",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10177,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE023",
+    "descripcion": "Resultados de procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10178,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE016",
+    "descripcion": "Orden de Laboratorio / Imágenes /Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10179,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE020",
+    "descripcion": "Resultado de Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10180,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE021",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10181,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE022",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10182,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10183,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE008",
+    "descripcion": "Esquema de Quimioterapia",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10184,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10185,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE009",
+    "descripcion": "Factura / Boleta",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10186,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE010",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10187,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE024",
+    "descripcion": "Siteds Ingresado Digital",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10188,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE027",
+    "descripcion": "Evaluación Pre Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10189,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE028",
+    "descripcion": "Evaluación Post Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10190,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE029",
+    "descripcion": "Registro de Anestesiología",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_112",
+    "rowKey": 10191,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE030",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10192,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE017",
+    "descripcion": "Pase de Emergencia",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10193,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE012",
+    "descripcion": "Historia Clínica",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10194,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE018",
+    "descripcion": "Procedimientos Ambultorios (Resúmen)",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10195,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE014",
+    "descripcion": "Orden de Atención Médica (Hoja Sited)",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10196,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10197,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE025",
+    "descripcion": "Solicitud SCTR",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10198,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE004",
+    "descripcion": "Carta de Garantia / Correo de Autorización",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10199,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE015",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10200,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE011",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10201,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE023",
+    "descripcion": "Resultados de procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10202,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE016",
+    "descripcion": "Orden de Laboratorio / Imágenes /Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10203,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE020",
+    "descripcion": "Resultado de Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10204,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE021",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10205,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE022",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10206,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10207,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10208,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE009",
+    "descripcion": "Factura / Boleta",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10209,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE010",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10210,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE024",
+    "descripcion": "Siteds Ingresado Digital",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10211,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE027",
+    "descripcion": "Evaluación Pre Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10212,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE028",
+    "descripcion": "Evaluación Post Anestesia",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10213,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE029",
+    "descripcion": "Registro de Anestesiología",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_1_10",
+    "rowKey": 10214,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE030",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10215,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE017",
+    "descripcion": "Pase de Emergencia",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10216,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE012",
+    "descripcion": "Historia Clínica",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10217,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE018",
+    "descripcion": "Procedimientos Ambultorios (Resúmen)",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10218,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE014",
+    "descripcion": "Orden de Atención Médica (Hoja Sited)",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10219,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10220,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE004",
+    "descripcion": "Carta de Garantia / Correo de Autorización",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10221,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE015",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10222,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE011",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10223,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE023",
+    "descripcion": "Resultados de procedimientos",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10224,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE016",
+    "descripcion": "Orden de Laboratorio / Imágenes /Patología\"",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10225,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE020",
+    "descripcion": "Resultado de Imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10226,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE021",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10227,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE022",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10228,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10229,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10230,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE009",
+    "descripcion": "Factura / Boleta",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10231,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE010",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10232,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE024",
+    "descripcion": "Siteds Ingresado Digital",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_200",
+    "rowKey": 10233,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE030",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10234,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE017",
+    "descripcion": "Pase de Emergencia",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10235,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE012",
+    "descripcion": "Historia Clínica",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10236,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE018",
+    "descripcion": "Procedimientos Ambultorios (Resúmen)",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10237,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE014",
+    "descripcion": "Orden de Atención Médica (Hoja Sited)",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10238,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10239,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE015",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10240,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE011",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10241,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE023",
+    "descripcion": "Resultados de procedimientos",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10242,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE016",
+    "descripcion": "Orden de Laboratorio / Imágenes /Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10243,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE020",
+    "descripcion": "Resultado de Imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10244,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE021",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10245,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE022",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10246,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10247,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10248,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE009",
+    "descripcion": "Factura / Boleta",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10249,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE010",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10250,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE024",
+    "descripcion": "Siteds Ingresado Digital",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "3_2_203",
+    "rowKey": 10251,
+    "garanteid": "0",
+    "tipodocumentoid": "DCE030",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10252,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10253,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10254,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10255,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10256,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10257,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA033",
+    "descripcion": "Solicitud SCTR",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10258,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10259,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10260,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10261,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10262,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10263,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10264,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10265,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10266,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10267,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10268,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de Devolución",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10269,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA026",
+    "descripcion": "Registro de Terapia",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10270,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10271,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10272,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10273,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10274,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10275,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10276,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10277,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10278,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10279,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10280,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10281,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10282,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_102",
+    "rowKey": 10283,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "102"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10284,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10285,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10286,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10287,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10288,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10289,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10290,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10291,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10292,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10293,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10294,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10295,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10296,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10297,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10298,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10299,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA026",
+    "descripcion": "Registro de Terapia",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10300,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10301,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10302,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10303,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10304,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10305,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10306,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10307,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10308,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10309,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10310,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10311,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10312,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_111",
+    "rowKey": 10313,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10314,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10315,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10316,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10317,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10318,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10319,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10320,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10321,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10322,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10323,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10324,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10325,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10326,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10327,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10328,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10329,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10330,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10331,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10332,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10333,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_104",
+    "rowKey": 10334,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "104"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10335,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10336,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10337,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10338,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10339,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10340,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10341,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10342,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10343,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10344,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10345,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10346,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10347,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10348,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10349,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10350,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10351,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA026",
+    "descripcion": "Registro de Terapia",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10352,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10353,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10354,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10355,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10356,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10357,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10358,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10359,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10360,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10361,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10362,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10363,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10364,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10365,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10366,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10367,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10368,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10369,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10370,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10371,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10372,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10373,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10374,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10375,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10376,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10377,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10378,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10379,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10380,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10381,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10382,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA026",
+    "descripcion": "Registro de Terapia",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10383,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10384,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10385,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10386,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10387,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10388,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10389,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10390,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10391,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10392,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10393,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10394,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10395,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_109",
+    "rowKey": 10396,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "109"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10397,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10398,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10399,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10400,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10401,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10402,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10403,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10404,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10405,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10406,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10407,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10408,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10409,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10410,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10411,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10412,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10413,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA009",
+    "descripcion": "Esquema de Quimioterapia",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10414,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10415,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10416,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10417,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10418,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10419,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10420,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10421,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10422,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10423,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10424,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10425,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10426,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_112",
+    "rowKey": 10427,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "112"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10428,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10429,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10430,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10431,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10432,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10433,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10434,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10435,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10436,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10437,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10438,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10439,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10440,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10441,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10442,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10443,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10444,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10445,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10446,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10447,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10448,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_34",
+    "rowKey": 10449,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "34"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10450,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10451,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10452,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10453,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10454,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10455,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10456,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10457,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10458,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10459,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10460,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10461,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10462,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10463,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10464,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10465,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10466,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10467,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10468,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10469,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10470,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10471,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10472,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10473,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10474,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA034",
+    "descripcion": "Placa Odontológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10475,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10476,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10477,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10478,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10479,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_116",
+    "rowKey": 10480,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "116"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10481,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10482,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10483,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10484,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10485,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10486,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10487,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10488,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10489,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10490,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10491,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10492,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10493,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10494,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10495,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10496,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10497,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10498,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10499,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10500,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10501,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10502,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10503,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10504,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10505,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10506,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10507,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10508,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10509,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_10",
+    "rowKey": 10510,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "10"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10511,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10512,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10513,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10514,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10515,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10516,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10517,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10518,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10519,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10520,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10521,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10522,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10523,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10524,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_110",
+    "rowKey": 10525,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "110"
+  },
+  {
+    "partitionKey": "1_1_44",
+    "rowKey": 10526,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "44"
+  },
+  {
+    "partitionKey": "1_1_44",
+    "rowKey": 10527,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "44"
+  },
+  {
+    "partitionKey": "1_1_44",
+    "rowKey": 10528,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "44"
+  },
+  {
+    "partitionKey": "1_1_44",
+    "rowKey": 10529,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "44"
+  },
+  {
+    "partitionKey": "1_1_44",
+    "rowKey": 10530,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "44"
+  },
+  {
+    "partitionKey": "1_1_44",
+    "rowKey": 10531,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "44"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10532,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10533,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10534,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10535,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10536,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10537,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10538,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10539,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10540,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10541,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10542,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10543,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10544,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10545,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10546,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_46",
+    "rowKey": 10547,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "46"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10548,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10549,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10550,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10551,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10552,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10553,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10554,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10555,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10556,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10557,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10558,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10559,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10560,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10561,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10562,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10563,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10564,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10565,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_108",
+    "rowKey": 10566,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "108"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10567,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10568,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10569,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10570,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10571,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10572,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10573,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10574,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10575,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10576,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10577,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10578,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10579,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10580,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10581,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_0",
+    "rowKey": 10582,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "0"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10583,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10584,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10585,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10586,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10587,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10588,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10589,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10590,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10591,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10592,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10593,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10594,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_1_97",
+    "rowKey": 10595,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "97"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10596,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10597,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10598,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10599,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10600,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10601,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10602,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10603,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10604,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10605,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10606,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10607,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10608,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10609,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10610,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10611,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10612,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA026",
+    "descripcion": "Registros de terapia",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10613,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10614,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10615,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10616,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10617,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10618,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10619,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10620,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10621,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10622,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10623,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10624,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10625,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10626,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10627,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10628,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10629,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambulatorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10630,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10631,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10632,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10633,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10634,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10635,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10636,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10637,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10638,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10639,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10640,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10641,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10642,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA026",
+    "descripcion": "Registros de terapia",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10643,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10644,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10645,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10646,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10647,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10648,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10649,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10650,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10651,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10652,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10653,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10654,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10655,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_111",
+    "rowKey": 10656,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "111"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10657,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10658,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10659,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10660,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10661,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10662,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10663,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10664,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10665,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10666,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10667,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10668,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10669,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10670,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10671,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10672,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10673,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA026",
+    "descripcion": "Registros de terapia",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10674,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10675,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10676,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10677,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10678,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10679,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10680,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10681,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10682,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10683,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10684,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10685,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10686,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_203",
+    "rowKey": 10687,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "203"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10688,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10689,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10690,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10691,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10692,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10693,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10694,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10695,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10696,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10697,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10698,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10699,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10700,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10701,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10702,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10703,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10704,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10705,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10706,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10707,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10708,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10709,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10710,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10711,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10712,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10713,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_200",
+    "rowKey": 10714,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "200"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10715,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10716,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10717,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10718,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10719,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10720,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10721,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10722,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10723,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10724,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10725,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10726,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10727,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10728,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10729,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10730,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10731,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10732,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA038",
+    "descripcion": "Boleta de Farmacia",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10733,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA039",
+    "descripcion": "Boleta de Farmacia 2 (Contingencia)",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_2_5",
+    "rowKey": 10734,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "2",
+    "modofacturacionid": "5"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10735,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10736,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA015",
+    "descripcion": "Hoja de Evolución Médica",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10737,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA024",
+    "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10738,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA017",
+    "descripcion": "Orden de Atención Médica (Hoja Siteds)",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10739,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA002",
+    "descripcion": "Autorización Manual por llamada al call center",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10740,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA004",
+    "descripcion": "Carta de Garantía",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10741,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA018",
+    "descripcion": "Orden de Farmacia",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10742,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA013",
+    "descripcion": "Guía de Farmacia",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10743,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA031",
+    "descripcion": "Resultados de Procedimientos",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10744,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10745,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10746,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10747,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10748,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10749,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10750,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10751,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10752,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10753,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10754,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA016",
+    "descripcion": "Informe Médico",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10755,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA014",
+    "descripcion": "Guia de farmacia BTL pases",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10756,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA027",
+    "descripcion": "Reporte de sistema",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10757,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10758,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA007",
+    "descripcion": "Documento de Identidad",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10759,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA035",
+    "descripcion": "Orden de Atención Médica 2",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10760,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA036",
+    "descripcion": "Orden de Farmacia 2",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10761,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA037",
+    "descripcion": "Guia de Farmacia 2",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_0_400",
+    "rowKey": 10762,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "0",
+    "modofacturacionid": "400"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10763,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10764,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10765,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10766,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10767,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10768,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10769,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10770,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10771,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10772,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10773,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10774,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_98",
+    "rowKey": 10775,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "98"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10776,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA023",
+    "descripcion": "Pase Ambulatorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10777,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA019",
+    "descripcion": "Orden de Laboratorio / Imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10778,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA020",
+    "descripcion": "Orden de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10779,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA021",
+    "descripcion": "Orden de Procedimiento",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10780,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA028",
+    "descripcion": "Resultado de Laboratorio",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10781,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA029",
+    "descripcion": "Resultado de Patología",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10782,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA030",
+    "descripcion": "Resultados de imágenes",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10783,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA003",
+    "descripcion": "Carta de devolucion",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10784,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA001",
+    "descripcion": "Anexo Detallado",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10785,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA011",
+    "descripcion": "Factura /Boleta hacia Garante",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10786,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA012",
+    "descripcion": "Ficha Epidemiológica",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10787,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA032",
+    "descripcion": "Siteds por Sistema",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  },
+  {
+    "partitionKey": "1_1_99",
+    "rowKey": 10788,
+    "garanteid": "0",
+    "tipodocumentoid": "DCA041",
+    "descripcion": "Comprobante Sunat 2",
+    "mecanismoid": "1",
+    "modofacturacionid": "99"
+  }
+]

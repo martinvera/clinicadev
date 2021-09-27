@@ -1,0 +1,56 @@
+[
+  {
+    "partitionKey": 1,
+    "rowKey": 1,
+    "nombre": "ADMINISTADOR",
+    "codigo": 1,
+    "privilegios": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35",
+    "descripcion": "ADMINISTADOR",
+    "estado": "1"
+  },
+  {
+    "partitionKey": 2,
+    "rowKey": 2,
+    "nombre": "USUARIO SOPORTE",
+    "codigo": 2,
+    "privilegios": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35",
+    "descripcion": "TIENE TODOS LOS PRIVILEGIOS",
+    "estado": "1"
+  },
+  {
+    "partitionKey": 3,
+    "rowKey": 3,
+    "nombre": "SUPERVISOR",
+    "codigo": 3,
+    "privilegios": "3,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35",
+    "descripcion": "PRIVILEGIOS RESTRINGIDOS",
+    "estado": "1"
+  },
+  {
+    "partitionKey": 4,
+    "rowKey": 4,
+    "nombre": "FACTURACIÓN",
+    "codigo": 4,
+    "privilegios": "7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32",
+    "descripcion": "PRIVILEGIOS RESTRINGIDOS",
+    "estado": "1"
+  },
+  {
+    "partitionKey": 5,
+    "rowKey": 5,
+    "nombre": "ADMISIÓN",
+    "codigo": 5,
+    "privilegios": "7,8,9,10",
+    "descripcion": "PRIVILEGIOS RESTRINGIDOS",
+    "estado": "1"
+  },
+  {
+    "partitionKey": 6,
+    "rowKey": 6,
+    "nombre": "USUARIO",
+    "codigo": 6,
+    "privilegios": "7,8,9,10",
+    "descripcion": "PRIVILEGIOS RESTRINGIDOS",
+    "estado": "1"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "partitionKey": "GARANTETOTAL",
+    "rowKey": "GT01",
+    "catalogo": "GARANTETOTAL",
+    "codigo": "GT01",
+    "descripcion": "Rimac EPS"
+  },
+  {
+    "partitionKey": "GARANTETOTAL",
+    "rowKey": "GT02",
+    "catalogo": "GARANTETOTAL",
+    "codigo": "GT02",
+    "descripcion": "Rimac Seguros y Reaseguros"
+  },
+  {
+    "partitionKey": "GARANTETOTAL",
+    "rowKey": "GT03",
+    "catalogo": "GARANTETOTAL",
+    "codigo": "GT03",
+    "descripcion": "Otros garantes"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "500",
+    "catalogo": "MECANISMOFACTURACION",
+    "descripcion": "SERVICIO",
+	"codigo" : "SERVICIO"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "501",
+    "catalogo": "MECANISMOFACTURACION",
+    "descripcion": "CPM",
+	"codigo" : "2"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "502",
+    "catalogo": "MECANISMOFACTURACION",
+    "descripcion": "PAQUETES",
+	"codigo" : "PAQUETES"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "503",
+    "catalogo": "MECANISMOFACTURACION",
+    "descripcion": "PAGO POR SERVICIO",
+    "codigo" : "PAGO POR SERVICIO"
+  }
+]

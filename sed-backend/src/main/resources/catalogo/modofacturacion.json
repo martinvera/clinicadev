@@ -1,0 +1,184 @@
+  [
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "600",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "101",
+      "descripcion": "SOAT"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "601",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "101",
+      "descripcion": "SCTR"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "602",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "102",
+      "descripcion": "ACCIDENTE PERSONAL Y ESTUDIANTIL"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "603",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "106",
+      "descripcion": "SERVICO (PROCEDIMIENTO DE ALTO COSTO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "604",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "107",
+      "descripcion": "FARMACIA DE ALTO COSTO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "606",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "108",
+      "descripcion": "SERVICIO (CASO REGULAR)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "607",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "109",
+      "descripcion": "SERVICIO (EMPRESA AUDITABLE)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "608",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "112",
+      "descripcion": "ONCOLOGICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "609",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "34",
+      "descripcion": "PHD-(FARMACIA)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "611",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "116",
+      "descripcion": "ODONTOLOGIA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "612",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "110",
+      "descripcion": "PREVENTIVA (EMPO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "613",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "44",
+      "descripcion": "PREVENTIVA - TRACK (EMPO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "614",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "46",
+      "descripcion": "ONCOLOGICO (EMPO)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "615",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "108",
+      "descripcion": "PLURIPATOLOGICO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "616",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "18",
+      "descripcion": "UME"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "617",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "19",
+      "descripcion": "MAD-SERVICIO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "618",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "200",
+      "descripcion": "CPM (CASO REGULAR)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "620",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "203",
+      "descripcion": "CPM (EMPRESAS AUDITABLE)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "622",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "23",
+      "descripcion": "TELECONSULTA"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "624",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "5",
+      "descripcion": "CRONICOS (REGULAR y CONSULTA VIRTUAL)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "625",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "5",
+      "descripcion": "CRONICOS (AUDITABLES)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "628",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "30",
+      "descripcion": "REGULAR"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "630",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "10",
+      "descripcion": "EXCLUSIONES DECPM-EMERG. RESPIRATORIA(COVID)"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "631",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "103",
+      "descripcion": "INAFECTO-CNSLT. VIRT"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "632",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "104",
+      "descripcion": "INAFECTO"
+    },
+    {
+      "partitionKey": "CATALOGO",
+      "rowKey": "633",
+      "catalogo": "MODOFACTURACION",
+      "codigo": "400",
+      "descripcion": "PAQUETE"
+    }
+  ]

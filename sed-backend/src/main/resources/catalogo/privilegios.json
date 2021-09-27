@@ -1,0 +1,218 @@
+[
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "201",
+    "codigo": "1",
+    "descripcion": "PUEDE CREAR ROL"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "202",
+    "codigo": "2",
+    "descripcion": "PUEDE EDITAR ROL"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "203",
+    "codigo": "3",
+    "descripcion": "PUEDE VISUALIZAR ROL"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "204",
+    "codigo": "4",
+    "descripcion": "PUEDE CREAR USUARIO"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "205",
+    "codigo": "5",
+    "descripcion": "PUEDE EDITAR USUARIO"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "206",
+    "codigo": "6",
+    "descripcion": "PUEDE VISUALIZAR USUARIO"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "207",
+    "codigo": "7",
+    "descripcion": "ACCESO A CARGAR DOCUMENTOS"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "208",
+    "codigo": "8",
+    "descripcion": "ACCESO A ELIMINAR DOCUMENTOS"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "209",
+    "codigo": "9",
+    "descripcion": "ACCESO A EDITAR CARGAR DOCUMENTOS"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "210",
+    "codigo": "10",
+    "descripcion": "ACCESO A VISUALIZAR DETALLE DE DOCUMENTO"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "211",
+    "codigo": "11",
+    "descripcion": "ACCESO A GENERAR REPORTE DE DOCUMENTO SIN LOTE"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "212",
+    "codigo": "12",
+    "descripcion": "ACCESO A EXPEDIENTE DIGITAL"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "213",
+    "codigo": "13",
+    "descripcion": "ACCESO A ELIMINAR LOTE"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "214",
+    "codigo": "14",
+    "descripcion": "ACCESO A GENERAR EXPEDIENTE DIGITAL"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "215",
+    "codigo": "15",
+    "descripcion": "ACCESO A MONITOREO DE EXPEDIENTE GENERADO"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "216",
+    "codigo": "16",
+    "descripcion": "AACCESO A EXPONER DOCUMENTOS FALTANTES"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "217",
+    "codigo": "17",
+    "descripcion": "ACCESO A VER FACTURAS"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "218",
+    "codigo": "18",
+    "descripcion": "AACCESO A VER ANEXO"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "219",
+    "codigo": "19",
+    "descripcion": "ACCESO A VER DOCUMENTOS"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "220",
+    "codigo": "20",
+    "descripcion": "ACCESO A REPORTE EXPEDIENTES CON ERROR"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "221",
+    "codigo": "21",
+    "descripcion": "ACCESO A DESCARGAR ZIP"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "222",
+    "codigo": "22",
+    "descripcion": "ACCESO A VER DETALLE ERROR"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "223",
+    "codigo": "23",
+    "descripcion": "ACCESO A DESCARGAR reporte total"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "224",
+    "codigo": "24",
+    "descripcion": "ACCESO A GENERAR REPORTE PARCIAL"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "225",
+    "codigo": "25",
+    "descripcion": "ACCESO A DESCARGAR REPORTE PARCIAL"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "226",
+    "codigo": "26",
+    "descripcion": "ACCESO A DESCARGAR REPORTE"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "227",
+    "codigo": "27",
+    "descripcion": "ACCESO DASHBOARD EXPEDIENTES GENERADOS"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "228",
+    "codigo": "28",
+    "descripcion": "ACCESO A GENERAR REPORTE MECANISMO/MODO FACTURACIÓN"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "229",
+    "codigo": "29",
+    "descripcion": "VER HISTORIAL (LOG)"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "230",
+    "codigo": "30",
+    "descripcion": "EDITAR FECHA DE ENVÍO"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "231",
+    "codigo": "31",
+    "descripcion": "EDITAR FECHA DE ACEPTACIÓN"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "232",
+    "codigo": "32",
+    "descripcion": "EDITAR FECHA Y NÚMERO DE REGISTRO DE SOLICITUD"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "233",
+    "codigo": "33",
+    "descripcion": "DASHBOARD LOTES ENVIADOS AL GARANTE"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "234",
+    "codigo": "34",
+    "descripcion": "GENERAR REPORTE"
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "235",
+    "codigo": "35",
+    "descripcion": "BOTÓN REPROCESAR "
+  },
+  {
+    "partitionKey": "PRIVILEGIOS",
+    "rowKey": "236",
+    "codigo": "36",
+    "descripcion": "REPROCESAR"
+  }
+]
