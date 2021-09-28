@@ -9,7 +9,7 @@ spring:
 
 azure:
   storage:
-    container-expiryTime : 10
+    container-expiryTime : 10000
     key: ${AZURE_STORAGE_KEY:hfvi4pqqO+IklIl44+VzgB88rDCHTphIFOPyio4G16ErA3YjbtTGKkZX5akSczRcuIao2GTvSZe2m6axSLQ9+w==}
     container-account: ${AZURE_STORAGE_ACCOUNT:clinicainternacional}
     container-name: documentstorage
