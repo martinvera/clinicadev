@@ -5,7 +5,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA001",
     "descripcion": "Anexo Detallado",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -14,7 +14,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA002",
     "descripcion": "Autorización Manual por llamada al call center",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -23,7 +23,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA003",
     "descripcion": "Carta de Devolución",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -32,7 +32,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA004",
     "descripcion": "Carta de Garantía",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -41,7 +41,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA005",
     "descripcion": "Certificado SOAT",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -50,7 +50,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA006",
     "descripcion": "Denuncia Policial",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -59,7 +59,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA007",
     "descripcion": "Documento de Identidad",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -68,7 +68,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA008",
     "descripcion": "Epicrisis",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -77,7 +77,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA009",
     "descripcion": "Esquema de Quimioterapia",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -86,7 +86,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA010",
     "descripcion": "Evaluación Post Anestesia",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -95,7 +95,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA011",
     "descripcion": "Factura /Boleta hacia Garante",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -104,7 +104,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA012",
     "descripcion": "Ficha Epidemiológica",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -113,7 +113,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA013",
     "descripcion": "Guía de Farmacia",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -122,7 +122,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA014",
     "descripcion": "Guia de farmacia BTL pases",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -131,7 +131,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA015",
     "descripcion": "Hoja de Evolución Médica",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -140,7 +140,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA016",
     "descripcion": "Informe Médico ",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -149,7 +149,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA017",
     "descripcion": "Orden de Atención Médica (Hoja Siteds)",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -158,7 +158,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA018",
     "descripcion": "Orden de Farmacia",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -167,7 +167,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA019",
     "descripcion": "Orden de Laboratorio / Imágenes",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -176,7 +176,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA020",
     "descripcion": "Orden de Patología",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -185,7 +185,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA021",
     "descripcion": "Orden de Procedimiento",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -194,7 +194,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA022",
     "descripcion": "Parte de Sala (Reporte operatorio/Consumo en el Centro Quirúrgico/Sala de Operaciones)o",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -203,9 +203,8 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA023",
     "descripcion": "Pase Ambulatorio",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
-
   },
   {
     "partitionKey": "CATALOGO",
@@ -213,7 +212,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA024",
     "descripcion": "Procedimientos Ambultorios  (Detalle de Laboratorio y Procedimientos)",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -222,7 +221,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA025",
     "descripcion": "Registro de Anestesiología",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -231,7 +230,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA026",
     "descripcion": "Registro de Terapia",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -240,7 +239,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA027",
     "descripcion": "Reporte de sistema",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -249,7 +248,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA028",
     "descripcion": "Resultado de Laboratorio",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -258,7 +257,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA029",
     "descripcion": "Resultado de Patología",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -267,7 +266,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA030",
     "descripcion": "Resultados de imágenes",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -276,7 +275,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA031",
     "descripcion": "Resultados de Procedimientos",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -285,7 +284,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA032",
     "descripcion": "Siteds por Sistema",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -294,7 +293,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA033",
     "descripcion": "Solicitud SCTR",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -303,7 +302,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA034",
     "descripcion": "Placa Odontológica",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -512,7 +511,6 @@
     "descripcion": "Pase Ambulatorio",
     "codigopadre": "2",
     "os": 0
-
   },
   {
     "partitionKey": "CATALOGO",
@@ -619,7 +617,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE001",
     "descripcion": "Anexo Detallado",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -637,7 +635,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE002",
     "descripcion": "Autorización Manual por llamada al call center",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -655,7 +653,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE003",
     "descripcion": "Carta de Devolución",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -673,7 +671,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE004",
     "descripcion": "Carta de Garantía (Correo de Autorización)",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -691,7 +689,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE005",
     "descripcion": "Certificado SOAT",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -709,7 +707,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE006",
     "descripcion": "Denuncia Policial",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -727,7 +725,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE007",
     "descripcion": "Documento de Identidad",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -745,7 +743,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE008",
     "descripcion": "Esquema de Quimioterapia",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -763,7 +761,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE009",
     "descripcion": "Factura hacia Garante",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -781,7 +779,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE010",
     "descripcion": "Ficha Epidemiológica",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -799,7 +797,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE011",
     "descripcion": "Guía de Farmacia",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -817,7 +815,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE012",
     "descripcion": "Hoja de Evolución",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -835,7 +833,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE013",
     "descripcion": "Informe Médico ",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -853,7 +851,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE014",
     "descripcion": "Orden de Atención Médica (Hoja Sited)",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -871,7 +869,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE015",
     "descripcion": "Orden de Farmacia",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -889,7 +887,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE016",
     "descripcion": "Orden de Laboratorio / Imágenes /Patología",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -907,7 +905,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE017",
     "descripcion": "Pase de Emergencia",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -925,7 +923,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE018",
     "descripcion": "Procedimientos Ambultorios (Resúmen)",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -943,7 +941,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE019",
     "descripcion": "Registros de Terapia",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -961,7 +959,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE020",
     "descripcion": "Resultado de Imágenes",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -979,7 +977,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE021",
     "descripcion": "Resultado de Laboratorio",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -988,7 +986,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE022",
     "descripcion": "Resultado de Patología",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -1006,7 +1004,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE023",
     "descripcion": "Resultado de Procedimientos",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -1017,7 +1015,6 @@
     "descripcion": "Resultado de Procedimientos",
     "codigopadre": "12",
     "os": 0
-
   },
   {
     "partitionKey": "CATALOGO",
@@ -1025,7 +1022,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE024",
     "descripcion": "Siteds ingresado Digital",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -1043,7 +1040,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE025",
     "descripcion": "Solicitud SCTR",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -1061,7 +1058,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE026",
     "descripcion": "Orden de Procedimiento",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -1079,7 +1076,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH001",
     "descripcion": "Anexo Detallado",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1088,7 +1085,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH002",
     "descripcion": "Boleta hacia Garante",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 0
   },
   {
@@ -1097,7 +1094,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH003",
     "descripcion": "Carta de Devolución",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1106,7 +1103,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH004",
     "descripcion": "Carta de Garantía",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1115,7 +1112,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH005",
     "descripcion": "Certificado SOAT",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1124,7 +1121,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH006",
     "descripcion": "Denuncia Policial",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1133,7 +1130,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH007",
     "descripcion": "Epicrisis",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1142,7 +1139,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH008",
     "descripcion": "Evaluación Post Anestesia (consumo en Sala de Recuperación)",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1151,7 +1148,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH009",
     "descripcion": "Evolución Médica (HHCC)",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1160,7 +1157,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH010",
     "descripcion": "Factura hacia Garante",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1169,7 +1166,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH011",
     "descripcion": "Ficha Epidemiológica",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1178,7 +1175,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH012",
     "descripcion": "Indicaciones Médicas",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1187,7 +1184,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH013",
     "descripcion": "Kardex de Enfermería",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1196,7 +1193,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH014",
     "descripcion": "Observaciones de Auditoria",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1205,7 +1202,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH015",
     "descripcion": "Orden de Atención Médica (Hoja Siteds)",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1214,7 +1211,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH016",
     "descripcion": "Orden de Farmacia",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 0
   },
   {
@@ -1223,7 +1220,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH017",
     "descripcion": "Orden de Imágenes",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1232,7 +1229,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH018",
     "descripcion": "Orden de Laboratorio",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1241,7 +1238,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH019",
     "descripcion": "Orden de Patología",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1250,7 +1247,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH020",
     "descripcion": "Orden de Procedimiento ((tranfuciones , otros)",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1259,7 +1256,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH021",
     "descripcion": "Parte de Sala (Reporte operatorio/Consumo en el Centro Quirúrgico/Sala de Operaciones)",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1268,7 +1265,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH022",
     "descripcion": "Registro de Anestiología",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1277,7 +1274,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH023",
     "descripcion": "Resultado de Imágenes",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1286,7 +1283,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH024",
     "descripcion": "Resultado de Laboratorio",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1295,7 +1292,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH025",
     "descripcion": "Resultado de Patología",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1304,7 +1301,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH026",
     "descripcion": "Resultado de Procedimientos",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1313,7 +1310,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH027",
     "descripcion": "Solicitud SCTR",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 1
   },
   {
@@ -1322,7 +1319,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH028",
     "descripcion": "Evaluación Pre-Anestesia",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 0
   },
   {
@@ -1331,7 +1328,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA035",
     "descripcion": "Orden de Atención Médica 2",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -1340,7 +1337,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA036",
     "descripcion": "Orden de Farmacia 2",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -1349,7 +1346,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA037",
     "descripcion": "Guía de Farmacia 2",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -1358,7 +1355,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA038",
     "descripcion": "Boleta de Farmacia",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -1367,7 +1364,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA039",
     "descripcion": "Boleta de Farmacia 2 (contingencia)",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -1376,7 +1373,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA040",
     "descripcion": "Evaluación Pre Anestesia",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -1385,7 +1382,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA041",
     "descripcion": "Comprobante Sunat 2",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -1394,7 +1391,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCA042",
     "descripcion": "Otros",
-    "codigopadre": "1",
+    "codigopadre": "A",
     "os": 0
   },
   {
@@ -1475,7 +1472,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE027",
     "descripcion": "Evaluación Pre-Anestesia",
-    "codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -1493,7 +1490,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE028",
     "descripcion": "Evaluación Post Anestesia (consumo en Sala de Recuperación)",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -1511,7 +1508,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE029",
     "descripcion": "Registro de Anestesiología",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -1529,7 +1526,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE030",
     "descripcion": "Comprobante Sunat 2",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -1547,7 +1544,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCE031",
     "descripcion": "Otros",
-"codigopadre": "3",
+    "codigopadre": "E",
     "os": 0
   },
   {
@@ -1565,7 +1562,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH029",
     "descripcion": "Comprobante Sunat 2",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 0
   },
   {
@@ -1574,17 +1571,17 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH031",
     "descripcion": "Otros",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 0
   },
   {
-  "partitionKey": "CATALOGO",
-  "rowKey": "451",
-  "catalogo": "TIPODOCUMENTO",
-  "codigo": "DCE021",
-  "descripcion": "Resultado de Laboratorio",
-  "codigopadre": "12",
-  "os": 0
+    "partitionKey": "CATALOGO",
+    "rowKey": "451",
+    "catalogo": "TIPODOCUMENTO",
+    "codigo": "DCE021",
+    "descripcion": "Resultado de Laboratorio",
+    "codigopadre": "12",
+    "os": 0
   },
   {
     "partitionKey": "CATALOGO",
@@ -1592,7 +1589,7 @@
     "catalogo": "TIPODOCUMENTO",
     "codigo": "DCH030",
     "descripcion": "Formato de Interconsulta",
-    "codigopadre": "5",
+    "codigopadre": "H",
     "os": 0
   }
 ]

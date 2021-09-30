@@ -18,7 +18,6 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import com.azure.core.http.rest.PagedIterable;
 import com.azure.core.http.rest.Response;
 import com.azure.core.util.Context;
 import com.azure.storage.queue.QueueClient;
@@ -34,6 +33,7 @@ import pe.com.ci.sed.clinicalrecord.persistence.entity.ClinicalRecord;
 import pe.com.ci.sed.clinicalrecord.persistence.entity.GenericDocument;
 import pe.com.ci.sed.clinicalrecord.persistence.entity.GestionLote;
 import pe.com.ci.sed.clinicalrecord.utils.Constants;
+import pe.com.ci.sed.clinicalrecord.property.OrigenProperty;
 
 import static pe.com.ci.sed.clinicalrecord.utils.Constants.MODO_FACTURACION_INAFECTA;
 import static pe.com.ci.sed.clinicalrecord.utils.GenericUtil.convertString;
@@ -49,16 +49,18 @@ public class QueueService {
     private final QueueClient queueClientError;
     private StorageService storageService;
     private GestionLotesService gestionLotesService;
+    private final OrigenProperty origenProperty;
 
     public QueueService(ClinicalRecordService clinicalRecordService, QueueClient queueClientClinicalRecord,
                         QueueClient queueClientDocumento, QueueClient queueClientError,
-                        StorageService storageService, GestionLotesService gestionLotesService) {
+                        StorageService storageService, GestionLotesService gestionLotesService, OrigenProperty origenProperty) {
         this.clinicalRecordService = clinicalRecordService;
         this.queueClientClinicalRecord = queueClientClinicalRecord;
         this.queueClientDocumento = queueClientDocumento;
         this.queueClientError = queueClientError;
         this.storageService = storageService;
         this.gestionLotesService = gestionLotesService;
+        this.origenProperty = origenProperty;
     }
 
     public void procesarMensajeConError() {
@@ -255,8 +257,22 @@ public class QueueService {
     private Response<SendMessageResult> genericEnviarCola(QueueClient queueClient, String data) {
         return queueClient.sendMessageWithResponse(data, null, Duration.ofSeconds(-1), null, Context.NONE);
     }
-
+    private String getOrigenCodigo(String tiexpediente){
+        String origenCodigo = origenProperty.getEquivalencia().get(tiexpediente);
+        return origenCodigo;
+    }
+    private String getOrigenDes(String tiexpedientedesc){
+        String origenDesc =  origenProperty.getOrigen().get(tiexpedientedesc);
+        return origenDesc;
+    }
     private ClinicalRecord buildClinicalRecord(RegistrarFacturaRequest factura, String sistemaOrigen) {
+        if(sistemaOrigen.equals("IAFAS")){
+            factura.setTiEpisodioXhis(this.getOrigenCodigo(factura.getTiEpisodioXhis()));
+            factura.setDeEpisodioXhis(this.getOrigenDes(factura.getTiEpisodioXhis()));
+        }else if(sistemaOrigen.equals("CONTROLDOCUMENTARIO")){
+            factura.setTiEpisodioXhis(factura.getTiEpisodioXhis());
+            factura.setDeEpisodioXhis(this.getOrigenDes(factura.getTiEpisodioXhis()));
+        }
         return ClinicalRecord.builder()
                 .nroLote(factura.getNuLote())
                 .facturaNro(factura.getNuDocPago().toUpperCase())

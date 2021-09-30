@@ -56,7 +56,7 @@ public class QueueServiceImpl {
                 log.info("Inicio de envío del documento de UNILAB hacia la cola documentoqueuestorage");
                 GDocument genericDocument = new GDocument();
 
-                if (request.getRequest().getDetalle()[0].getCoPrueba().startsWith("APAT")) {
+                if (request.getRequest().getDetalle().get(0).getCoPrueba().startsWith("APAT")) {
                     request.getRequest().getCabecera().setTipoDocumentoId("DCA029");
                     request.getRequest().getCabecera().setTipoDocumentoDesc("Resultado de Patología".toUpperCase());
                 } else {
@@ -113,6 +113,11 @@ public class QueueServiceImpl {
         }
     }
 
+    /**
+     * Método que procesa la trama que se envía desde el cliente con la ruta del File Server
+     * Luego de realizar las validaciones envía la trama a la cola <documentqueuestorage>
+     * para luego ser procesado por el microservicio <document-service>
+     */
     public ResponseEntity<EiResponse> encolarFacturaFromEi(List<EnterpriseIRequest> request) {
         Map<String, String> header = new HashMap<>();
         header.put("TRANSACTIONID", ThreadContext.get(Constants.TRANSACTION_ID));

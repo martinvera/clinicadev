@@ -26,5 +26,19 @@
     "catalogo": "SEDE",
     "descripcion": "Surco",
     "codigo": "00024299"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "804",
+    "catalogo": "SEDE",
+    "descripcion": "Colmena",
+    "codigo": "00016948"
+  },
+  {
+    "partitionKey": "CATALOGO",
+    "rowKey": "805",
+    "catalogo": "SEDE",
+    "descripcion": "El Polo",
+    "codigo": "00009864"
   }
 ]

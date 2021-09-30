@@ -27,7 +27,7 @@ public class GenericUtil {
     }
 
     public static RequestHeader getHeader(Principal principal, String applicationId) {
-        var userId = Objects.nonNull(principal.getName()) ? principal.getName() : Strings.EMPTY;
+        var userId = Objects.nonNull(principal) ? principal.getName() : Strings.EMPTY;
         return RequestHeader.builder().userId(userId).applicationId(applicationId).transactionId(UUID.randomUUID().toString()).build();
     }
 

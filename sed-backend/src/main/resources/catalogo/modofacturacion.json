@@ -3,15 +3,15 @@
       "partitionKey": "CATALOGO",
       "rowKey": "600",
       "catalogo": "MODOFACTURACION",
-      "codigo": "101",
-      "descripcion": "SOAT"
+      "codigo": "100",
+      "descripcion": "SERIVICIO SOAT"
     },
     {
       "partitionKey": "CATALOGO",
       "rowKey": "601",
       "catalogo": "MODOFACTURACION",
       "codigo": "101",
-      "descripcion": "SCTR"
+      "descripcion": "SERVICIO SCTR"
     },
     {
       "partitionKey": "CATALOGO",
@@ -139,13 +139,7 @@
       "codigo": "5",
       "descripcion": "CRONICOS (REGULAR y CONSULTA VIRTUAL)"
     },
-    {
-      "partitionKey": "CATALOGO",
-      "rowKey": "625",
-      "catalogo": "MODOFACTURACION",
-      "codigo": "5",
-      "descripcion": "CRONICOS (AUDITABLES)"
-    },
+
     {
       "partitionKey": "CATALOGO",
       "rowKey": "628",
@@ -172,7 +166,7 @@
       "rowKey": "632",
       "catalogo": "MODOFACTURACION",
       "codigo": "104",
-      "descripcion": "INAFECTO"
+      "descripcion": "INAFECTO-SEDE"
     },
     {
       "partitionKey": "CATALOGO",

@@ -1,4 +1,4 @@
-package pe.com.ci.sed.document.property;
+package pe.com.ci.sed.clinicalrecord.property;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,15 +14,9 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 @ConfigurationProperties(prefix = "application")
-@PropertySource(value = "classpath:sedes.yml", factory = SedePropertiesFactory.class)
-public class SedeProperty {
-
-    private Map<String,String> equivalenciaSede;
-    
-    private Map<String,String> sedes;
-
-    private Map<String,String> equivalenciaOrigen;
+@PropertySource(value = "classpath:sistemaorigen.yml", factory = OrigenPropertiesFactory.class)
+public class OrigenProperty {
+    private Map<String,String> equivalencia;
 
     private Map<String,String> origen;
-
 }

@@ -1,0 +1,9 @@
+application:
+  equivalencia:
+    2: A
+    1: E
+    3: H
+  origen:
+    A: AMBULATORIO
+    E: EMERGENCIA
+    H: HOSPITALIZACIÓN

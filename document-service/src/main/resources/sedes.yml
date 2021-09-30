@@ -1,5 +1,5 @@
 application:
-  equivalencias:
+  equivalenciaSede:
     9682: 148
     9867: 4
     15610: 1
@@ -21,3 +21,11 @@ application:
     9682: SAN BORJA
     8215: SAN ISIDRO
     24299: SURCO
+  equivalenciaOrigen:
+    2: A
+    1: E
+    3: H
+  origen:
+    A: AMBULATORIO
+    E: EMERGENCIA
+    H: HOSPITALIZACIÓN

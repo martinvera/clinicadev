@@ -61,6 +61,7 @@ public class QueueServiceImpl {
     private StorageServiceImpl storageService;
     private final SedeProperty sedeProperty;
 
+
     public QueueServiceImpl(QueueClient queueClient, QueueClient queueClientError, DocumentoService documentoService,
                             SalesForceServiceImpl salesForceService, EnterpriceImageService enterpriceImageService, XhisServiceImpl xhisService,
                             StorageServiceImpl storageService, SedeProperty sedeProperty) {
@@ -187,6 +188,13 @@ public class QueueServiceImpl {
         }
     }
 
+    /**
+     * @param message: Mensaje recibido de la cola <queuedocumetstorage>
+     *
+     * Obtiene trama JSON de la cola <queuedocumentstorage> el cual en el campo <contenido>
+     * que contiene la URL de la trama JSON enviado por el cliente almacenada en el BlobStorage
+     * Obtiene la URL y descarga el archivo ejecutando el método <storageService.download(url)>
+     * */
     private final Function<QueueMessageItem, QueueMessageProcess> crearDocumento = message -> {
         List<Documento> documentos = new ArrayList<>();
         DocumentRequest documentRequest = GenericUtil.readValue(message.getBody().toString(), new TypeReference<>() {
@@ -289,7 +297,13 @@ public class QueueServiceImpl {
 
     private List<Documento> buildDocumentoFromIAFACD(RegistrarDocRequest factura, ORIGEN_SISTEMA origenSistema) {
         return factura.getEncuentros().stream().map(encuentro -> {
-
+            if(origenSistema.name().equals(ORIGEN_SISTEMA.IAFAS.name())){
+                encuentro.setCoServicio(sedeProperty.getEquivalenciaOrigen().get(factura.getTiEpisodioXhis()));
+                encuentro.setDeServicio(sedeProperty.getOrigen().get(encuentro.getCoServicio()));
+            }else if(origenSistema.name().equals(ORIGEN_SISTEMA.CONTROLDOCUMENTARIO.name())){
+                encuentro.setCoServicio(factura.getTiEpisodioXhis());
+                encuentro.setDeServicio(sedeProperty.getOrigen().get(encuentro.getCoServicio()));
+            }
             List<Archivo> list = documentoService.inicializarTipoDocumentoRequerido(encuentro.getCoServicio(), factura.getCoMecaPago(), factura.getCoSubMecaPago(), factura.getCoGarante());
             String sede = Strings.EMPTY;
             String sedeDesc = Strings.EMPTY;
@@ -300,7 +314,7 @@ public class QueueServiceImpl {
                         .tipoDocumentoId(encuentro.getTipoDocumentoId())
                         .build();
                 list.add(archivo);
-                sede = sedeProperty.getEquivalencias().get(factura.getCoCentro().toUpperCase());
+                sede = sedeProperty.getEquivalenciaSede().get(factura.getCoCentro().toUpperCase());
                 sedeDesc = this.getSede(factura.getCoCentro().toUpperCase());
             } else if (origenSistema.name().equals(Constants.ORIGEN_SISTEMA.CONTROLDOCUMENTARIO.name())) {
                 sede = factura.getCoEstru();
@@ -345,7 +359,7 @@ public class QueueServiceImpl {
         String sedeDescripcion = sedeProperty.getSedes().get(coCentro);
         if (Strings.isNotBlank(sedeDescripcion))
             return sedeDescripcion;
-        else return sedeProperty.getEquivalencias().get(coCentro);
+        else return sedeProperty.getEquivalenciaSede().get(coCentro);
     }
 
     public Documento buildDocumentoFromUnilab(RegistrarDocFromUnilabRequest unilabCreateRequest) {
@@ -380,6 +394,15 @@ public class QueueServiceImpl {
         return documento;
     }
 
+    /**
+     * @param request: trama enviada por la integración  POST <v1/integrator/enterpriseimaging>
+     * @return Documento con los campos requeridos y lista de archivos descargados desde el File Server
+     * @exception DocumentException
+     *
+     * Crea el documento con los datos enviados desde la trama
+     * Ejecuta el método <enterpriseImageService.obtenerInformeImages> para obtener los archivos
+     * PDF desde el File Server
+     * */
     public Documento buildDocumentoFromEImaging(EnterpriseIRequest request) {
         Documento documento = new Documento();
         try {
