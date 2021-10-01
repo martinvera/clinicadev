@@ -186,33 +186,37 @@ public class ExpedienteServicesTable implements ExpedienteService {
 
         try {
             String tableNameGarante = STORAGETABLEEXPEDIENTE + request.getRequest().getGaranteId();
-            StringBuilder sb = new StringBuilder();
-            sb.append(TableQuery.generateFilterCondition(PARTITION_KEY, TableQuery.QueryComparisons.EQUAL, request.getRequest().getNroLote())).append(" ");
-            sb.append(TableQuery.Operators.OR).append(" ").append(TableQuery.generateFilterCondition(PARTITION_KEY, TableQuery.QueryComparisons.EQUAL, request.getRequest().getNroLote() + "_" + ESTADO.EN_PROCESO.name())).append(" ");
-            sb.append(TableQuery.Operators.OR).append(" ").append(TableQuery.generateFilterCondition(PARTITION_KEY, TableQuery.QueryComparisons.EQUAL, request.getRequest().getNroLote() + "_" + ESTADO.ERROR.name())).append(" ");
-            sb.append(TableQuery.Operators.OR).append(" ").append(TableQuery.generateFilterCondition(PARTITION_KEY, TableQuery.QueryComparisons.EQUAL, request.getRequest().getNroLote() + "_" + ESTADO.TERMINADO.name())).append(" ");
-            CloudTable tableGarante = cloudTableClient.getTableReference(tableNameGarante);
-            log.info("listaExpediente Query : {}", sb);
-            List<ExpedienteDigitalTable> deleteList = new ArrayList<>();
-            TableQuery<ExpedienteDigitalTable> query = TableQuery.from(ExpedienteDigitalTable.class).where(sb.toString());
-            tableGarante.execute(query).forEach(deleteList::add);
-            deleteList.stream().collect(Collectors.groupingBy(ExpedienteDigitalTable::getPartitionKey, Collectors.toList()))
-                    .forEach((k, v) -> {
-                        try {
-                            TableBatchOperation batchOperation = new TableBatchOperation();
-                            v.forEach(batchOperation::delete);
-                            tableGarante.execute(batchOperation);
-                        } catch (StorageException e) {
-                            log.error("Error code: {}, message: {}", e.getErrorCode(), e.getMessage());
-                        }
-                    });
+            CloudTable tableExpedienteGarante = cloudTableClient.getTableReference(tableNameGarante);
+            if(tableExpedienteGarante.exists()){
+                StringBuilder sb = new StringBuilder();
+                sb.append(TableQuery.generateFilterCondition(PARTITION_KEY, TableQuery.QueryComparisons.EQUAL, request.getRequest().getNroLote())).append(" ");
+                sb.append(TableQuery.Operators.OR).append(" ").append(TableQuery.generateFilterCondition(PARTITION_KEY, TableQuery.QueryComparisons.EQUAL, request.getRequest().getNroLote() + "_" + ESTADO.EN_PROCESO.name())).append(" ");
+                sb.append(TableQuery.Operators.OR).append(" ").append(TableQuery.generateFilterCondition(PARTITION_KEY, TableQuery.QueryComparisons.EQUAL, request.getRequest().getNroLote() + "_" + ESTADO.ERROR.name())).append(" ");
+                sb.append(TableQuery.Operators.OR).append(" ").append(TableQuery.generateFilterCondition(PARTITION_KEY, TableQuery.QueryComparisons.EQUAL, request.getRequest().getNroLote() + "_" + ESTADO.TERMINADO.name())).append(" ");
+                CloudTable tableGarante = cloudTableClient.getTableReference(tableNameGarante);
+                log.info("listaExpediente Query : {}", sb);
+                List<ExpedienteDigitalTable> deleteList = new ArrayList<>();
+                TableQuery<ExpedienteDigitalTable> query = TableQuery.from(ExpedienteDigitalTable.class).where(sb.toString());
+                tableGarante.execute(query).forEach(deleteList::add);
+                deleteList.stream().collect(Collectors.groupingBy(ExpedienteDigitalTable::getPartitionKey, Collectors.toList()))
+                        .forEach((k, v) -> {
+                            try {
+                                TableBatchOperation batchOperation = new TableBatchOperation();
+                                v.forEach(batchOperation::delete);
+                                tableGarante.execute(batchOperation);
+                            } catch (StorageException e) {
+                                log.error("Error code: {}, message: {}", e.getErrorCode(), e.getMessage());
+                            }
+                        });
 
-            log.info("Ingresando a eliminar archivos nroLote={}", request.getRequest().getNroLote());
-            storageService.eliminarArchivosXLote(Integer.parseInt(request.getRequest().getNroLote()));
-            log.info("Teminó a eliminar archivos nroLote={}", request.getRequest().getNroLote());
-
-
-            return getResult(request.getHeader(), "Expedientes generados eliminado correctamente.");
+                log.info("Ingresando a eliminar archivos nroLote={}", request.getRequest().getNroLote());
+                storageService.eliminarArchivosXLote(Integer.parseInt(request.getRequest().getNroLote()));
+                log.info("Teminó a eliminar archivos nroLote={}", request.getRequest().getNroLote());
+                return getResult(request.getHeader(), "Expedientes generados eliminado correctamente.");
+            }else{
+                log.info("No hay expedientes generados nroLote={}", request.getRequest().getNroLote());
+                return getResult(request.getHeader(), "No existe expedientes generados.");
+            }
         } catch (Exception e) {
             log.error("Error en la eliminar los expediente digitales del garante {} con lote {} : {} ", request.getRequest().getGaranteId(), request.getRequest().getNroLote(), e);
             throw new ExpedienteException(e.getMessage(), INTERNAL_SERVER_ERROR);
