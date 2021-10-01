@@ -3,7 +3,7 @@
     "partitionKey": "CATALOGO",
     "rowKey": "26",
     "catalogo": "SERVICIOS",
-    "codigo": "1",
+    "codigo": "A",
     "descripcion": "Ambulatorio"
   },
   {
@@ -17,14 +17,14 @@
     "partitionKey": "CATALOGO",
     "rowKey": "28",
     "catalogo": "SERVICIOS",
-    "codigo": "3",
+    "codigo": "E",
     "descripcion": "Emergencia"
   },
   {
     "partitionKey": "CATALOGO",
     "rowKey": "30",
     "catalogo": "SERVICIOS",
-    "codigo": "5",
+    "codigo": "H",
     "descripcion": "Hospitalización"
   },
   {
